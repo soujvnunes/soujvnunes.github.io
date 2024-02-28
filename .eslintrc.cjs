@@ -20,7 +20,14 @@ module.exports = {
     "import-helpers/order-imports": [
       "warn",
       {
-        groups: ["/^react/", "module", "/^@/", ["parent", "sibling", "index"]],
+        groups: [
+          "/^react/",
+          "module",
+          "/consts/",
+          "/helpers/",
+          "/components/",
+          ["parent", "sibling", "index"],
+        ],
         alphabetize: {
           order: "asc",
           ignoreCase: true,
