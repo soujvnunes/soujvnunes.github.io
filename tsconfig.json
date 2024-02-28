@@ -22,7 +22,7 @@
 
     /* Misc */
     "paths": {
-      "@shared/*": ["./src/shared/*"]
+      "*": ["./src/*"]
     }
   },
   "include": ["src"],
