@@ -2,23 +2,13 @@ import classNames from "consts/classNames";
 import PROJECTS from "consts/projects";
 import SOCIALS from "consts/socials";
 import cn from "helpers/cn";
-import SoujvnunesLogos from "components/SoujvnunesLogos";
-import ThemeButton from "components/ThemeButton";
+import Header from "components/Header";
 import UfalIcon from "components/UfalIcon";
-import me from "/me.jpg";
 
 export default function App() {
   return (
     <>
-      <header
-        className={cn(
-          "flex items-center h-16 bg-white",
-          classNames.container.root,
-        )}
-      >
-        <SoujvnunesLogos />
-        <ThemeButton />
-      </header>
+      <Header />
       <main className="flex flex-col grow">
         <section
           className={cn(
@@ -28,7 +18,7 @@ export default function App() {
         >
           <p className="inline-block ml-1 lg:ml-2 text-black/60">
             <img
-              src={me}
+              src="/me.jpg"
               className="inline-block w-10 h-10 lg:w-16 lg:h-16"
               alt="Vite logo"
             />
