@@ -1,23 +1,4 @@
-export const SOCIALS = [
-  {
-    href: "https://github.com/soujvnunes",
-    title: "Github",
-  },
-  {
-    href: "https://www.linkedin.com/in/soujvnunes/",
-    title: "LinkedIn",
-  },
-  {
-    href: "https://medium.com/@soujvnunes",
-    title: "Medium",
-  },
-  {
-    href: "https://www.behance.net/soujvnunes",
-    title: "Behance",
-  },
-];
-
-export const PROJECTS = [
+const PROJECTS = [
   {
     id: "1",
     href: "https://app.polkamarkets.com/",
@@ -43,3 +24,5 @@ export const PROJECTS = [
       "Writing of step-by-step on how to create design tokens based on an already developed web application and without documentation.",
   },
 ];
+
+export default PROJECTS;
