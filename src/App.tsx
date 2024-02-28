@@ -1,48 +1,52 @@
-import { PROJECTS, SOCIALS } from "@shared/consts";
-import { cn } from "@shared/helpers";
-import UfalIcon from "./components/UfalIcon";
+import classNames from "consts/classNames";
+import PROJECTS from "consts/projects";
+import SOCIALS from "consts/socials";
+import cn from "helpers/cn";
+import SoujvnunesLogos from "components/SoujvnunesLogos";
+import UfalIcon from "components/UfalIcon";
 import me from "/me.jpg";
 
 export default function App() {
   return (
     <>
-      <header className="flex items-center h-16 pl-8 pr-8 bg-white">
-        <a href="/" className="mr-auto">
-          <h1>
-            <strong>
-              sou
-              <span className="text-red-600">j</span>
-              <span className="text-amber-600">v</span>
-              <span className="text-blue-600">n</span>
-              unes
-            </strong>
-            <span className="-ml-1.5 -mr-1.5 align-middle material-symbols-outlined">
-              pen_size_1
-            </span>
-            design_
-            <strong>engineer</strong>
-          </h1>
-        </a>
+      <header
+        className={cn(
+          "flex items-center h-16 bg-white",
+          classNames.container.root,
+        )}
+      >
+        <SoujvnunesLogos />
         <button
           className="inline-flex items-center h-10 pl-2 pr-2 rounded-lg hover:bg-black/20"
           aria-label="Change to dark mode"
           title="Change to dark mode"
         >
-          <span className="material-symbols-outlined">dark_mode</span>
+          <span aria-hidden className="material-symbols-outlined">
+            dark_mode
+          </span>
         </button>
       </header>
       <main className="flex flex-col grow">
-        <section className="flex flex-col justify-center pl-8 pr-8 grow">
-          <p className="inline-block ml-2 text-black/60">
-            <img src={me} className="inline-block w-16 h-16" alt="Vite logo" />
+        <section
+          className={cn(
+            "flex flex-col justify-center grow pt-4 pb-4",
+            classNames.container.root,
+          )}
+        >
+          <p className="inline-block ml-1 lg:ml-2 text-black/60">
+            <img
+              src={me}
+              className="inline-block w-10 h-10 lg:w-16 lg:h-16"
+              alt="Vite logo"
+            />
             <strong className="ml-2">Hi, I&apos;m Victor</strong>
           </p>
-          <h2 className="mb-6 font-bold text-8xl text-balance">
+          <h2 className="mb-2 text-5xl font-bold lg:mb-6 lg:text-8xl text-balance">
             Lemme build you something extraordinary!
           </h2>
           <hr className="sr-only" />
           <p>
-            <button className="font-serif text-2xl italic text-black/60">
+            <button className="font-serif italic lg:text-2xl text-black/60">
               More about me
               <span className="ml-1 text-4xl align-middle material-symbols-outlined wght-200">
                 trending_flat
@@ -50,20 +54,30 @@ export default function App() {
             </button>
           </p>
         </section>
-        <section role="feed" className="pl-8 pr-8 mb-6">
-          <h2 className="mb-4 text-2xl font-bold text-black/60">
+        <section
+          role="feed"
+          className={cn("lg:mb-6 mb-4", classNames.container.root)}
+        >
+          <h2 className="mb-2 font-bold lg:mb-4 lg:text-2xl text-black/60">
             Contributions
           </h2>
-          <ul className="-mr-2 -mt-2 flex w-[calc(100%+0.5rem)] flex-wrap md:-mr-3 md:-mt-3 md:w-[calc(100%+0.75rem)] lg:-mr-4 lg:-mt-4 lg:w-[calc(100%+1rem)]">
+          <ul className="-mr-2 -mt-2 flex w-[calc(100%+0.5rem)] flex-wrap md:-mr-3 md:-mt-3 md:w-[calc(100%+0.75rem)] xl:-mr-4 xl:-mt-4 xl:w-[calc(100%+1rem)]">
             {PROJECTS.map((project) => (
               <li
                 key={project.title}
-                className="max-w-full grow-0 basis-full pr-2 pt-2 md:max-w-[50%] md:basis-1/2 md:pr-3 md:pt-3 lg:max-w-[25%] lg:basis-1/4 lg:pr-4 lg:pt-4"
+                className="max-w-full grow-0 basis-full pr-2 pt-2 md:max-w-[50%] md:basis-1/2 md:pr-3 md:pt-3 xl:max-w-[25%] xl:basis-1/4 xl:pr-4 xl:pt-4"
               >
-                <article className="relative p-2 overflow-hidden bg-white rounded-2xl">
+                <article
+                  aria-labelledby={`article_label_${project.id}`}
+                  aria-describedby={`article_desc_${project.id}`}
+                  className="relative p-2 overflow-hidden bg-white rounded-2xl"
+                >
                   <header className="flex items-center">
-                    <div
-                      className={cn("flex w-10 h-10 rounded-lg", project.color)}
+                    <span
+                      className={cn(
+                        "flex w-10 h-10 shrink-0 rounded-lg",
+                        project.color,
+                      )}
                     >
                       {
                         {
@@ -98,8 +112,13 @@ export default function App() {
                           ),
                         }[project.id]
                       }
-                    </div>
-                    <h3 className="ml-2 font-bold">{project.title}</h3>
+                    </span>
+                    <h3
+                      className="ml-2 font-bold"
+                      id={`article_label_${project.id}`}
+                    >
+                      {project.title}
+                    </h3>
                     <a
                       className="inline-flex items-center h-10 pl-2 pr-2 ml-auto rounded-lg hover:bg-black/20"
                       target="_blank"
@@ -107,12 +126,15 @@ export default function App() {
                       aria-label={`Visit ${project.title}`}
                       href={project.href}
                     >
-                      <span className="material-symbols-outlined">
+                      <span aria-hidden className="material-symbols-outlined">
                         arrow_outward
                       </span>
                     </a>
                   </header>
-                  <p className="pb-3 pl-12 text-black/60">
+                  <p
+                    className="pb-3 pl-12 text-black/60"
+                    id={`article_desc_${project.id}`}
+                  >
                     {project.description}
                   </p>
                 </article>
@@ -120,13 +142,15 @@ export default function App() {
             ))}
           </ul>
         </section>
-        <footer className="flex items-center h-10 pl-8 pr-8 text-xs bg-white text-black/60">
-          Copyright (c) {new Date().getFullYear()} soujvnunes
-          <ul className="flex ml-auto space-x-4">
+        <footer className="flex items-center pl-8 pr-8 text-xs bg-white max-lg:pb-2 max-lg:pt-2 lg:h-10 max-lg:flex-col">
+          <span className="max-lg:mb-2">
+            Copyright (c) {new Date().getFullYear()} soujvnunes
+          </span>
+          <ul className="flex space-x-4 lg:ml-auto">
             {SOCIALS.map((social) => (
               <li key={social.title}>
                 <a
-                  className="underline uppercase"
+                  className="underline uppercase text-black/60 hover:text-black/80"
                   href={social.href}
                   target="_blank"
                   rel="noreferrer"
