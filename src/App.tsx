@@ -3,6 +3,7 @@ import PROJECTS from "consts/projects";
 import SOCIALS from "consts/socials";
 import cn from "helpers/cn";
 import SoujvnunesLogos from "components/SoujvnunesLogos";
+import ThemeButton from "components/ThemeButton";
 import UfalIcon from "components/UfalIcon";
 import me from "/me.jpg";
 
@@ -16,15 +17,7 @@ export default function App() {
         )}
       >
         <SoujvnunesLogos />
-        <button
-          className="inline-flex items-center h-10 pl-2 pr-2 rounded-lg hover:bg-black/20"
-          aria-label="Change to dark mode"
-          title="Change to dark mode"
-        >
-          <span aria-hidden className="material-symbols-outlined">
-            dark_mode
-          </span>
-        </button>
+        <ThemeButton />
       </header>
       <main className="flex flex-col grow">
         <section
@@ -120,7 +113,7 @@ export default function App() {
                       {project.title}
                     </h3>
                     <a
-                      className="inline-flex items-center h-10 pl-2 pr-2 ml-auto rounded-lg hover:bg-black/20"
+                      className={classNames.button.root}
                       target="_blank"
                       rel="noreferrer"
                       aria-label={`Visit ${project.title}`}
