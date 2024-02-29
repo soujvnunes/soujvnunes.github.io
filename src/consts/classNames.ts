@@ -9,7 +9,7 @@ const classNames = {
     secondary: "text-black/60 dark:text-white/80",
   },
   surface: {
-    primary: "bg-white dark:bg-gray-900",
+    primary: "bg-white dark:bg-stone-800",
   },
 };
 
