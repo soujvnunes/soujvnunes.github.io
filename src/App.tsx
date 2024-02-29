@@ -3,6 +3,7 @@ import PROJECTS from "consts/projects";
 import SOCIALS from "consts/socials";
 import cn from "helpers/cn";
 import Header from "components/Header";
+import IntroSection from "components/IntroSection";
 import UfalIcon from "components/UfalIcon";
 
 export default function App() {
@@ -10,33 +11,7 @@ export default function App() {
     <>
       <Header />
       <main className="flex flex-col grow">
-        <section
-          className={cn(
-            "flex flex-col justify-center grow pt-4 pb-4",
-            classNames.container.root,
-          )}
-        >
-          <p className="inline-block ml-1 lg:ml-2 text-black/60">
-            <img
-              src="/me.jpg"
-              className="inline-block w-10 h-10 lg:w-16 lg:h-16"
-              alt="Vite logo"
-            />
-            <strong className="ml-2">Hi, I&apos;m Victor</strong>
-          </p>
-          <h2 className="mb-2 text-5xl font-bold lg:mb-6 lg:text-8xl text-balance">
-            Lemme build you something extraordinary!
-          </h2>
-          <hr className="sr-only" />
-          <p>
-            <button className="font-serif italic lg:text-2xl text-black/60">
-              More about me
-              <span className="ml-1 text-4xl align-middle material-symbols-outlined wght-200">
-                trending_flat
-              </span>
-            </button>
-          </p>
-        </section>
+        <IntroSection />
         <section
           role="feed"
           className={cn("lg:mb-6 mb-4", classNames.container.root)}
@@ -62,6 +37,7 @@ export default function App() {
                         project.color,
                       )}
                     >
+                      {/** todo: get rid of it */}
                       {
                         {
                           1: (
