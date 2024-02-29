@@ -7,7 +7,8 @@ export default function Header() {
   return (
     <header
       className={cn(
-        "flex items-center h-16 bg-white",
+        "flex items-center h-16",
+        classNames.surface.primary,
         classNames.container.root,
       )}
     >
