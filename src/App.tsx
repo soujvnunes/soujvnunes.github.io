@@ -28,7 +28,7 @@ export default function App() {
                 <article
                   aria-labelledby={`article_label_${project.id}`}
                   aria-describedby={`article_desc_${project.id}`}
-                  className="relative p-2 overflow-hidden bg-white rounded-2xl"
+                  className={cn("p-2 rounded-2xl", classNames.surface.primary)}
                 >
                   <header className="flex items-center">
                     <span
@@ -65,6 +65,7 @@ export default function App() {
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               className="w-6 h-6 m-auto"
+                              fill="currentColor"
                             >
                               <path d="M7.67,6.33c-.74,0-1.48.15-2.17.43-.69.28-1.31.7-1.84,1.23-.53.53-.94,1.15-1.23,1.84-.28.69-.43,1.42-.43,2.17s.15,1.48.43,2.17c.28.69.7,1.31,1.23,1.84.53.53,1.15.94,1.84,1.23.69.28,1.42.43,2.17.43s1.48-.15,2.17-.43c.69-.28,1.31-.7,1.84-1.23.53-.53.94-1.15,1.23-1.84.28-.69.43-1.42.43-2.17s-.15-1.48-.43-2.17c-.28-.69-.7-1.31-1.23-1.84-.53-.53-1.15-.94-1.84-1.23-.69-.28-1.42-.43-2.17-.43ZM16.67,7c-.35,0-.7.13-1.02.38-.32.25-.62.62-.87,1.08s-.44,1.02-.58,1.62c-.13.61-.2,1.26-.2,1.91s.07,1.31.2,1.91c.13.61.33,1.16.58,1.62s.54.83.87,1.08c.32.25.67.38,1.02.38s.7-.13,1.02-.38.62-.62.87-1.08.44-1.02.58-1.62c.13-.61.2-1.26.2-1.91s-.07-1.31-.2-1.91-.33-1.16-.58-1.62-.54-.83-.87-1.08c-.32-.25-.67-.38-1.02-.38ZM21,7.67c-.27,0-.52.46-.71,1.27-.19.81-.29,1.91-.29,3.06s.11,2.25.29,3.06c.19.81.44,1.27.71,1.27s.52-.46.71-1.27c.19-.81.29-1.91.29-3.06s-.11-2.25-.29-3.06c-.19-.81-.44-1.27-.71-1.27Z" />
                             </svg>
@@ -79,7 +80,7 @@ export default function App() {
                       {project.title}
                     </h3>
                     <a
-                      className={classNames.button.root}
+                      className={cn(classNames.button.root, "ml-auto")}
                       target="_blank"
                       rel="noreferrer"
                       aria-label={`Visit ${project.title}`}
@@ -91,7 +92,7 @@ export default function App() {
                     </a>
                   </header>
                   <p
-                    className="pb-3 pl-12 text-black/60"
+                    className={cn(classNames.text.secondary, "pb-3 pl-12")}
                     id={`article_desc_${project.id}`}
                   >
                     {project.description}
@@ -101,7 +102,12 @@ export default function App() {
             ))}
           </ul>
         </section>
-        <footer className="flex items-center pl-8 pr-8 text-xs bg-white max-lg:pb-2 max-lg:pt-2 lg:h-10 max-lg:flex-col">
+        <footer
+          className={cn(
+            classNames.surface.primary,
+            "flex items-center pl-8 pr-8 text-xs max-lg:pb-2 max-lg:pt-2 lg:h-10 max-lg:flex-col",
+          )}
+        >
           <span className="max-lg:mb-2">
             Copyright (c) {new Date().getFullYear()} soujvnunes
           </span>
@@ -109,7 +115,7 @@ export default function App() {
             {SOCIALS.map((social) => (
               <li key={social.title}>
                 <a
-                  className="underline uppercase text-black/60 hover:text-black/80"
+                  className="underline uppercase text-black/60 hover:text-black/80 dark:text-white/80 dark:hover:text-white"
                   href={social.href}
                   target="_blank"
                   rel="noreferrer"
