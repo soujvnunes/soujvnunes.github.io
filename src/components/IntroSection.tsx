@@ -20,7 +20,6 @@ export default function IntroSection() {
       <h2 className="mb-2 text-5xl font-bold lg:mb-6 lg:text-8xl text-balance">
         Lemme build you something extraordinary!
       </h2>
-      <hr className="sr-only" />
       <p>
         <button
           className={cn(
@@ -29,7 +28,10 @@ export default function IntroSection() {
           )}
         >
           More about me
-          <span className="ml-1 text-4xl align-middle material-symbols-outlined wght-200">
+          <span
+            aria-hidden
+            className="ml-1 text-4xl align-middle material-symbols-outlined wght-200"
+          >
             trending_flat
           </span>
         </button>
