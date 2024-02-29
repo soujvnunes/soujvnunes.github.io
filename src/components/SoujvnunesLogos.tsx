@@ -4,9 +4,9 @@ export default function SoujvnunesLogos() {
       <h1>
         <strong>
           sou
-          <span className="text-red-600">j</span>
-          <span className="text-amber-600">v</span>
-          <span className="text-blue-600">n</span>
+          <span className="text-red-600 dark:text-red-400">j</span>
+          <span className="text-amber-600 dark:text-amber-400">v</span>
+          <span className="text-blue-600 dark:text-blue-400">n</span>
           unes
         </strong>
         <span
