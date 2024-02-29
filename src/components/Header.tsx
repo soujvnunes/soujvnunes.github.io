@@ -13,6 +13,7 @@ export default function Header() {
     >
       <SoujvnunesLogos />
       <ThemeButton />
+      {/** todo: implement i18n URGENTLY */}
     </header>
   );
 }
