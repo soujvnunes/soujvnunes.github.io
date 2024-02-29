@@ -14,9 +14,14 @@ export default function App() {
         <IntroSection />
         <section
           role="feed"
-          className={cn("lg:mb-6 mb-4", classNames.container.root)}
+          className={cn(classNames.container.root, "lg:mb-6 mb-4")}
         >
-          <h2 className="mb-2 font-bold lg:mb-4 lg:text-2xl text-black/60">
+          <h2
+            className={cn(
+              classNames.text.secondary,
+              "mb-2 font-bold lg:mb-4 lg:text-2xl",
+            )}
+          >
             Contributions
           </h2>
           <ul className="-mr-2 -mt-2 flex w-[calc(100%+0.5rem)] flex-wrap md:-mr-3 md:-mt-3 md:w-[calc(100%+0.75rem)] xl:-mr-4 xl:-mt-4 xl:w-[calc(100%+1rem)]">
