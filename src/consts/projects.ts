@@ -21,7 +21,7 @@ const PROJECTS = [
     title: "Ways to create Design Tokens",
     color: "bg-neutral-100",
     description:
-      "Writing of step-by-step on how to create design tokens based on an already developed web application and without documentation.",
+      "Writing of step-by-step on how to create design tokens based on shipped web application and without documentation.",
   },
 ];
 
