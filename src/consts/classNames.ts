@@ -6,7 +6,7 @@ const classNames = {
     root: "inline-flex items-center h-10 pl-2 pr-2 rounded-lg hover:bg-black/20 dark:hover:bg-white/20",
   },
   text: {
-    secondary: "text-black/60 dark:text-white/80",
+    secondary: "text-black/60 dark:text-white/60",
   },
   surface: {
     primary: "bg-white dark:bg-stone-800",
