@@ -1,3 +1,5 @@
+import MaterialSymbols from "./MaterialSymbols";
+
 export default function SoujvnunesLogos() {
   return (
     <a href="/" className="mr-auto">
@@ -9,12 +11,10 @@ export default function SoujvnunesLogos() {
           <span className="text-blue-600 dark:text-blue-400">n</span>
           unes
         </strong>
-        <span
-          aria-hidden
-          className="-ml-1.5 -mr-1.5 align-middle material-symbols-outlined"
-        >
-          pen_size_1
-        </span>
+        <MaterialSymbols
+          name="pen_size_1"
+          className="-ml-1.5 -mr-1.5 align-middle"
+        />
         design_
         <strong>engineer</strong>
       </h1>
