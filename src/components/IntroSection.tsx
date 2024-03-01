@@ -1,5 +1,6 @@
 import classNames from "consts/classNames";
 import cn from "helpers/cn";
+import MaterialSymbols from "./MaterialSymbols";
 
 export default function IntroSection() {
   return (
@@ -28,12 +29,10 @@ export default function IntroSection() {
           )}
         >
           More about me
-          <span
-            aria-hidden
-            className="ml-1 text-4xl align-middle material-symbols-outlined wght-200"
-          >
-            trending_flat
-          </span>
+          <MaterialSymbols
+            name="trending_flat"
+            className="ml-1 text-4xl align-middle wght-200"
+          />
         </button>
       </p>
     </section>
