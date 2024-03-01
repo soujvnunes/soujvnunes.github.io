@@ -1,15 +1,16 @@
 import { useId } from "react";
 import classNames from "consts/classNames";
-import { type IconNames } from "consts/icons";
+import { type Icons } from "consts/icons";
 import cn from "helpers/cn";
 import Icon from "./Icon";
+import MaterialSymbols from "./MaterialSymbols";
 
 interface CardProps {
   children: React.ReactNode;
   label: string;
   href: string;
   icon: {
-    name: IconNames;
+    name: keyof Icons;
   };
   className?: {
     startItem?: string;
@@ -51,9 +52,7 @@ export default function Card({
           aria-label={`Visit ${label}`}
           href={href}
         >
-          <span aria-hidden className="material-symbols-outlined">
-            arrow_outward
-          </span>
+          <MaterialSymbols name="arrow_outward" />
         </a>
       </header>
       <p
