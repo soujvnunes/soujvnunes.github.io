@@ -1,5 +1,6 @@
 import classNames from "consts/classNames";
 import cn from "helpers/cn";
+import MaterialSymbols from "./MaterialSymbols";
 
 export default function ThemeButton() {
   // todo: implement this URGENTLY
@@ -9,9 +10,7 @@ export default function ThemeButton() {
       aria-label="Change to dark mode"
       title="Change to dark mode"
     >
-      <span aria-hidden className="material-symbols-outlined">
-        dark_mode
-      </span>
+      <MaterialSymbols name="dark_mode" />
     </button>
   );
 }
