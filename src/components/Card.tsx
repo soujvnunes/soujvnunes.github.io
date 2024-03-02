@@ -42,7 +42,7 @@ export default function Card({
         >
           <Icon className="m-auto" name={icon.name} />
         </span>
-        <h3 className="ml-2 font-bold" id={labelId}>
+        <h3 className="ml-2 font-bold truncate text-ellipsis" id={labelId}>
           {label}
         </h3>
         <a
