@@ -1,8 +1,11 @@
+import { useTranslation } from "react-i18next";
 import classNames from "consts/classNames";
 import cn from "helpers/cn";
 import MaterialSymbols from "./MaterialSymbols";
 
 export default function IntroSection() {
+  const [t] = useTranslation();
+
   return (
     <section
       className={cn(
@@ -16,10 +19,10 @@ export default function IntroSection() {
           className="inline-block w-10 h-10 lg:w-16 lg:h-16"
           alt="Vite logo"
         />
-        <strong className="ml-2">Hi, I&apos;m Victor</strong>
+        <strong className="ml-2">{t("intro_caption")}</strong>
       </p>
       <h2 className="mb-2 text-5xl font-bold lg:mb-6 lg:text-8xl text-balance">
-        Lemme build you something extraordinary!
+        {t("intro_title")}
       </h2>
       <p>
         <button
@@ -28,7 +31,7 @@ export default function IntroSection() {
             classNames.text.secondary,
           )}
         >
-          More about me
+          {t("intro_cta")}
           <MaterialSymbols
             name="trending_flat"
             className="ml-1 text-4xl align-middle wght-200"
