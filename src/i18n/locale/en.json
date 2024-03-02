@@ -1,0 +1,31 @@
+{
+  "translation": {
+    "change_mode": {
+      "light": "Change to light mode",
+      "dark": "Change to dark mode"
+    },
+    "change_lang": {
+      "en": "Change to English language",
+      "pt": "Mudar para idioma Português"
+    },
+    "intro_caption": "Hi, I'm Victor",
+    "intro_title": "Lemme build you something extraordinary!",
+    "intro_cta": "More about me",
+    "contributions_title": "Contributions",
+    "contributions_projects": [
+      {
+        "title": "Polkamarkets App",
+        "description": "Design review and implementation of UI/UX to be integrated with MetaMask interface or other digital wallets services."
+      },
+      {
+        "title": "U.F.A.L. 60 Years",
+        "description": "Design and implementation of a virtual exhibition that shows the evolution of the Federal University of Alagoas."
+      },
+      {
+        "title": "Ways to create Design Tokens",
+        "description": "Writing of step-by-step on how to create design tokens based on shipped web application and without documentation."
+      }
+    ],
+    "socials_label": "Visit"
+  }
+}
