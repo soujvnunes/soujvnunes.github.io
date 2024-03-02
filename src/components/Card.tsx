@@ -46,11 +46,15 @@ export default function Card({
           {label}
         </h3>
         <a
-          className={cn(classNames.button.root, "ml-auto")}
           target="_blank"
           rel="noreferrer"
-          aria-label={`Visit ${label}`}
           href={href}
+          aria-label={`Visit ${label}`}
+          className={cn(
+            classNames.button.root,
+            classNames.button.text,
+            "ml-auto",
+          )}
         >
           <MaterialSymbols name="arrow_outward" />
         </a>
