@@ -8,7 +8,7 @@ export default function ThemeButton() {
 
   return (
     <button
-      className={cn(classNames.button.root, "mr-2")}
+      className={cn(classNames.button.root, classNames.button.text, "mr-2")}
       aria-label={t("change_mode.light")}
       title={t("change_mode.light")}
     >
