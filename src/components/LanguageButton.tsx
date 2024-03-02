@@ -7,16 +7,12 @@ export default function LanguageButton() {
 
   return (
     <button
-      className={cn(classNames.button.root, "-mr-2")}
+      className={cn(classNames.button.root, classNames.button.outline)}
       name={i18n.language === "en" ? "pt" : "en"}
       aria-label={t(`change_lang.${i18n.language}`)}
-      onClick={(event) => {
-        void (async () => {
-          await i18n.changeLanguage(event.currentTarget.name);
-        })();
-      }}
+      onClick={(event) => void i18n.changeLanguage(event.currentTarget.name)}
     >
-      {i18n.language === "en" ? "🇺🇸" : "🇧🇷"}
+      {i18n.language === "en" ? "pt" : "en"}
     </button>
   );
 }
