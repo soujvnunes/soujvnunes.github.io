@@ -1,7 +1,10 @@
-export type Icons = Record<
-  "polkamarkets" | "ufal60anos" | "medium",
-  Pick<JSX.IntrinsicElements["path"], "className" | "d">[]
->;
+type IconsName = "polkamarkets" | "ufal60anos" | "medium";
+export type IconsValue = Pick<
+  JSX.IntrinsicElements["path"],
+  "className" | "d"
+>[];
+
+export type Icons = Record<IconsName, IconsValue>;
 
 const icons: Icons = {
   polkamarkets: [
