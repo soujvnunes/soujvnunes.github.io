@@ -1,4 +1,5 @@
-import icons, { type Icons } from "consts/icons";
+import { memo, useEffect, useRef, useState } from "react";
+import type { IconsValue, Icons } from "consts/icons";
 import cn from "helpers/cn";
 
 interface IconProps
@@ -6,8 +7,21 @@ interface IconProps
   name: keyof Icons;
 }
 
-export default function Icon({ name, className, ...props }: IconProps) {
-  const paths = icons[name];
+export default memo(function Icon({ name, className, ...props }: IconProps) {
+  const [path, setPath] = useState<IconsValue>([]);
+  const isMounted = useRef(true);
+
+  useEffect(() => {
+    if (isMounted.current) {
+      void (async function handlePath() {
+        setPath((await import("consts/icons")).default[name]);
+      })();
+    }
+
+    return () => {
+      isMounted.current = false;
+    };
+  }, [name]);
 
   return (
     <svg
@@ -18,9 +32,9 @@ export default function Icon({ name, className, ...props }: IconProps) {
       className={cn("w-6 h-6 fill-current", className)}
       {...props}
     >
-      {paths.map((path) => (
+      {path.map((path) => (
         <path key={path.d} {...path} />
       ))}
     </svg>
   );
-}
+});
