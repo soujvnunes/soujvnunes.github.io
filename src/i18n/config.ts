@@ -4,10 +4,14 @@ import LanguageDetector from "i18next-browser-languagedetector";
 import en from "./locale/en.json";
 import pt from "./locale/pt.json";
 
-void i18n.use(LanguageDetector).use(initReactI18next).init({
-  resources: {
-    en,
-    pt,
-  },
-  debug: true,
-});
+void i18n
+  .use(LanguageDetector)
+  .use(initReactI18next)
+  .init({
+    resources: {
+      en,
+      pt,
+    },
+    fallbackLng: "en",
+    supportedLngs: ["en", "pt"],
+  });
