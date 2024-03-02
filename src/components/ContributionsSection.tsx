@@ -15,7 +15,7 @@ export default function ContributionsSection() {
       <h2
         className={cn(
           classNames.text.secondary,
-          "mb-2 font-bold lg:mb-4 lg:text-2xl",
+          "mb-2 font-bold lg:mb-4 text-2xl",
         )}
       >
         {t("contributions_title")}
@@ -28,7 +28,7 @@ export default function ContributionsSection() {
           >
             <Card
               label={t(project.title)}
-              href={project.description}
+              href={project.href}
               icon={{
                 name: project.icon.name,
               }}
