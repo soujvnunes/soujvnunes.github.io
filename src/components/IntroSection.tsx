@@ -21,13 +21,13 @@ export default function IntroSection() {
         />
         <strong className="ml-2">{t("intro_caption")}</strong>
       </p>
-      <h2 className="mb-2 text-5xl font-bold lg:mb-6 lg:text-8xl text-balance">
+      <h2 className="mb-3 text-5xl font-bold lg:mb-6 lg:text-8xl text-balance">
         {t("intro_title")}
       </h2>
       <p>
         <button
           className={cn(
-            "font-serif italic lg:text-2xl",
+            "font-serif italic text-2xl",
             classNames.text.secondary,
           )}
         >
