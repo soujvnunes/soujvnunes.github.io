@@ -4,10 +4,7 @@
       "light": "Change to light mode",
       "dark": "Change to dark mode"
     },
-    "change_lang": {
-      "en": "Change to English language",
-      "pt": "Mudar para idioma Português"
-    },
+    "change_lang": "Mudar para idioma Português",
     "intro_caption": "Hi, I'm Victor",
     "intro_title": "Lemme build you something extraordinary!",
     "intro_cta": "More about me",
@@ -26,6 +23,7 @@
         "description": "Writing of step-by-step on how to create design tokens based on shipped web application and without documentation."
       }
     ],
-    "socials_label": "Visit"
+    "contributions_cta": "See live",
+    "socials_label": "Visit my profile on {{name}}"
   }
 }

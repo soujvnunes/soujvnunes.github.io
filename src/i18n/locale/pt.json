@@ -4,10 +4,7 @@
       "light": "Mudar para tema claro",
       "dark": "Mudar para tema escuro"
     },
-    "change_lang": {
-      "en": "Change to English language",
-      "pt": "Mudar para idioma Português"
-    },
+    "change_lang": "Change to English language",
     "intro_caption": "Olá, sou o Victor",
     "intro_title": "Construirei algo extraordinário para você!",
     "intro_cta": "Mais sobre mim",
@@ -26,6 +23,7 @@
         "description": "Artigo com passo-a-passo para criar tokens de design baseado em uma aplicação web já entregue e sem documentação."
       }
     ],
-    "socials_label": "Visitar"
+    "contributions_cta": "Veja no ar",
+    "socials_label": "Visite meu perfil do {{name}}"
   }
 }
