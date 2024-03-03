@@ -1,7 +1,6 @@
 import { useTranslation } from "react-i18next";
 import classNames from "consts/classNames";
 import cn from "helpers/cn";
-import MaterialSymbols from "./MaterialSymbols";
 
 export default function IntroSection() {
   const [t] = useTranslation();
@@ -24,6 +23,9 @@ export default function IntroSection() {
       <h2 className="mb-3 text-5xl font-bold lg:mb-6 lg:text-8xl text-balance">
         {t("intro_title")}
       </h2>
+      {/* 
+      
+      todo: more about me
       <p>
         <button
           className={cn(
@@ -37,7 +39,7 @@ export default function IntroSection() {
             className="ml-1 text-4xl align-middle wght-200"
           />
         </button>
-      </p>
+      </p> */}
     </section>
   );
 }
