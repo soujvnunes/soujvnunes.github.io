@@ -1,20 +1,30 @@
 import { memo, useEffect, useRef, useState } from "react";
-import type { IconsValue, Icons } from "consts/icons";
 import cn from "helpers/cn";
 
-interface IconProps
-  extends Pick<React.ComponentPropsWithoutRef<"svg">, "className" | "viewBox"> {
-  name: keyof Icons;
-}
+type IconProps = React.SVGProps<SVGSVGElement> & {
+  title?: string;
+  name: "polkamarkets" | "ufal60anos";
+  className?: string;
+};
+type SvgComponent = React.FunctionComponent<Omit<IconProps, "name">>;
 
-export default memo(function Icon({ name, className, ...props }: IconProps) {
-  const [path, setPath] = useState<IconsValue>([]);
+export default memo(function Icon({
+  name,
+  className,
+  title,
+  ...props
+}: IconProps) {
+  const [Svg, setSvg] = useState<SvgComponent | null>(null);
   const isMounted = useRef(true);
 
   useEffect(() => {
     if (isMounted.current) {
       void (async function handlePath() {
-        setPath((await import("consts/icons")).default[name]);
+        const svg = (await import(`../assets/icons/${name}.svg?react`)) as {
+          default: SvgComponent;
+        };
+
+        setSvg(() => svg.default);
       })();
     }
 
@@ -23,18 +33,14 @@ export default memo(function Icon({ name, className, ...props }: IconProps) {
     };
   }, [name]);
 
-  return (
-    <svg
-      aria-hidden
+  return Svg ? (
+    <Svg
+      aria-hidden={title ? undefined : "true"}
       focusable="false"
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
       className={cn("w-6 h-6 fill-current", className)}
       {...props}
-    >
-      {path.map((path) => (
-        <path key={path.d} {...path} />
-      ))}
-    </svg>
-  );
+    />
+  ) : null;
 });
