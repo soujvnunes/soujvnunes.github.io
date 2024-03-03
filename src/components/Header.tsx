@@ -2,7 +2,6 @@ import classNames from "consts/classNames";
 import cn from "helpers/cn";
 import LanguageButton from "./LanguageButton";
 import SoujvnunesLogos from "./SoujvnunesLogos";
-import ThemeButton from "./ThemeButton";
 
 export default function Header() {
   return (
@@ -14,7 +13,11 @@ export default function Header() {
       )}
     >
       <SoujvnunesLogos />
-      <ThemeButton />
+      {/* 
+      
+      todo: mode changing
+
+      <ThemeButton /> */}
       <LanguageButton />
     </header>
   );
