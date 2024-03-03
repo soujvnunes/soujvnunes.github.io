@@ -1,9 +1,9 @@
 import { memo, useEffect, useRef, useState } from "react";
 import cn from "helpers/cn";
 
-type IconProps = React.SVGProps<SVGSVGElement> & {
+export type IconProps = React.SVGProps<SVGSVGElement> & {
   title?: string;
-  name: "polkamarkets" | "ufal60anos";
+  name: "Behance" | "GitHub" | "LinkedIn" | "Medium" | "Polkamarkets" | "Ufal";
   className?: string;
 };
 type SvgComponent = React.FunctionComponent<Omit<IconProps, "name">>;
