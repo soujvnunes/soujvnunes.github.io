@@ -2,6 +2,8 @@ import { useTranslation } from "react-i18next";
 import classNames from "consts/classNames";
 import cn from "helpers/cn";
 import Card from "./Card";
+import Icon from "./Icon";
+import MaterialSymbols from "./MaterialSymbols";
 
 const projects = [
   {
@@ -65,14 +67,33 @@ export default function ContributionsSection() {
             className="max-w-full grow-0 basis-full pr-2 pt-2 md:max-w-[50%] md:basis-1/2 md:pr-3 md:pt-3 xl:max-w-[25%] xl:basis-1/4 xl:pr-4 xl:pt-4"
           >
             <Card
-              label={t(project.title)}
               href={project.href}
-              icon={{
-                name: project.icon.name,
-              }}
-              className={{
-                startItem: project.className.startItem,
-              }}
+              label={t(project.title)}
+              startItem={
+                <span
+                  className={cn(
+                    "flex w-10 h-10 shrink-0 rounded-lg",
+                    project.className.startItem,
+                  )}
+                >
+                  <Icon className="m-auto" name={project.icon.name} />
+                </span>
+              }
+              endItem={
+                <a
+                  target="_blank"
+                  rel="noreferrer"
+                  href={project.href}
+                  aria-label={t("contributions_cta")}
+                  className={cn(
+                    classNames.button.root,
+                    classNames.button.text,
+                    "ml-auto",
+                  )}
+                >
+                  <MaterialSymbols name="arrow_outward" />
+                </a>
+              }
             >
               {t(project.description)}
             </Card>
