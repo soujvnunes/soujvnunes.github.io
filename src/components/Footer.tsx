@@ -1,7 +1,25 @@
 import { useTranslation } from "react-i18next";
 import classNames from "consts/classNames";
-import SOCIALS from "consts/socials";
 import cn from "helpers/cn";
+
+const socials = [
+  {
+    href: "https://github.com/soujvnunes",
+    title: "Github",
+  },
+  {
+    href: "https://www.linkedin.com/in/soujvnunes/",
+    title: "LinkedIn",
+  },
+  {
+    href: "https://medium.com/@soujvnunes",
+    title: "Medium",
+  },
+  {
+    href: "https://www.behance.net/soujvnunes",
+    title: "Behance",
+  },
+];
 
 export default function Footer() {
   const [t] = useTranslation();
@@ -17,7 +35,7 @@ export default function Footer() {
         Copyright (c) {new Date().getFullYear()} soujvnunes
       </span>
       <ul className="flex space-x-4 lg:ml-auto">
-        {SOCIALS.map((social) => (
+        {socials.map((social) => (
           <li key={social.title}>
             <a
               className="underline uppercase text-black/60 hover:text-black/80 dark:text-white/80 dark:hover:text-white"
