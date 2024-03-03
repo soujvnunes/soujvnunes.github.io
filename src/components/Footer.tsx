@@ -1,25 +1,27 @@
 import { useTranslation } from "react-i18next";
 import classNames from "consts/classNames";
 import cn from "helpers/cn";
+import Icon from "./Icon";
 
 const socials = [
   {
+    href: "https://medium.com/@soujvnunes",
+    name: "Medium",
+  },
+  {
     href: "https://github.com/soujvnunes",
-    title: "Github",
+    name: "GitHub",
   },
   {
     href: "https://www.linkedin.com/in/soujvnunes/",
-    title: "LinkedIn",
+    name: "LinkedIn",
   },
-  {
-    href: "https://medium.com/@soujvnunes",
-    title: "Medium",
-  },
+
   {
     href: "https://www.behance.net/soujvnunes",
-    title: "Behance",
+    name: "Behance",
   },
-];
+] as const;
 
 export default function Footer() {
   const [t] = useTranslation();
@@ -28,26 +30,33 @@ export default function Footer() {
     <footer
       className={cn(
         classNames.surface.primary,
-        "flex items-center pl-8 pr-8 text-xs max-lg:pb-2 max-lg:pt-2 lg:h-10 max-lg:flex-col",
+        classNames.container.root,
+        "flex items-center text-xs h-10 lg:h-10",
       )}
     >
-      <span className="max-lg:mb-2">
-        Copyright (c) {new Date().getFullYear()} soujvnunes
+      <span className={classNames.text.secondary}>
+        Copyright (c) {new Date().getFullYear()} <strong>soujvnunes</strong>
       </span>
-      <ul className="flex space-x-4 lg:ml-auto">
-        {socials.map((social) => (
-          <li key={social.title}>
-            <a
-              className="underline uppercase text-black/60 hover:text-black/80 dark:text-white/80 dark:hover:text-white"
-              target="_blank"
-              rel="noreferrer"
-              href={social.href}
-            >
-              <span className="sr-only">{t("socials_label")}</span>
-              <strong>{social.title}</strong>
-            </a>
-          </li>
-        ))}
+      <ul className="flex ml-auto space-x-4">
+        {socials.map(({ name, href }) => {
+          const title = t("socials_label", {
+            name,
+          });
+
+          return (
+            <li key={name}>
+              <a
+                className="underline uppercase text-black/60 hover:text-black/80 dark:text-white/80 dark:hover:text-white"
+                target="_blank"
+                rel="noreferrer"
+                title={title}
+                href={href}
+              >
+                <Icon name={name} title={title} />
+              </a>
+            </li>
+          );
+        })}
       </ul>
     </footer>
   );
