@@ -1,5 +1,6 @@
 import react from "@vitejs/plugin-react-swc";
 import { defineConfig } from "vite";
+import svgr from "vite-plugin-svgr";
 import webfontDownload from "vite-plugin-webfont-dl";
 
 // https://vitejs.dev/config/
@@ -11,6 +12,7 @@ export default defineConfig({
       "https://use.typekit.net/bwb4cjf.css",
       "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200",
     ]),
+    svgr(),
   ],
   resolve: {
     alias: [
