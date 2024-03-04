@@ -25,6 +25,8 @@ module.exports = {
           "module",
           "/consts/",
           "/helpers/",
+          "/hooks/",
+          "/assets/",
           "/components/",
           ["parent", "sibling", "index"],
         ],
