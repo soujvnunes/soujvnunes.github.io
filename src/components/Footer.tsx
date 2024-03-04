@@ -31,13 +31,13 @@ export default function Footer() {
       className={cn(
         classNames.surface.primary,
         classNames.container.root,
-        "flex items-center text-xs h-10 lg:h-10",
+        "flex h-10 items-center text-xs",
       )}
     >
       <span className={classNames.text.secondary}>
         Copyright (c) {new Date().getFullYear()} <strong>soujvnunes</strong>
       </span>
-      <ul className="flex ml-auto space-x-4">
+      <ul className="ml-auto flex space-x-4">
         {socials.map(({ name, href }) => {
           const title = t("socials_label", {
             name,
@@ -46,7 +46,7 @@ export default function Footer() {
           return (
             <li key={name}>
               <a
-                className="underline uppercase text-black/60 hover:text-black/80 dark:text-white/80 dark:hover:text-white"
+                className="text-black/60 hover:text-black/80 dark:text-white/80 dark:hover:text-white"
                 target="_blank"
                 rel="noreferrer"
                 title={title}
