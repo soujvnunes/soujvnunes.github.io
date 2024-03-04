@@ -9,13 +9,13 @@ export default function IntroSection() {
   return (
     <section
       className={cn(
-        "flex flex-col justify-center grow pt-4 pb-4",
+        "flex grow flex-col justify-center pb-4 pt-4",
         classNames.container.root,
       )}
     >
-      <p className={cn("inline-block ml-1 lg:ml-2", classNames.text.secondary)}>
+      <p className={cn("ml-1 inline-block lg:ml-2", classNames.text.secondary)}>
         <img
-          className="inline-block w-10 h-10 lg:w-16 lg:h-16"
+          className="inline-block h-10 w-10 lg:h-16 lg:w-16"
           alt=""
           src={me}
         />
