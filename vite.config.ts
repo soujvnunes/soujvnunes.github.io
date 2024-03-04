@@ -32,6 +32,13 @@ export default defineConfig({
         find: "hooks",
         replacement: "/src/hooks",
       },
+      {
+        find: "assets",
+        replacement: "/src/assets",
+      },
     ],
+  },
+  build: {
+    target: "esnext",
   },
 });
