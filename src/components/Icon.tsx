@@ -1,6 +1,6 @@
 import { memo } from "react";
-import useSvg, { type SvgProps, type Svgs } from "hooks/useSvg";
 import cn from "helpers/cn";
+import useSvg, { type SvgProps, type Svgs } from "hooks/useSvg";
 
 export interface IconProps extends SvgProps {
   className?: string;
