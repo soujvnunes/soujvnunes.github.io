@@ -28,6 +28,10 @@ export default defineConfig({
         find: "components",
         replacement: "/src/components",
       },
+      {
+        find: "hooks",
+        replacement: "/src/hooks",
+      },
     ],
   },
 });
