@@ -7,7 +7,7 @@ export default function App() {
   return (
     <>
       <Header />
-      <main className="flex flex-col grow">
+      <main className="flex grow flex-col">
         <IntroSection />
         <ContributionsSection />
         <Footer />
