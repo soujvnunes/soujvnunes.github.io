@@ -23,11 +23,11 @@ export default function Card({
     <article
       aria-labelledby={labelId}
       aria-describedby={descriptionId}
-      className={cn(classNames.surface.primary, "p-2 rounded-2xl")}
+      className={cn(classNames.surface.primary, "rounded-2xl p-2")}
     >
       <header className="flex items-center">
         {startItem}
-        <h3 className="ml-2 font-bold truncate text-ellipsis" id={labelId}>
+        <h3 className="ml-2 truncate text-ellipsis font-bold" id={labelId}>
           {label}
         </h3>
         {endItem}
