@@ -1,13 +1,12 @@
-import { memo, useEffect, useRef, useState } from "react";
+import { memo } from "react";
+import useSvg, { type SvgProps, type Svgs } from "hooks/useSvg";
 import cn from "helpers/cn";
 
-export type IconProps = React.SVGProps<SVGSVGElement> & {
-  title?: string;
+export interface IconProps extends SvgProps {
   className?: string;
   size?: "sm" | "md";
-  name: "Behance" | "GitHub" | "LinkedIn" | "Medium" | "Polkamarkets" | "Ufal";
-};
-type SvgComponent = React.FunctionComponent<Omit<IconProps, "name">>;
+  name: Svgs;
+}
 
 export default memo(function Icon({
   name,
@@ -16,24 +15,7 @@ export default memo(function Icon({
   size = "md",
   ...props
 }: IconProps) {
-  const [Svg, setSvg] = useState<SvgComponent | null>(null);
-  const isMounted = useRef(true);
-
-  useEffect(() => {
-    if (isMounted.current) {
-      void (async function handlePath() {
-        const svg = (await import(`../assets/icons/${name}.svg?react`)) as {
-          default: SvgComponent;
-        };
-
-        setSvg(() => svg.default);
-      })();
-    }
-
-    return () => {
-      isMounted.current = false;
-    };
-  }, [name]);
+  const Svg = useSvg(name);
 
   return Svg ? (
     <Svg
