@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import classNames from "consts/classNames";
 import cn from "helpers/cn";
+import me from "assets/me.jpg";
 
 export default function IntroSection() {
   const [t] = useTranslation();
@@ -14,18 +15,18 @@ export default function IntroSection() {
     >
       <p className={cn("inline-block ml-1 lg:ml-2", classNames.text.secondary)}>
         <img
-          src="/me.jpg"
           className="inline-block w-10 h-10 lg:w-16 lg:h-16"
-          alt="Vite logo"
+          alt=""
+          src={me}
         />
         <strong className="ml-2">{t("intro_caption")}</strong>
       </p>
-      <h2 className="mb-3 text-5xl font-bold lg:mb-6 lg:text-8xl text-balance">
+      <h2 className={cn(classNames.text.headline, "mb-3 lg:mb-6 lg:text-8xl")}>
         {t("intro_title")}
       </h2>
       {/* 
       
-      todo: more about me
+      todo: more about me 
       <p>
         <button
           className={cn(
