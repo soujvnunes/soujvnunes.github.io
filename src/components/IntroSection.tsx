@@ -10,7 +10,7 @@ export default function IntroSection() {
     <section
       className={twMerge(
         classNames.container.root,
-        "flex grow flex-col justify-center pb-4 pt-4",
+        "flex grow flex-col justify-center pb-10 pt-10",
       )}
     >
       <p
