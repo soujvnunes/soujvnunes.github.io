@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
+import { twMerge } from "tailwind-merge";
 import classNames from "consts/classNames";
-import cn from "helpers/cn";
 import MaterialSymbols from "./MaterialSymbols";
 
 export default function ThemeButton() {
@@ -8,7 +8,11 @@ export default function ThemeButton() {
 
   return (
     <button
-      className={cn(classNames.button.root, classNames.button.text, "mr-2")}
+      className={twMerge(
+        classNames.button.root,
+        classNames.button.text,
+        "mr-2",
+      )}
       aria-label={t("change_mode.light")}
       title={t("change_mode.light")}
     >
@@ -16,3 +20,4 @@ export default function ThemeButton() {
     </button>
   );
 }
+ 
