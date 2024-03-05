@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
+import { twMerge } from "tailwind-merge";
 import classNames from "consts/classNames";
-import cn from "helpers/cn";
 import Icon from "./Icon";
 
 const socials = [
@@ -28,7 +28,7 @@ export default function Footer() {
 
   return (
     <footer
-      className={cn(
+      className={twMerge(
         classNames.surface.primary,
         classNames.container.root,
         "flex h-10 items-center text-xs",
