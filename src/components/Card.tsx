@@ -1,6 +1,6 @@
 import { useId } from "react";
+import { twMerge } from "tailwind-merge";
 import classNames from "consts/classNames";
-import cn from "helpers/cn";
 
 interface CardProps {
   children: React.ReactNode;
@@ -23,7 +23,7 @@ export default function Card({
     <article
       aria-labelledby={labelId}
       aria-describedby={descriptionId}
-      className={cn(classNames.surface.primary, "rounded-2xl p-2")}
+      className={twMerge(classNames.surface.primary, "rounded-2xl p-2")}
     >
       <header className="flex items-center">
         {startItem}
@@ -33,7 +33,7 @@ export default function Card({
         {endItem}
       </header>
       <p
-        className={cn(classNames.text.secondary, "pb-2 pl-12")}
+        className={twMerge(classNames.text.secondary, "pb-2 pl-12")}
         id={descriptionId}
       >
         {children}
