@@ -1,6 +1,6 @@
 import { memo } from "react";
+import { twMerge } from "tailwind-merge";
 import classNames from "consts/classNames";
-import cn from "helpers/cn";
 
 // Pairing each svg with its key to turn the usage predictable
 const svgs = {
@@ -35,7 +35,7 @@ export default memo(function Icon({
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
       aria-hidden={title ? undefined : "true"}
-      className={cn("fill-current", ...classNames.size[size], className)}
+      className={twMerge("fill-current", ...classNames.size[size], className)}
       {...props}
     />
   );
