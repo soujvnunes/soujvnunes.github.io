@@ -2,6 +2,7 @@ import { memo } from "react";
 import classNames from "consts/classNames";
 import cn from "helpers/cn";
 
+// Pairing each svg with its key to turn the usage predictable
 const svgs = {
   Behance: await import("./__svgs__/Behance.svg?react"),
   GitHub: await import("./__svgs__/GitHub.svg?react"),
