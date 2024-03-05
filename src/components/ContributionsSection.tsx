@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
+import { twMerge } from "tailwind-merge";
 import classNames from "consts/classNames";
-import cn from "helpers/cn";
 import Card from "./Card";
 import Icon from "./Icon";
 import MaterialSymbols from "./MaterialSymbols";
@@ -47,10 +47,10 @@ export default function ContributionsSection() {
   return (
     <section
       role="feed"
-      className={cn(classNames.container.root, "mb-4 lg:mb-6")}
+      className={twMerge(classNames.container.root, "mb-4 lg:mb-6")}
     >
       <h2
-        className={cn(
+        className={twMerge(
           classNames.text.secondary,
           classNames.text.title,
           "mb-2 lg:mb-4",
@@ -58,7 +58,7 @@ export default function ContributionsSection() {
       >
         {t("contributions_title")}
       </h2>
-      <ul className={cn(classNames.grid.root, classNames.grid.col[4][0])}>
+      <ul className={twMerge(classNames.grid.root, classNames.grid.col[4][0])}>
         {projects.map((project) => (
           <li key={project.href} className={classNames.grid.col[4][1]}>
             <Card
@@ -66,7 +66,7 @@ export default function ContributionsSection() {
               label={t(project.title)}
               startItem={
                 <span
-                  className={cn(
+                  className={twMerge(
                     ...classNames.size.lg,
                     "flex shrink-0 rounded-lg",
                     project.className.startItem,
@@ -81,7 +81,7 @@ export default function ContributionsSection() {
                   rel="noreferrer"
                   href={project.href}
                   aria-label={t("contributions_cta")}
-                  className={cn(
+                  className={twMerge(
                     classNames.button.root,
                     classNames.button.text,
                     "ml-auto",
