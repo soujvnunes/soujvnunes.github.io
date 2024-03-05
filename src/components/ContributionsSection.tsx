@@ -47,29 +47,28 @@ export default function ContributionsSection() {
   return (
     <section
       role="feed"
-      className={cn(classNames.container.root, "lg:mb-6 mb-4")}
+      className={cn(classNames.container.root, "mb-4 lg:mb-6")}
     >
       <h2
         className={cn(
           classNames.text.secondary,
-          "mb-2 font-bold lg:mb-4 text-2xl",
+          classNames.text.title,
+          "mb-2 lg:mb-4",
         )}
       >
         {t("contributions_title")}
       </h2>
-      <ul className="-mr-2 -mt-2 flex w-[calc(100%+0.5rem)] flex-wrap md:-mr-3 md:-mt-3 md:w-[calc(100%+0.75rem)] xl:-mr-4 xl:-mt-4 xl:w-[calc(100%+1rem)]">
+      <ul className={cn(classNames.grid.root, classNames.grid.col[4][0])}>
         {projects.map((project) => (
-          <li
-            key={project.href}
-            className="max-w-full grow-0 basis-full pr-2 pt-2 md:max-w-[50%] md:basis-1/2 md:pr-3 md:pt-3 xl:max-w-[25%] xl:basis-1/4 xl:pr-4 xl:pt-4"
-          >
+          <li key={project.href} className={classNames.grid.col[4][1]}>
             <Card
               href={project.href}
               label={t(project.title)}
               startItem={
                 <span
                   className={cn(
-                    "flex w-10 h-10 shrink-0 rounded-lg",
+                    ...classNames.size.lg,
+                    "flex shrink-0 rounded-lg",
                     project.className.startItem,
                   )}
                 >
