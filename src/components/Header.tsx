@@ -1,15 +1,15 @@
+import { twMerge } from "tailwind-merge";
 import classNames from "consts/classNames";
-import cn from "helpers/cn";
 import LanguageButton from "./LanguageButton";
 import SoujvnunesLogos from "./SoujvnunesLogos";
 
 export default function Header() {
   return (
     <header
-      className={cn(
-        "flex h-16 items-center",
+      className={twMerge(
         classNames.surface.primary,
         classNames.container.root,
+        "flex h-16 items-center",
       )}
     >
       <SoujvnunesLogos />
