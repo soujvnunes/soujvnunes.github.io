@@ -5,8 +5,9 @@
       "dark": "Change to dark mode"
     },
     "change_lang": "Mudar para idioma Português",
-    "intro_caption": "Hi, I'm Victor",
-    "intro_title": "Lemme build you something extraordinary!",
+    "intro_caption_title": "Hi, I'm",
+    "intro_caption_description": "UI/UX Designer & Frontend Developer",
+    "intro_title": "Lemme design you something extraordinary!",
     "intro_cta": "More about me",
     "contributions_title": "Contributions",
     "contributions_projects": [

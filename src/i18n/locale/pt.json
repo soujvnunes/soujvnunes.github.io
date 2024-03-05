@@ -5,8 +5,9 @@
       "dark": "Mudar para tema escuro"
     },
     "change_lang": "Change to English language",
-    "intro_caption": "Olá, sou o Victor",
-    "intro_title": "Construirei algo extraordinário para você!",
+    "intro_caption_title": "Olá, sou o",
+    "intro_caption_description": "Programador e Designer Web",
+    "intro_title": "Irei projetar algo extraordinário para você!",
     "intro_cta": "Mais sobre mim",
     "contributions_title": "Contribuições",
     "contributions_projects": [
