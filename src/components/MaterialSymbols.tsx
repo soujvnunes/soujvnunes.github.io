@@ -1,4 +1,4 @@
-import cn from "helpers/cn";
+import { twMerge } from "tailwind-merge";
 
 interface MaterialSymbolsProps {
   name: string;
@@ -10,7 +10,10 @@ export default function MaterialSymbols({
   className,
 }: MaterialSymbolsProps) {
   return (
-    <span aria-hidden className={cn("material-symbols-outlined", className)}>
+    <span
+      aria-hidden
+      className={twMerge("material-symbols-outlined", className)}
+    >
       {name}
     </span>
   );
