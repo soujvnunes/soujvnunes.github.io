@@ -21,8 +21,8 @@ export default defineConfig({
         replacement: "/src/consts",
       },
       {
-        find: "helpers",
-        replacement: "/src/helpers",
+        find: "config",
+        replacement: "/src/config",
       },
       {
         find: "components",
