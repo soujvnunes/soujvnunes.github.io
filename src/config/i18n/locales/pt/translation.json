@@ -1,0 +1,28 @@
+{
+  "change_mode": {
+    "light": "Mudar para tema claro",
+    "dark": "Mudar para tema escuro"
+  },
+  "change_lang": "Change to English language",
+  "intro_caption_title": "Olá, sou o",
+  "intro_caption_description": "Programador e Designer Web",
+  "intro_title": "Irei projetar algo extraordinário para você!",
+  "intro_cta": "Mais sobre mim",
+  "contributions_title": "Contribuições",
+  "contributions_projects": [
+    {
+      "title": "App Polkamarkets",
+      "description": "Revisão de design e implementação de interface/experiência de usuário integrada com serviços de carteira digital, como MetaMask."
+    },
+    {
+      "title": "UFAL 60 Anos",
+      "description": "Design e implementação de uma exposição virtual, mostrando a evolução da Universidade Federal de Alagoas."
+    },
+    {
+      "title": "Maneiras de Criar tokens de Design",
+      "description": "Artigo com passo-a-passo para criar tokens de design baseado em uma aplicação web já entregue e sem documentação."
+    }
+  ],
+  "contributions_cta": "Veja no ar",
+  "socials_label": "Visite meu perfil do {{name}}"
+}
