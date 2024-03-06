@@ -24,7 +24,7 @@ module.exports = {
           "/^react/",
           "module",
           "/consts/",
-          "/helpers/",
+          "/config/",
           "/hooks/",
           "/assets/",
           "/components/",
