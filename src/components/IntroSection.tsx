@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { twMerge } from "tailwind-merge";
 import classNames from "consts/classNames";
-import me from "assets/me.jpg";
+import me from "/me.jpg";
 
 export default function IntroSection() {
   const [t] = useTranslation();
