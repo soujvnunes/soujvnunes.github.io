@@ -38,23 +38,6 @@ export default function IntroSection() {
       >
         {t("intro_title")}
       </h2>
-      {/*  
-      
-      todo: more about me 
-      <p>
-        <button
-          className={twMerge(
-            "font-serif italic text-2xl",
-            classNames.text.secondary,
-          )}
-        >
-          {t("intro_cta")}
-          <MaterialSymbols
-            name="trending_flat"
-            className="ml-1 text-4xl align-middle wght-200"
-          />
-        </button>
-      </p> */}
     </section>
   );
 }
