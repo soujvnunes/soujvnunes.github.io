@@ -10,7 +10,7 @@ export default defineConfig({
     react(),
     webfontDownload([
       "https://use.typekit.net/bwb4cjf.css",
-      "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200",
+      "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0",
     ]),
     svgr(),
   ],
