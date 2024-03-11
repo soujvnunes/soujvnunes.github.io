@@ -13,11 +13,6 @@ export default function Header() {
       )}
     >
       <SoujvnunesLogos />
-      {/* 
-      
-      todo: mode changing
-
-      <ThemeButton /> */}
       <LanguageButton />
     </header>
   );
