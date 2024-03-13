@@ -4,25 +4,36 @@
     "dark": "Change to dark mode"
   },
   "change_lang": "Mudar para idioma Português",
+  "lang": "English",
   "intro_caption_title": "Hi, I'm",
   "intro_caption_description": "UI/UX Designer & Frontend Developer",
   "intro_title": "Lemme design you something extraordinary!",
   "intro_cta": "More about me",
   "contributions_title": "Contributions",
-  "contributions_projects": [
-    {
+  "contributions_projects_actions_label": "See {{action}}",
+  "contributions_projects_actions": {
+    "live": "live",
+    "contribution": "contribution",
+    "project": "project",
+    "article": "article"
+  },
+  "contributions_projects": {
+    "polkamarkets": {
       "title": "Polkamarkets App",
-      "description": "Design review and implementation of UI/UX to be integrated with MetaMask interface or other digital wallets services."
+      "description": "Design review and implementation of UI/UX to be integrated with MetaMask interface or other digital wallets services.",
+      "company": "Polkamarkets Labs"
     },
-    {
+    "ufal": {
       "title": "U.F.A.L. 60 Years",
-      "description": "Design and implementation of a virtual exhibition that shows the evolution of the Federal University of Alagoas."
+      "description": "Design and implementation of a virtual exhibition that shows the evolution of the Federal University of Alagoas.",
+      "company": "Federal University of Alagoas"
     },
-    {
+    "vitalk": {
       "title": "Ways to create Design Tokens",
-      "description": "Writing of step-by-step on how to create design tokens based on shipped web application and without documentation."
+      "description": "Right before Gympass US, LLC acquire Vitalk, becoming Wellz, I've written a step-by-step to extract design tokens from a live web service without documentation.",
+      "company": "Vitalk"
     }
-  ],
+  },
   "contributions_cta": "See live",
   "socials_label": "Visit my profile on {{name}}"
 }
