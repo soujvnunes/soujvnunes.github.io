@@ -4,12 +4,17 @@ import classNames from "consts/classNames";
 
 // Pairing each svg with its key to turn the usage predictable
 const svgs = {
+  ArrowOutward: await import("./__svgs__/ArrowOutward.svg?react"),
   Behance: await import("./__svgs__/Behance.svg?react"),
+  BeproNetwork: await import("./__svgs__/BeproNetwork.svg?react"),
   GitHub: await import("./__svgs__/GitHub.svg?react"),
+  Language: await import("./__svgs__/Language.svg?react"),
   LinkedIn: await import("./__svgs__/LinkedIn.svg?react"),
   Medium: await import("./__svgs__/Medium.svg?react"),
+  Pen: await import("./__svgs__/Pen.svg?react"),
   Polkamarkets: await import("./__svgs__/Polkamarkets.svg?react"),
   Ufal: await import("./__svgs__/Ufal.svg?react"),
+  Vitalk: await import("./__svgs__/Vitalk.svg?react"),
 };
 
 type Svgs = keyof typeof svgs;
@@ -35,7 +40,11 @@ export default memo(function Icon({
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
       aria-hidden={title ? undefined : "true"}
-      className={twMerge("fill-current", ...classNames.size[size], className)}
+      className={twMerge(
+        "inline-flex fill-current",
+        ...classNames.size[size],
+        className,
+      )}
       {...props}
     />
   );
