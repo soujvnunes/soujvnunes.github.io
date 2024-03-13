@@ -86,6 +86,29 @@ const projects: Projects[] = [
     },
   },
   {
+    id: "bepro",
+    actions: [
+      {
+        id: "live",
+        href: "https://app.bepro.network",
+        endItem: {
+          icon: "ArrowOutward",
+        },
+      },
+      {
+        id: "contribution",
+        href: "https://github.com/bepronetwork/web-network/commits?author=soujvnunes",
+        startItem: {
+          icon: "GitHub",
+        },
+      },
+    ],
+    startItem: {
+      className: "bg-gradient-to-br from-indigo-500/10 to-indigo-500/20",
+      icon: "BeproNetwork",
+    },
+  },
+  {
     id: "ufal",
     actions: [
       {
