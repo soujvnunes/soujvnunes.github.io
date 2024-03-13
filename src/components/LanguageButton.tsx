@@ -1,20 +1,23 @@
 import { useTranslation } from "react-i18next";
-import { twMerge } from "tailwind-merge";
-import classNames from "consts/classNames";
+import Button from "components/Button";
+import Icon from "./Icon";
 
 export default function LanguageButton() {
   const [t, i18n] = useTranslation();
   const title = t("change_lang");
 
   return (
-    <button
+    <Button
+      className="min-w-32"
       aria-label={title}
       title={title}
-      name={i18n.language === "en" ? "pt" : "en"}
-      className={twMerge(classNames.button.root, classNames.button.outline)}
-      onClick={(event) => void i18n.changeLanguage(event.currentTarget.name)}
+      value={i18n.language === "en" ? "pt" : "en"}
+      onClick={(event: React.MouseEvent<HTMLButtonElement>) =>
+        void i18n.changeLanguage(event.currentTarget.value)
+      }
+      endItem={<Icon name="Language" />}
     >
-      {i18n.language === "en" ? "en" : "pt"}
-    </button>
+      {t("lang")}
+    </Button>
   );
 }
