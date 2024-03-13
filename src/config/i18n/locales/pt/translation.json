@@ -32,6 +32,11 @@
       "title": "Maneiras de Criar tokens de Design",
       "description": "Pouco antes da Gympass US, LLC adquirir a Vitalk, passando a chamar-se Wellz, escrevi um passo-a-passo para extrair tokens de design baseados num serviço web já no ar e sem documentação.",
       "company": "Vitalk"
+    },
+    "bepro": {
+      "title": "App Bepro",
+      "description": "Implementação da interface de usuário para gerenciamento de tarefas baseadas no mercado de criptomoedas, integrada com serviços de carteira digital, como MetaMask.",
+      "company": "Bepro Network"
     }
   },
   "contributions_cta": "Veja no ar",

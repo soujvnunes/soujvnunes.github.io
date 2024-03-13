@@ -20,7 +20,7 @@
   "contributions_projects": {
     "polkamarkets": {
       "title": "Polkamarkets App",
-      "description": "Design review and implementation of UI/UX to be integrated with MetaMask interface or other digital wallets services.",
+      "description": "Design review and implementation of user interface to be integrated with MetaMask interface or other digital wallets services.",
       "company": "Polkamarkets Labs"
     },
     "ufal": {
@@ -32,6 +32,11 @@
       "title": "Ways to create Design Tokens",
       "description": "Right before Gympass US, LLC acquire Vitalk, becoming Wellz, I've written a step-by-step to extract design tokens from a live web service without documentation.",
       "company": "Vitalk"
+    },
+    "bepro": {
+      "title": "Bepro App",
+      "description": "User interface implementation of task-based crypto marketplace, integrating it with digital wallets services, such as MetaMask.",
+      "company": "Bepro Network"
     }
   },
   "contributions_cta": "See live",
