@@ -1,15 +1,17 @@
-import ContributionsSection from "components/ContributionsSection";
-import Footer from "components/Footer";
-import Header from "components/Header";
-import IntroSection from "components/IntroSection";
+import "config/i18n";
+import Contributions from "containers/Contributions";
+import Footer from "containers/Footer";
+import Header from "containers/Header";
+import Intro from "containers/Intro";
+import "./main.css";
 
 export default function App() {
   return (
     <>
       <Header />
       <main className="flex grow flex-col">
-        <IntroSection />
-        <ContributionsSection />
+        <Intro />
+        <Contributions />
         <Footer />
       </main>
     </>
