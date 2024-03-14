@@ -29,7 +29,7 @@ export default function Project({ id, actions, startItem }: ProjectProps) {
   const [t] = useTranslation();
 
   return (
-    <Card>
+    <Card className="@container">
       <CardHeader
         subhead={t(`contributions_projects.${id}.company`)}
         startItem={
@@ -47,7 +47,7 @@ export default function Project({ id, actions, startItem }: ProjectProps) {
         {t(`contributions_projects.${id}.title`)}
       </CardHeader>
       <CardContent>{t(`contributions_projects.${id}.description`)}</CardContent>
-      <CardFooter>
+      <CardFooter className="flex-col @xs:flex-row">
         {actions.map((action) => {
           const actionValue = t(`contributions_projects_actions.${action.id}`);
           const label = t("contributions_projects_actions_label", {
@@ -64,8 +64,8 @@ export default function Project({ id, actions, startItem }: ProjectProps) {
                 aria-label={label}
                 title={label}
                 href={action.href}
-                className={action.id === "live" ? "mr-auto" : ""}
-                variant={action.id === "live" ? "outline" : "text"}
+                className={action.id === "live" ? "@xs:mr-auto" : ""}
+                variant={action.id === "live" ? "outline" : "toned"}
                 endItem={
                   "endItem" in action && <Icon name={action.endItem.icon} />
                 }
