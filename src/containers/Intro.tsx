@@ -3,7 +3,7 @@ import { twMerge } from "tailwind-merge";
 import classNames from "consts/classNames";
 import me from "/me.jpg";
 
-export default function IntroSection() {
+export default function Intro() {
   const [t] = useTranslation();
 
   return (
