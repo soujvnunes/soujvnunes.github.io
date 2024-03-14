@@ -16,7 +16,9 @@ export default function Footer() {
         <SoujvnunesSymbol className="text-base" /> (c){" "}
         {new Date().getFullYear()}
       </span>
-      <FooterSocials />
+      <ul className="ml-auto flex space-x-1">
+        <FooterSocials />
+      </ul>
     </footer>
   );
 }
