@@ -1,3 +1,4 @@
+import { useId } from "react";
 import { useTranslation } from "react-i18next";
 import { twMerge } from "tailwind-merge";
 import classNames from "consts/classNames";
@@ -5,13 +6,12 @@ import ContributionsSectionProjects from "./ContributionsSectionProjects";
 
 export default function ContributionsSection() {
   const [t] = useTranslation();
+  const labelId = useId();
 
   return (
-    <section
-      role="feed"
-      className={twMerge(classNames.container.root, "mb-4 lg:mb-6")}
-    >
+    <section className={twMerge(classNames.container.root, "mb-4 lg:mb-6")}>
       <h2
+        id={labelId}
         className={twMerge(
           classNames.text.secondary,
           classNames.text.title,
@@ -20,7 +20,14 @@ export default function ContributionsSection() {
       >
         {t("contributions_title")}
       </h2>
-      <ContributionsSectionProjects />
+      <ul
+        role="feed"
+        aria-busy="false"
+        aria-labelledby={labelId}
+        className={twMerge(classNames.grid.root, classNames.grid.col[4][0])}
+      >
+        <ContributionsSectionProjects />
+      </ul>
     </section>
   );
 }
