@@ -2,9 +2,9 @@ import { useId } from "react";
 import { useTranslation } from "react-i18next";
 import { twMerge } from "tailwind-merge";
 import classNames from "consts/classNames";
-import ContributionsSectionProjects from "./ContributionsSectionProjects";
+import ContributionsProjects from "./ContributionsProjects";
 
-export default function ContributionsSection() {
+export default function Contributions() {
   const [t] = useTranslation();
   const labelId = useId();
 
@@ -26,7 +26,7 @@ export default function ContributionsSection() {
         aria-labelledby={labelId}
         className={twMerge(classNames.grid.root, classNames.grid.col[4][0])}
       >
-        <ContributionsSectionProjects />
+        <ContributionsProjects />
       </ul>
     </section>
   );
