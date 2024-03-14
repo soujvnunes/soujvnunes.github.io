@@ -3,9 +3,12 @@ import { twMerge } from "tailwind-merge";
 import classNames from "consts/classNames";
 import { CardContext } from "hooks/useCard";
 
-type CardProps = Pick<React.ComponentPropsWithoutRef<"article">, "children">;
+type CardProps = Pick<
+  React.ComponentPropsWithoutRef<"article">,
+  "children" | "className"
+>;
 
-export default function Card({ children }: CardProps) {
+export default function Card({ className, ...props }: CardProps) {
   const labelId = useId();
   const descriptionId = useId();
   const [ids] = useState({
@@ -21,10 +24,10 @@ export default function Card({ children }: CardProps) {
         className={twMerge(
           classNames.surface.primary,
           "flex h-full flex-col rounded-2xl p-2",
+          className,
         )}
-      >
-        {children}
-      </article>
+        {...props}
+      />
     </CardContext.Provider>
   );
 }
