@@ -24,6 +24,10 @@ export interface IconProps extends React.ComponentPropsWithoutRef<"svg"> {
   size?: "sm" | "md";
   name: Svgs;
 }
+export type IconName<
+  T extends TIconName | (string & NonNullable<unknown>) = string,
+  TIconName = IconProps["name"],
+> = T extends TIconName ? Extract<TIconName, T> : TIconName;
 
 export default memo(function Icon({
   name,
