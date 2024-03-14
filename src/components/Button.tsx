@@ -49,7 +49,7 @@ type ButtonProps<C extends React.ElementType = DefaultElement> =
       startItem?: React.ReactNode;
       endItem?: React.ReactNode;
       size?: "sm" | "md";
-      variant?: "text" | "outline";
+      variant?: "text" | "outline" | "toned";
     }
   >;
 
