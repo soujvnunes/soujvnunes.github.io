@@ -1,8 +1,13 @@
 import SoujvnunesSymbol from "./SoujvnunesSymbol";
 
-export default function SoujvnunesLogos() {
+type SoujvnunesLogosProps = Pick<
+  React.ComponentPropsWithoutRef<"strong">,
+  "className"
+>;
+
+export default function SoujvnunesLogos(props: SoujvnunesLogosProps) {
   return (
-    <strong>
+    <strong {...props}>
       sou
       <SoujvnunesSymbol />
       unes
