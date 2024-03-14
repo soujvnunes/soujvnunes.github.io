@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
+import Button from "components/Button";
 import Icon from "components/Icon";
-import Button from "./Button";
 
 const socials = [
   {
