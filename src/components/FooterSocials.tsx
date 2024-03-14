@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import Icon from "components/Icon";
+import Button from "./Button";
 
 const socials = [
   {
@@ -24,27 +25,25 @@ const socials = [
 export default function FooterSocials() {
   const [t] = useTranslation();
 
-  return (
-    <ul className="ml-auto flex space-x-4">
-      {socials.map(({ name, href }) => {
-        const title = t("socials_label", {
-          name,
-        });
+  return socials.map(({ name, href }) => {
+    const title = t("socials_label", {
+      name,
+    });
 
-        return (
-          <li key={name}>
-            <a
-              className="text-black/60 hover:text-black/80 dark:text-white/80 dark:hover:text-white"
-              target="_blank"
-              rel="noreferrer"
-              title={title}
-              href={href}
-            >
-              <Icon name={name} title={title} />
-            </a>
-          </li>
-        );
-      })}
-    </ul>
-  );
+    return (
+      <li key={name}>
+        <Button
+          as="a"
+          size="sm"
+          variant="text"
+          target="_blank"
+          rel="noreferrer"
+          title={title}
+          href={href}
+        >
+          <Icon name={name} title={title} />
+        </Button>
+      </li>
+    );
+  });
 }
