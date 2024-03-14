@@ -23,11 +23,11 @@ module.exports = {
         groups: [
           "/^react/",
           "module",
-          "/consts/",
-          "/config/",
-          "/hooks/",
-          "/assets/",
-          "/components/",
+          "/^consts/",
+          "/^config/",
+          "/^hooks/",
+          "/^components/",
+          "/^containers/",
           ["parent", "sibling", "index"],
         ],
         alphabetize: {
