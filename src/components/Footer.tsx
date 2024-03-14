@@ -13,7 +13,8 @@ export default function Footer() {
       )}
     >
       <span className={classNames.text.secondary}>
-        <SoujvnunesSymbol /> (c) {new Date().getFullYear()}
+        <SoujvnunesSymbol className="text-base" /> (c){" "}
+        {new Date().getFullYear()}
       </span>
       <FooterSocials />
     </footer>
