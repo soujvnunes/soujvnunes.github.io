@@ -143,71 +143,65 @@ const projects: Projects[] = [
 export default function ContributionsSectionProjects() {
   const [t] = useTranslation();
 
-  return (
-    <ul className={twMerge(classNames.grid.root, classNames.grid.col[4][0])}>
-      {projects.map((project) => (
-        <li key={project.id} className={classNames.grid.col[4][1]}>
-          <Card>
-            <CardHeader
-              subhead={t(`contributions_projects.${project.id}.company`)}
-              startItem={
-                <span
-                  className={twMerge(
-                    ...classNames.size.lg,
-                    "flex shrink-0 rounded-lg",
-                    project.startItem.className,
-                  )}
-                >
-                  <Icon className="m-auto" name={project.startItem.icon} />
-                </span>
-              }
+  return projects.map((project) => (
+    <li key={project.id} className={classNames.grid.col[4][1]}>
+      <Card>
+        <CardHeader
+          subhead={t(`contributions_projects.${project.id}.company`)}
+          startItem={
+            <span
+              className={twMerge(
+                ...classNames.size.lg,
+                "flex shrink-0 rounded-lg",
+                project.startItem.className,
+              )}
             >
-              {t(`contributions_projects.${project.id}.title`)}
-            </CardHeader>
-            <CardContent>
-              {t(`contributions_projects.${project.id}.description`)}
-            </CardContent>
-            <CardFooter>
-              {project.actions.map((action) => {
-                const actionValue = t(
-                  `contributions_projects_actions.${action.id}`,
-                );
-                const label = t("contributions_projects_actions_label", {
-                  action: actionValue,
-                });
+              <Icon className="m-auto" name={project.startItem.icon} />
+            </span>
+          }
+        >
+          {t(`contributions_projects.${project.id}.title`)}
+        </CardHeader>
+        <CardContent>
+          {t(`contributions_projects.${project.id}.description`)}
+        </CardContent>
+        <CardFooter>
+          {project.actions.map((action) => {
+            const actionValue = t(
+              `contributions_projects_actions.${action.id}`,
+            );
+            const label = t("contributions_projects_actions_label", {
+              action: actionValue,
+            });
 
-                return (
-                  <Fragment key={action.id}>
-                    <Button
-                      as="a"
-                      size="sm"
-                      target="_blank"
-                      rel="noreferrer"
-                      aria-label={label}
-                      title={label}
-                      href={action.href}
-                      className={action.id === "live" ? "mr-auto" : ""}
-                      variant={action.id === "live" ? "outline" : "text"}
-                      endItem={
-                        "endItem" in action && (
-                          <Icon name={action.endItem.icon} />
-                        )
-                      }
-                      startItem={
-                        "startItem" in action && (
-                          <Icon name={action.startItem.icon} />
-                        )
-                      }
-                    >
-                      {actionValue}
-                    </Button>
-                  </Fragment>
-                );
-              })}
-            </CardFooter>
-          </Card>
-        </li>
-      ))}
-    </ul>
-  );
+            return (
+              <Fragment key={action.id}>
+                <Button
+                  as="a"
+                  size="sm"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={label}
+                  title={label}
+                  href={action.href}
+                  className={action.id === "live" ? "mr-auto" : ""}
+                  variant={action.id === "live" ? "outline" : "text"}
+                  endItem={
+                    "endItem" in action && <Icon name={action.endItem.icon} />
+                  }
+                  startItem={
+                    "startItem" in action && (
+                      <Icon name={action.startItem.icon} />
+                    )
+                  }
+                >
+                  {actionValue}
+                </Button>
+              </Fragment>
+            );
+          })}
+        </CardFooter>
+      </Card>
+    </li>
+  ));
 }
