@@ -1,3 +1,4 @@
+import containerQueries from "@tailwindcss/container-queries";
 import defaultTheme from "tailwindcss/defaultTheme";
 
 /** @type {import('tailwindcss').Config} */
@@ -11,5 +12,5 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [containerQueries],
 };
