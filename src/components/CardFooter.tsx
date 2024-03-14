@@ -1,8 +1,15 @@
+import { twMerge } from "tailwind-merge";
+
 type CardFooterProps = Pick<
   React.ComponentPropsWithoutRef<"footer">,
-  "children"
+  "children" | "className"
 >;
 
-export default function CardFooter(props: CardFooterProps) {
-  return <footer className="mt-auto flex justify-end gap-1" {...props} />;
+export default function CardFooter({ className, ...props }: CardFooterProps) {
+  return (
+    <footer
+      className={twMerge("mt-auto flex justify-end gap-1", className)}
+      {...props}
+    />
+  );
 }
