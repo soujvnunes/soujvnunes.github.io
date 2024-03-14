@@ -21,9 +21,9 @@ const classNames = {
       md: "h-10 min-w-10 pl-2 pr-2",
     },
     variant: {
-      text: "text-black/60 hover:text-black/80 dark:text-white/60 dark:hover:text-white hover:bg-black/10 dark:hover:bg-white/10",
+      text: "text-black/80 dark:text-white hover:bg-black/10 dark:hover:bg-white/10",
       outline:
-        "text-black/60 hover:text-black/80 dark:text-white/60 dark:hover:text-white border border-black/20 hover:border-black/40 hover:bg-black/10 dark:border-white/20 dark:hover:border-white/40 dark:hover:bg-white/10",
+        "text-black/80 dark:text-white border border-black/20 hover:border-black/40 hover:bg-black/10 dark:border-white/20 dark:hover:border-white/40 dark:hover:bg-white/10",
     },
   },
   text: {
