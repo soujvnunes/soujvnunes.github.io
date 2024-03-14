@@ -1,7 +1,7 @@
 import { twMerge } from "tailwind-merge";
 import classNames from "consts/classNames";
 import Icon from "components/Icon";
-import LanguageButton from "./LanguageButton";
+import ToggleLanguage from "./ToggleLanguage";
 import SoujvnunesLogos from "./SoujvnunesLogos";
 
 export default function Header() {
@@ -21,7 +21,7 @@ export default function Header() {
           <strong>engineer</strong>
         </h1>
       </a>
-      <LanguageButton />
+      <ToggleLanguage />
     </header>
   );
 }
