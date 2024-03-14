@@ -26,12 +26,12 @@ export default defineConfig({
         replacement: "/src/components",
       },
       {
-        find: "hooks",
-        replacement: "/src/hooks",
+        find: "containers",
+        replacement: "/src/containers",
       },
       {
-        find: "assets",
-        replacement: "/src/assets",
+        find: "hooks",
+        replacement: "/src/hooks",
       },
     ],
   },
