@@ -1,15 +1,3 @@
-const className = {
-  size: {
-    x2s: ["w-2", "h-2"],
-    xs: ["w-3", "h-3"],
-    sm: ["w-4", "h-4"],
-    md: ["w-6", "h-6"],
-    lg: ["w-10", "h-10"],
-    xl: ["w-16", "h-16"],
-    x2l: ["w-24", "h-24"],
-  },
-} as const;
-
 const classNames = {
   container: {
     root: "pl-4 pr-4 lg:pl-8 lg:pr-8",
@@ -21,9 +9,11 @@ const classNames = {
       md: "h-10 min-w-10 pl-2 pr-2",
     },
     variant: {
-      text: "text-black/80 dark:text-white hover:bg-black/10 dark:hover:bg-white/10",
+      toned:
+        "text-black/80 dark:text-white bg-black/10 dark:bg-white/10 hover:bg-black/20 dark:hover:bg-white/20 transition-colors",
+      text: "text-black/80 dark:text-white hover:bg-black/10 dark:hover:bg-white/10 transition-colors",
       outline:
-        "text-black/80 dark:text-white border border-black/20 hover:border-black/40 hover:bg-black/10 dark:border-white/20 dark:hover:border-white/40 dark:hover:bg-white/10",
+        "transition-colors text-black/80 dark:text-white border border-black/20 hover:border-black/40 hover:bg-black/10 dark:border-white/20 dark:hover:border-white/40 dark:hover:bg-white/10",
     },
   },
   text: {
@@ -45,7 +35,15 @@ const classNames = {
     },
   },
   /** [size]: [width, height] */
-  size: className.size,
+  size: {
+    x2s: ["w-2", "h-2"],
+    xs: ["w-3", "h-3"],
+    sm: ["w-4", "h-4"],
+    md: ["w-6", "h-6"],
+    lg: ["w-10", "h-10"],
+    xl: ["w-16", "h-16"],
+    x2l: ["w-24", "h-24"],
+  },
 } as const;
 
 export default classNames;
