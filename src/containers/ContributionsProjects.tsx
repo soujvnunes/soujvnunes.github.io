@@ -1,5 +1,5 @@
 import classNames from "consts/classNames";
-import Project, { ProjectProps } from "./Project";
+import Project, { type ProjectProps } from "./Project";
 
 const projects: ProjectProps[] = [
   {
