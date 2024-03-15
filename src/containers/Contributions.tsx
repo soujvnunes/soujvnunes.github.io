@@ -9,7 +9,7 @@ export default function Contributions() {
   const labelId = useId();
 
   return (
-    <section className={twMerge(classNames.container.root, "mb-4 lg:mb-6")}>
+    <section className={classNames.container.root}>
       <h2
         id={labelId}
         className={twMerge(
