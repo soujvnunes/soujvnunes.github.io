@@ -9,14 +9,14 @@ export default function Footer() {
       className={twMerge(
         classNames.surface.primary,
         classNames.container.root,
-        "flex h-10 items-center text-xs",
+        "flex h-10 items-center",
       )}
     >
-      <span className={classNames.text.secondary}>
-        <SoujvnunesSymbol className="text-base" /> (c){" "}
-        {new Date().getFullYear()}
-      </span>
-      <ul className="ml-auto flex space-x-1">
+      <p className={twMerge(classNames.text.secondary, "leading-[0]")}>
+        <SoujvnunesSymbol />
+        <span className="text-xs"> &copy; {new Date().getFullYear()}</span>
+      </p>
+      <ul className="ml-auto space-x-1">
         <FooterSocials />
       </ul>
     </footer>
