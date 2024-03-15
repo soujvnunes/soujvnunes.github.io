@@ -34,7 +34,6 @@ export default function FooterSocials() {
       <li className="inline-block" key={name}>
         <Button
           as="a"
-          size="sm"
           variant="text"
           target="_blank"
           rel="noreferrer"
