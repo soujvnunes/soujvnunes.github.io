@@ -31,7 +31,7 @@ export default function FooterSocials() {
     });
 
     return (
-      <li key={name}>
+      <li className="inline-block" key={name}>
         <Button
           as="a"
           size="sm"
