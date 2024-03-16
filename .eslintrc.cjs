@@ -25,6 +25,7 @@ module.exports = {
           "module",
           "/^consts/",
           "/^config/",
+          "/^helpers/",
           "/^hooks/",
           "/^components/",
           "/^containers/",
