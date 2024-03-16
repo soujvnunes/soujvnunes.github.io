@@ -11,25 +11,28 @@ import Icon, { type IconName } from "components/Icon";
 
 export interface ProjectProps {
   id: string;
+  startItem: { icon: IconName; className: string };
+  endItem?: { href: string };
   actions: ((
-    | { endItem: { icon: IconName<"ArrowOutward"> }; id: "live" }
     | { startItem: { icon: IconName<"GitHub"> }; id: "contribution" }
     | { startItem: { icon: IconName<"Behance"> }; id: "project" }
     | { startItem: { icon: IconName<"Medium"> }; id: "article" }
   ) & {
     href: string;
   })[];
-  startItem: {
-    icon: IconName;
-    className: string;
-  };
 }
 
-export default function Project({ id, actions, startItem }: ProjectProps) {
+export default function Project({
+  id,
+  actions,
+  startItem,
+  endItem,
+}: ProjectProps) {
   const [t] = useTranslation();
+  const endItemLabel = t("contributions_title_visit_label");
 
   return (
-    <Card className="@container">
+    <Card>
       <CardHeader
         subhead={t(`contributions_projects.${id}.company`)}
         startItem={
@@ -43,11 +46,27 @@ export default function Project({ id, actions, startItem }: ProjectProps) {
             <Icon className="m-auto" name={startItem.icon} />
           </span>
         }
+        endItem={
+          endItem?.href && (
+            <Button
+              as="a"
+              target="_blank"
+              rel="noreferrer"
+              variant="text"
+              aria-label={endItemLabel}
+              title={endItemLabel}
+              href={endItem.href}
+              endItem={<Icon name="ArrowOutward" />}
+            >
+              {t("contributions_title_visit")}
+            </Button>
+          )
+        }
       >
         {t(`contributions_projects.${id}.title`)}
       </CardHeader>
       <CardContent>{t(`contributions_projects.${id}.description`)}</CardContent>
-      <CardFooter className="flex-col @xs:flex-row">
+      <CardFooter>
         {actions.map((action) => {
           const actionValue = t(`contributions_projects_actions.${action.id}`);
           const label = t("contributions_projects_actions_label", {
@@ -61,17 +80,11 @@ export default function Project({ id, actions, startItem }: ProjectProps) {
                 size="sm"
                 target="_blank"
                 rel="noreferrer"
+                variant="outline"
                 aria-label={label}
                 title={label}
                 href={action.href}
-                className={action.id === "live" ? "@xs:mr-auto" : ""}
-                variant={action.id === "live" ? "outline" : "toned"}
-                endItem={
-                  "endItem" in action && <Icon name={action.endItem.icon} />
-                }
-                startItem={
-                  "startItem" in action && <Icon name={action.startItem.icon} />
-                }
+                startItem={<Icon name={action.startItem.icon} />}
               >
                 {actionValue}
               </Button>
