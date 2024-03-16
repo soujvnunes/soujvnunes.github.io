@@ -10,9 +10,10 @@
   "intro_title": "Irei projetar algo extraordinário para você!",
   "intro_cta": "Mais sobre mim",
   "contributions_title": "Contribuições",
+  "contributions_title_visit": "Visitar",
+  "contributions_title_visit_label": "Visitar website do projeto",
   "contributions_projects_actions_label": "Ver {{action}}",
   "contributions_projects_actions": {
-    "live": "ao vivo",
     "contribution": "contribuição",
     "project": "projeto",
     "article": "artigo"

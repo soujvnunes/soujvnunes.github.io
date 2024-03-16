@@ -10,9 +10,10 @@
   "intro_title": "Lemme design you something extraordinary!",
   "intro_cta": "More about me",
   "contributions_title": "Contributions",
+  "contributions_title_visit": "Visit",
+  "contributions_title_visit_label": "Visit website project",
   "contributions_projects_actions_label": "See {{action}}",
   "contributions_projects_actions": {
-    "live": "live",
     "contribution": "contribution",
     "project": "project",
     "article": "article"
