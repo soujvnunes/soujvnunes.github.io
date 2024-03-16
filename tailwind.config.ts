@@ -1,7 +1,6 @@
-import containerQueries from "@tailwindcss/container-queries";
+import { type Config } from "tailwindcss";
 import defaultTheme from "tailwindcss/defaultTheme";
 
-/** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
@@ -12,5 +11,5 @@ export default {
       },
     },
   },
-  plugins: [containerQueries],
-};
+  plugins: [require("@headlessui/tailwindcss")],
+} satisfies Config;
