@@ -6,13 +6,6 @@ const projects: ProjectProps[] = [
     id: "polkamarkets",
     actions: [
       {
-        id: "live",
-        href: "https://app.polkamarkets.com/",
-        endItem: {
-          icon: "ArrowOutward",
-        },
-      },
-      {
         id: "contribution",
         href: "https://github.com/Polkamarkets/polkamarkets-web/commits?author=soujvnunes",
         startItem: {
@@ -20,6 +13,9 @@ const projects: ProjectProps[] = [
         },
       },
     ],
+    endItem: {
+      href: "https://app.polkamarkets.com/",
+    },
     startItem: {
       className: "bg-gradient-to-br from-blue-500/10 to-blue-500/20",
       icon: "Polkamarkets",
@@ -45,13 +41,6 @@ const projects: ProjectProps[] = [
     id: "bepro",
     actions: [
       {
-        id: "live",
-        href: "https://app.bepro.network",
-        endItem: {
-          icon: "ArrowOutward",
-        },
-      },
-      {
         id: "contribution",
         href: "https://github.com/bepronetwork/web-network/commits?author=soujvnunes",
         startItem: {
@@ -63,17 +52,13 @@ const projects: ProjectProps[] = [
       className: "bg-gradient-to-br from-indigo-500/10 to-indigo-500/20",
       icon: "BeproNetwork",
     },
+    endItem: {
+      href: "https://app.bepro.network",
+    },
   },
   {
     id: "ufal",
     actions: [
-      {
-        id: "live",
-        href: "https://sites.ufal.br/ufal-60-anos/",
-        endItem: {
-          icon: "ArrowOutward",
-        },
-      },
       {
         id: "contribution",
         href: "https://github.com/soujvnunes/virtual-exhibition/commits?author=soujvnunes",
@@ -92,6 +77,9 @@ const projects: ProjectProps[] = [
     startItem: {
       className: "bg-gradient-to-br from-fuchsia-500/10 to-fuchsia-500/20",
       icon: "Ufal",
+    },
+    endItem: {
+      href: "https://sites.ufal.br/ufal-60-anos/",
     },
   },
 ];
