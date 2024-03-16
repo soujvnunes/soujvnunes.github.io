@@ -15,7 +15,7 @@ export default function Intro() {
     >
       <p
         className={twMerge(
-          classNames.text.secondary,
+          classNames.text.color.secondary,
           "mb-2 ml-1 flex items-center gap-2 lg:ml-2 lg:gap-3",
         )}
       >
@@ -32,7 +32,7 @@ export default function Intro() {
       </p>
       <h2
         className={twMerge(
-          classNames.text.headline,
+          classNames.text.variant.headline,
           "mb-3 lg:mb-6 lg:text-8xl",
         )}
       >
