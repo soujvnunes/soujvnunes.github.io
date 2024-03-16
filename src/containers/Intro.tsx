@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { twMerge } from "tailwind-merge";
 import classNames from "consts/classNames";
+import Image from "components/Image";
 import me from "/me.jpg";
 
 export default function Intro() {
@@ -19,7 +20,7 @@ export default function Intro() {
           "mb-2 ml-1 flex items-center gap-2 lg:ml-2 lg:gap-3",
         )}
       >
-        <img alt="" className="h-10 w-10 rounded-lg lg:h-16 lg:w-16" src={me} />
+        <Image alt="" size="lg" radius="2xs" src={me} />
         <span className="font-bold">
           <span className="lg:text-xl">
             {t("intro_caption_title")}{" "}
