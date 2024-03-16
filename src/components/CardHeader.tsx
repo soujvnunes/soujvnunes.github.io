@@ -1,3 +1,5 @@
+import { twMerge } from "tailwind-merge";
+import classNames from "consts/classNames";
 import useCard from "hooks/useCard";
 
 interface CardProps
@@ -16,14 +18,17 @@ export default function CardHeader({
   const card = useCard();
 
   return (
-    <header className="flex items-center pr-2">
+    <header className="flex items-center">
       {startItem}
-      <h3
-        className="ml-2 mr-auto truncate text-ellipsis font-bold"
-        id={card.labelId}
-      >
+      <h3 className="ml-2 mr-auto truncate font-bold" id={card.labelId}>
         {children}
-        <small className="block text-black/60 dark:text-white/60">
+        <small
+          className={twMerge(
+            classNames.text.color.secondary,
+            classNames.text.variant.caption,
+            "block",
+          )}
+        >
           {subhead}
         </small>
       </h3>
