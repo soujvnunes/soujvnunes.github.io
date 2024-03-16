@@ -13,8 +13,8 @@ export default function Contributions() {
       <h2
         id={labelId}
         className={twMerge(
-          classNames.text.secondary,
-          classNames.text.title,
+          classNames.text.color.secondary,
+          classNames.text.variant.title,
           "mb-2 lg:mb-4",
         )}
       >
