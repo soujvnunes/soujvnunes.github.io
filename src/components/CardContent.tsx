@@ -9,7 +9,10 @@ export default function CardContent({ children }: CardContentProps) {
 
   return (
     <p
-      className={twMerge(classNames.text.secondary, "pb-2 pl-2 pr-2 pt-2")}
+      className={twMerge(
+        classNames.text.color.secondary,
+        "pb-2 pl-2 pr-2 pt-2",
+      )}
       id={card.descriptionId}
     >
       {children}
