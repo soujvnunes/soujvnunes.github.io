@@ -1,9 +1,20 @@
+const text = {
+  color: {
+    secondary: "text-black/60 dark:text-white/60",
+  },
+  variant: {
+    headline: "text-balance text-5xl font-bold",
+    title: "text-2xl font-bold",
+    caption: "text-xs uppercase font-bold tracking-wide",
+  },
+};
+
 const classNames = {
   container: {
     root: "pl-4 pr-4 lg:pl-8 lg:pr-8",
   },
   button: {
-    root: "flex items-center justify-center rounded-lg text-xs font-bold uppercase",
+    root: `flex items-center justify-center rounded-lg ${text.variant.caption}`,
     size: {
       sm: "h-8 min-w-8 pl-1 pr-1",
       md: "h-10 min-w-10 pl-2 pr-2",
@@ -16,11 +27,7 @@ const classNames = {
         "border border-black/20 text-black/80 transition-colors hover:border-black/40 hover:bg-black/10 dark:border-white/20 dark:text-white dark:hover:border-white/40 dark:hover:bg-white/10",
     },
   },
-  text: {
-    secondary: "text-black/60 dark:text-white/60",
-    headline: "text-balance text-5xl font-bold",
-    title: "text-2xl font-bold",
-  },
+  text,
   surface: {
     primary: "bg-white dark:bg-stone-800",
   },
