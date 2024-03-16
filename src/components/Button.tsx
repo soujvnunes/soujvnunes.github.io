@@ -48,7 +48,9 @@ type ButtonProps<C extends React.ElementType = DefaultElement> =
     {
       startItem?: React.ReactNode;
       endItem?: React.ReactNode;
+      /** @default md */
       size?: "sm" | "md";
+      /** @default outline */
       variant?: "text" | "outline" | "toned";
     }
   >;
