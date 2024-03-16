@@ -8,7 +8,7 @@ export default function Footer() {
     <footer
       className={twMerge(classNames.container.root, "flex h-16 items-center")}
     >
-      <p className={twMerge(classNames.text.secondary, "leading-[0]")}>
+      <p className={twMerge(classNames.text.color.secondary, "leading-[0]")}>
         <SoujvnunesSymbol />
         <span className="text-xs"> &copy; {new Date().getFullYear()}</span>
       </p>
