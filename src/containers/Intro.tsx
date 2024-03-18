@@ -14,12 +14,12 @@ export default function Intro() {
       )}
     >
       <p className={twMerge("mb-2 inline-flex items-center")}>
-        <IntroMemoji className="-mr-16 h-24 lg:-mr-28 lg:h-40" />
+        <IntroMemoji className="-mr-11 h-24 w-24 lg:-mr-20 lg:h-40 lg:w-40" />
         <span
           className={twMerge(
             classNames.text.color.secondary,
             classNames.surface.primary,
-            "rounded-full px-7 py-4 font-bold lg:px-14 lg:py-8 lg:text-xl",
+            "rounded-br-full rounded-tr-full px-6 py-4 font-bold lg:px-12 lg:py-8 lg:text-xl",
           )}
         >
           {t("intro_caption_title")}{" "}
