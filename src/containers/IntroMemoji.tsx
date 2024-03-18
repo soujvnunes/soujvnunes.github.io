@@ -31,6 +31,7 @@ export default function IntroMemoji({
   return (
     <span className={twMerge("inline-block overflow-hidden", className)}>
       <video
+        playsInline
         autoPlay
         muted
         crossOrigin="anonymous"
