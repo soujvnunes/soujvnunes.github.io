@@ -1,8 +1,8 @@
 import { useRef } from "react";
 import { twMerge } from "tailwind-merge";
 import Image from "components/Image";
-import me from "/me.jpg";
-import memoji from "/me.mov";
+import memoji from "/memoji.mov";
+import memoji_fallback from "/memoji.png";
 
 export default function IntroMemoji({
   className,
@@ -31,16 +31,18 @@ export default function IntroMemoji({
   return (
     <span className={twMerge("inline-block overflow-hidden", className)}>
       <video
-        playsInline
-        autoPlay
         muted
+        autoPlay
+        playsInline
+        preload="metadata"
         crossOrigin="anonymous"
         className="h-full scale-150"
-        src={memoji}
         ref={video}
+        src={memoji}
+        poster={memoji_fallback}
         onTimeUpdate={handleTimeUpdate}
       >
-        <Image alt="" size="lg" radius="2xs" src={me} />
+        <Image alt="" className="h-full scale-150" src={memoji_fallback} />
       </video>
     </span>
   );
