@@ -35,7 +35,7 @@ export default function IntroMemoji({
         autoPlay
         muted
         crossOrigin="anonymous"
-        className="h-full scale-125"
+        className="h-full scale-150"
         src={memoji}
         ref={video}
         onTimeUpdate={handleTimeUpdate}
