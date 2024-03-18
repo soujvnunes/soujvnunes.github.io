@@ -14,7 +14,7 @@ export default function Intro() {
       )}
     >
       <p className={twMerge("mb-2 inline-flex items-center")}>
-        <IntroMemoji className="-mr-11 h-24 w-24 lg:-mr-20 lg:h-40 lg:w-40" />
+        <IntroMemoji />
         <span
           className={twMerge(
             classNames.text.color.secondary,
