@@ -1,8 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { twMerge } from "tailwind-merge";
 import classNames from "consts/classNames";
-import Image from "components/Image";
-import me from "/me.jpg";
+import IntroMemoji from "./IntroMemoji";
 
 export default function Intro() {
   const [t] = useTranslation();
@@ -11,24 +10,20 @@ export default function Intro() {
     <section
       className={twMerge(
         classNames.container.root,
-        "flex min-h-64 grow flex-col justify-center pb-10 pt-10",
+        "min-h-64 grow pb-10 pt-10 text-center",
       )}
     >
-      <p
-        className={twMerge(
-          classNames.text.color.secondary,
-          "mb-2 ml-1 flex items-center gap-2 lg:ml-2 lg:gap-3",
-        )}
-      >
-        <Image alt="" size="lg" radius="2xs" src={me} />
-        <span className="font-bold">
-          <span className="lg:text-xl">
-            {t("intro_caption_title")}{" "}
-            <span className="text-black/80 dark:text-white">Victor</span>
-          </span>
-          <span className="block max-lg:text-xs">
-            {t("intro_caption_description")}
-          </span>
+      <p className={twMerge("mb-2 inline-flex items-center")}>
+        <IntroMemoji className="-mr-16 h-24 lg:-mr-28 lg:h-40" />
+        <span
+          className={twMerge(
+            classNames.text.color.secondary,
+            classNames.surface.primary,
+            "rounded-full px-7 py-4 font-bold lg:px-14 lg:py-8 lg:text-xl",
+          )}
+        >
+          {t("intro_caption_title")}{" "}
+          <span className="text-black/80 dark:text-white">Victor</span>
         </span>
       </p>
       <h2
