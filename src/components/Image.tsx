@@ -39,9 +39,12 @@ export default function Image({
       )}
     >
       <img
+        // eslint-disable-next-line react/no-unknown-property
+        fetchPriority="high"
+        loading="lazy"
         alt={alt}
         className={twMerge(
-          "block bg-cover bg-no-repeat object-cover transition-opacity duration-1000",
+          "block bg-cover bg-no-repeat object-cover transition-opacity",
           isLoading(state) && "opacity-0",
           !!size && "aspect-square",
         )}
@@ -63,11 +66,12 @@ export default function Image({
         {...props}
       />
       <Transition
+        as="span"
         aria-hidden
-        enter="transition-opacity duration-1000"
+        enter="transition-opacity"
         enterFrom="opacity-0"
         enterTo="opacity-100"
-        leave="transition-opacity duration-1000"
+        leave="transition-opacity"
         leaveFrom="opacity-100"
         leaveTo="opacity-0"
         show={isLoading(state)}
