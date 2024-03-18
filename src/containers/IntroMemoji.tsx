@@ -1,49 +1,53 @@
-import { useRef } from "react";
-import { twMerge } from "tailwind-merge";
-import Image from "components/Image";
-import memoji from "/memoji.mov";
-import memoji_fallback from "/memoji.png";
+import { useCallback, useState } from "react";
+import IntroMemojiFallback from "./IntroMemojiFallback.svg?react";
+import memojiUrl from "/memoji.mov";
 
-export default function IntroMemoji({
-  className,
-}: React.ComponentPropsWithoutRef<"video">) {
-  const video = useRef<HTMLVideoElement | null>(null);
-  const timeout = useRef(0);
+const introMemojiFallback = (
+  <IntroMemojiFallback className="absolute w-36 lg:w-60" />
+);
+const introMemojiDuration = 11;
+const introMemojiFrame = 7;
 
-  function handleTimeUpdate(event: React.SyntheticEvent<HTMLVideoElement>) {
-    const node = video.current;
+export default function IntroMemoji() {
+  const [canPlay, setCanPlay] = useState(false);
+  const handleCanPlayThrough = useCallback(() => {
+    setCanPlay(true);
+  }, []);
+  const handleTimeUpdate = useCallback(
+    (event: React.SyntheticEvent<HTMLVideoElement>) => {
+      const video = event.currentTarget;
 
-    if (node) {
-      if (event.currentTarget.currentTime >= 11) {
-        node.currentTime = 7;
+      if (event.currentTarget.currentTime >= introMemojiDuration) {
+        video.currentTime = introMemojiFrame;
 
-        timeout.current = window.setTimeout(() => {
-          void (async () => {
-            await node.play();
-          })();
-        }, 3000);
+        void (async () => {
+          try {
+            await video.play();
+          } catch (error) {
+            setCanPlay(false);
+          }
+        })();
       }
-    } else {
-      window.clearInterval(timeout.current);
-    }
-  }
+    },
+    [],
+  );
 
   return (
-    <span className={twMerge("inline-block overflow-hidden", className)}>
+    <span className="-mr-11 inline-flex h-24 w-24 items-center justify-center overflow-hidden lg:-mr-20 lg:h-40 lg:w-40">
       <video
         muted
         autoPlay
         playsInline
-        preload="metadata"
+        preload="none"
         crossOrigin="anonymous"
         className="h-full scale-150"
-        ref={video}
-        src={memoji}
-        poster={memoji_fallback}
+        src={memojiUrl}
+        onCanPlayThrough={handleCanPlayThrough}
         onTimeUpdate={handleTimeUpdate}
       >
-        <Image alt="" className="h-full scale-150" src={memoji_fallback} />
+        {introMemojiFallback}
       </video>
+      {!canPlay && introMemojiFallback}
     </span>
   );
 }
