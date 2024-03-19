@@ -8,14 +8,14 @@ export default function ToggleLanguage() {
 
   return (
     <Button
-      className="min-w-32"
+      className="plausible-event-name=Toggled+language min-w-32"
       aria-label={title}
       title={title}
+      endItem={<Icon name="Language" />}
       value={i18n.language === "en" ? "pt" : "en"}
       onClick={(event: React.MouseEvent<HTMLButtonElement>) =>
         void i18n.changeLanguage(event.currentTarget.value)
       }
-      endItem={<Icon name="Language" />}
     >
       {t("lang")}
     </Button>
