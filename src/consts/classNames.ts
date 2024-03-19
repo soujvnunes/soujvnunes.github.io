@@ -3,15 +3,15 @@ const text = {
     secondary: "text-black/60 dark:text-white/60",
   },
   variant: {
-    headline: "text-balance text-5xl font-bold",
-    title: "text-2xl font-bold",
+    headline: "text-balance text-2xl font-bold lg:text-[4rem]/[4rem]",
+    title: "lg:text-2xl",
     caption: "text-xs uppercase font-bold tracking-wide",
   },
 };
 
 const classNames = {
   container: {
-    root: "pl-4 pr-4 lg:pl-8 lg:pr-8",
+    root: "mx-auto w-full max-lg:px-4 lg:max-w-4xl",
   },
   button: {
     root: `flex items-center justify-center rounded-lg ${text.variant.caption}`,
@@ -30,6 +30,7 @@ const classNames = {
   text,
   surface: {
     primary: "bg-white dark:bg-stone-800",
+    secondary: "bg-gray-100 dark:bg-stone-900",
   },
   grid: {
     root: "flex flex-wrap",
