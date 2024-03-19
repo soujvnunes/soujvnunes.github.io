@@ -37,6 +37,7 @@ export default function FooterSocials() {
           variant="text"
           target="_blank"
           rel="noreferrer"
+          className="plausible-event-name=Visited+socials"
           title={title}
           href={href}
         >
