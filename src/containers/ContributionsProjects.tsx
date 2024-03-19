@@ -86,7 +86,7 @@ const projects: ProjectProps[] = [
 
 export default function ContributionsProjects() {
   return projects.map((project) => (
-    <li key={project.id} className={classNames.grid.col[4][1]}>
+    <li key={project.id}>
       <Project {...project} />
     </li>
   ));
