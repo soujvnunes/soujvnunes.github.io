@@ -1,10 +1,9 @@
 import { useCallback, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Tab } from "@headlessui/react";
 import { twMerge } from "tailwind-merge";
 import classNames from "consts/classNames";
-import HeaderMemoji from "./HeaderMemoji";
-import ToggleLanguage from "./ToggleLanguage";
+import HeaderIntro from "./HeaderIntro";
+import HeaderNav from "./HeaderNav";
 
 export default function Header() {
   const [t] = useTranslation();
@@ -30,44 +29,8 @@ export default function Header() {
         </div>
       </div>
       <header ref={handleHeader} className="pb-4 pt-10 text-center">
-        <p
-          className={twMerge(
-            classNames.text.color.secondary,
-            "inline-flex h-16 items-center rounded-full bg-gradient-to-r from-indigo-500/40 to-amber-500/40 pr-8",
-          )}
-        >
-          <HeaderMemoji />
-          <strong>
-            {t("intro_caption_title")}{" "}
-            <span className="text-black/80 dark:text-white">Victor</span>
-          </strong>
-        </p>
-        <h1
-          className={twMerge(classNames.text.variant.headline, "-mt-6 mb-10")}
-        >
-          {t("intro_title")}
-        </h1>
-        <nav className="mx-2 flex items-center">
-          <Tab.List className="mr-auto space-x-2 lg:space-x-4">
-            <Tab
-              className={twMerge(
-                classNames.text.color.secondary,
-                classNames.text.variant.title,
-              )}
-            >
-              Contribution
-            </Tab>
-            <Tab
-              className={twMerge(
-                classNames.text.color.secondary,
-                classNames.text.variant.title,
-              )}
-            >
-              About
-            </Tab>
-          </Tab.List>
-          <ToggleLanguage />
-        </nav>
+        <HeaderIntro />
+        <HeaderNav />
       </header>
     </>
   );
