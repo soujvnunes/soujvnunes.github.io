@@ -1,14 +1,14 @@
 import { useCallback, useState } from "react";
-import IntroMemojiFallback from "./IntroMemojiFallback.svg?react";
+import HeaderMemojiFallback from "./HeaderMemojiFallback.svg?react";
 import memojiUrl from "/memoji.mov";
 
-const introMemojiFallback = (
-  <IntroMemojiFallback className="absolute w-36 lg:w-60" />
+const headerMemojiFallback = (
+  <HeaderMemojiFallback className="absolute w-36 lg:w-60" />
 );
-const introMemojiDuration = 11;
-const introMemojiFrame = 7;
+const headerMemojiDuration = 11;
+const headerMemojiFrame = 7;
 
-export default function IntroMemoji() {
+export default function HeaderMemoji() {
   const [canPlay, setCanPlay] = useState(false);
   const handleCanPlayThrough = useCallback(() => {
     setCanPlay(true);
@@ -17,8 +17,8 @@ export default function IntroMemoji() {
     (event: React.SyntheticEvent<HTMLVideoElement>) => {
       const video = event.currentTarget;
 
-      if (event.currentTarget.currentTime >= introMemojiDuration) {
-        video.currentTime = introMemojiFrame;
+      if (video.currentTime >= headerMemojiDuration) {
+        video.currentTime = headerMemojiFrame;
 
         void (async () => {
           try {
@@ -33,7 +33,7 @@ export default function IntroMemoji() {
   );
 
   return (
-    <span className="-mr-11 inline-flex h-24 w-24 items-center justify-center overflow-hidden lg:-mr-20 lg:h-40 lg:w-40">
+    <span className="-ml-8 -mr-6 inline-flex h-32 w-32 items-center justify-center overflow-hidden">
       <video
         muted
         autoPlay
@@ -45,9 +45,9 @@ export default function IntroMemoji() {
         onCanPlayThrough={handleCanPlayThrough}
         onTimeUpdate={handleTimeUpdate}
       >
-        {introMemojiFallback}
+        {headerMemojiFallback}
       </video>
-      {!canPlay && introMemojiFallback}
+      {!canPlay && headerMemojiFallback}
     </span>
   );
 }
