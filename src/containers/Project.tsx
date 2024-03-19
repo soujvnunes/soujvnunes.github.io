@@ -53,6 +53,7 @@ export default function Project({
               target="_blank"
               rel="noreferrer"
               variant="text"
+              className="plausible-event-name=Visited+project"
               aria-label={endItemLabel}
               title={endItemLabel}
               href={endItem.href}
@@ -85,6 +86,7 @@ export default function Project({
                 title={label}
                 href={action.href}
                 startItem={<Icon name={action.startItem.icon} />}
+                className={`plausible-event-name=Saw+${action.id}`}
               >
                 {actionValue}
               </Button>
