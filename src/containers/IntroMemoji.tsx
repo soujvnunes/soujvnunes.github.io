@@ -17,16 +17,12 @@ export default function IntroMemoji() {
     (event: React.SyntheticEvent<HTMLVideoElement>) => {
       const video = event.currentTarget;
 
-      if (event.currentTarget.currentTime >= introMemojiDuration) {
+      if (video.currentTime >= introMemojiDuration) {
         video.currentTime = introMemojiFrame;
 
-        void (async () => {
-          try {
-            await video.play();
-          } catch (error) {
-            setCanPlay(false);
-          }
-        })();
+        video.play().catch(() => {
+          setCanPlay(false);
+        });
       }
     },
     [],
@@ -38,7 +34,6 @@ export default function IntroMemoji() {
         muted
         autoPlay
         playsInline
-        preload="none"
         crossOrigin="anonymous"
         className="h-full scale-150"
         src={memojiUrl}
