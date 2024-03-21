@@ -7,10 +7,12 @@
   "lang": "Português",
   "intro_caption_title": "Olá, sou o",
   "intro_caption_description": "Programador e Designer Web",
-  "intro_title": "Irei projetar e programar algo extraordinário para você!",
+  "intro_title": "Irei <secondary>projetar</secondary> e <primary>programar</primary> algo extraordinário para você!",
   "intro_cta": "Mais sobre mim",
-  "about_title": "About",
-  "contributions_title": "Contribuições",
+  "tabs": {
+    "about": "Sobre",
+    "contributions": "Contribuições"
+  },
   "contributions_title_visit": "Visitar",
   "contributions_title_visit_label": "Visitar website do projeto",
   "contributions_projects_actions_label": "Ver {{action}}",

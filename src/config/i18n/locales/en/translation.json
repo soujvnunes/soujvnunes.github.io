@@ -7,10 +7,12 @@
   "lang": "English",
   "intro_caption_title": "Hi, I'm",
   "intro_caption_description": "UI/UX Designer & Frontend Developer",
-  "intro_title": "Lemme design & develop you something extraordinary!",
+  "intro_title": "Lemme <secondary>design</secondary> & <primary>develop</primary> you something extraordinary!",
   "intro_cta": "More about me",
-  "about_title": "Sobre",
-  "contributions_title": "Contributions",
+  "tabs": {
+    "about": "About",
+    "contributions": "Contributions"
+  },
   "contributions_title_visit": "Visit",
   "contributions_title_visit_label": "Visit website project",
   "contributions_projects_actions_label": "See {{action}}",
