@@ -8,7 +8,11 @@ import "./main.css";
 root?.render(
   <StrictMode>
     <Suspense
-      fallback={<SoujvnunesLogos className="m-auto animate-pulse text-2xl" />}
+      fallback={
+        <div className="flex h-dvh">
+          <SoujvnunesLogos className="m-auto animate-pulse text-2xl" />
+        </div>
+      }
     >
       <LazyApp />
     </Suspense>
