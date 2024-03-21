@@ -1,5 +1,6 @@
 const text = {
   color: {
+    primary: "text-black/80 dark:text-white",
     secondary: "text-black/60 dark:text-white/60",
   },
   variant: {
