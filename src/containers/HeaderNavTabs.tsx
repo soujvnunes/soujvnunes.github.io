@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import { Tab } from "@headlessui/react";
 import { twMerge } from "tailwind-merge";
 import classNames from "consts/classNames";
+import isLgScreen from "helpers/isLgScreen";
 import objectKeys from "helpers/objectKeys";
 import useTab from "hooks/useTab";
 import Button from "components/Button";
@@ -18,11 +19,7 @@ export default function HeaderNavTabs() {
           key={_tab}
           value={_tab}
           onClick={tab.set}
-          as={
-            window.matchMedia("(min-width: 1024px)").matches
-              ? undefined
-              : Button
-          }
+          as={isLgScreen ? undefined : Button}
           className={twMerge(
             classNames.text.color.secondary,
             classNames.text.variant.title,
