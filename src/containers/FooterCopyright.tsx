@@ -4,7 +4,7 @@ import SoujvnunesSymbol from "./SoujvnunesSymbol";
 
 export default function FooterCopyright() {
   return (
-    <p className={twMerge(classNames.text.color.secondary, "leading-[0]")}>
+    <p className={twMerge(classNames.text.color.secondary, "pl-4 leading-[0]")}>
       <SoujvnunesSymbol />
       <span className="text-xs"> &copy; {fullYear}</span>
     </p>
