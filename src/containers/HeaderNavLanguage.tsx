@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import Button from "components/Button";
 import Icon from "components/Icon";
 
-export default function ToggleLanguage() {
+export default function HeaderNavLanguage() {
   const [t, i18n] = useTranslation();
   const title = t("change_lang");
 
