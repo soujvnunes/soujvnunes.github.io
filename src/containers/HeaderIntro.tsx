@@ -9,11 +9,11 @@ export default function HeaderIntro() {
   return (
     <>
       <p>
-        <HeaderIntroMemoji className="-mr-10 align-middle lg:-mr-14" />
+        <HeaderIntroMemoji className="-mr-20 align-middle" />
         <strong
           className={twMerge(
             classNames.text.color.secondary,
-            "rounded-3xl border-b border-b-amber-700/10 bg-gradient-to-tl from-amber-500/20 px-5 py-3 max-lg:text-xs lg:rounded-full lg:px-8 lg:py-5 dark:border-b-0 dark:border-t dark:border-t-amber-500/10",
+            "rounded-full border-b border-b-amber-700/10 bg-gradient-to-tl from-amber-500/20 py-5 pl-14 pr-8 dark:border-b-0 dark:border-t dark:border-t-amber-500/10",
           )}
         >
           {t("intro_caption_title")}{" "}
