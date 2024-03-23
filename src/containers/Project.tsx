@@ -32,7 +32,8 @@ export default function Project({
   const endItemLabel = t("contributions_title_visit_label");
 
   return (
-    <Card>
+    // "border-b border-b-amber-700/10 bg-gradient-to-tl from-stone-800/40 backdrop-blur-2xl dark:border-b-0 dark:border-t dark:border-t-stone-500/10 dark:bg-stone-800/20"
+    <Card className="border-b border-b-amber-700/10 bg-gradient-to-tl from-amber-500/5 backdrop-blur-2xl dark:border-b-0 dark:border-t dark:border-t-amber-500/5">
       <CardHeader
         subhead={t(`contributions_projects.${id}.company`)}
         startItem={
