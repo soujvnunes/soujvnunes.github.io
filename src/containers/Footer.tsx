@@ -1,7 +1,7 @@
 import { twMerge } from "tailwind-merge";
 import classNames from "consts/classNames";
 import FooterCopyright from "./FooterCopyright";
-import FooterSocials from "./FooterSocials";
+import Socials from "./Socials";
 
 export default function Footer() {
   return (
@@ -9,7 +9,7 @@ export default function Footer() {
       className={twMerge(classNames.container.root, "flex h-16 items-center")}
     >
       <FooterCopyright />
-      <FooterSocials />
+      <Socials className="ml-auto" />
     </footer>
   );
 }
