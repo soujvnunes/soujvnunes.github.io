@@ -7,18 +7,16 @@ type HeaderIntroMemojiFallbackProps = Pick<
   "className"
 >;
 
-const HeaderIntroMemojiFallback = forwardRef(
-  function HeaderIntroMemojiFallbackWithRef(
-    { className }: HeaderIntroMemojiFallbackProps,
-    ref: React.ForwardedRef<SVGSVGElement>,
-  ) {
-    return (
-      <HeaderIntroMemojiFallbackSvg
-        ref={ref}
-        className={twMerge("absolute w-36 lg:w-48", className)}
-      />
-    );
-  },
-);
+const HeaderIntroMemojiFallback = forwardRef(function HeaderIntroMemojiFallback(
+  { className }: HeaderIntroMemojiFallbackProps,
+  ref: React.ForwardedRef<SVGSVGElement>,
+) {
+  return (
+    <HeaderIntroMemojiFallbackSvg
+      ref={ref}
+      className={twMerge("absolute w-48", className)}
+    />
+  );
+});
 
 export default HeaderIntroMemojiFallback;
