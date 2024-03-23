@@ -15,10 +15,7 @@ export default function Header({ children }: HeaderProps) {
   return (
     <header
       ref={handleHeader}
-      className={twMerge(
-        classNames.container.root,
-        "pb-2 pt-10 text-center lg:pb-4",
-      )}
+      className={twMerge(classNames.container.root, "pb-4 pt-10 text-center")}
     >
       <div
         style={{
