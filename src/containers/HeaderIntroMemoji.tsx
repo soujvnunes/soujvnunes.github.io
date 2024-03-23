@@ -31,7 +31,7 @@ export default function HeaderIntroMemoji({ className }: HeaderMemojiProps) {
   return (
     <span
       className={twMerge(
-        "inline-flex h-24 w-24 items-center justify-center overflow-hidden lg:h-32 lg:w-32",
+        "inline-flex h-32 w-32 items-center justify-center overflow-hidden",
         className,
       )}
     >
