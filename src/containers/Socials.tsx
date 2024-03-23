@@ -1,12 +1,18 @@
 import { useTranslation } from "react-i18next";
+import { twMerge } from "tailwind-merge";
 import Button from "components/Button";
 import Icon from "components/Icon";
 
-export default function FooterSocials() {
+type FooterSocialsProps = Pick<
+  React.ComponentPropsWithoutRef<"ul">,
+  "className"
+>;
+
+export default function FooterSocials({ className }: FooterSocialsProps) {
   const [t] = useTranslation();
 
   return (
-    <ul className="ml-auto space-x-2">
+    <ul className={twMerge("space-x-2", className)}>
       {socials.map(({ name, href }) => {
         const title = t("socials_label", {
           name,
@@ -22,6 +28,7 @@ export default function FooterSocials() {
               className="plausible-event-name=Visited+socials"
               title={title}
               href={href}
+              aria-label={title}
             >
               <Icon name={name} title={title} />
             </Button>
