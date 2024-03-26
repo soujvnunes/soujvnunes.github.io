@@ -11,7 +11,7 @@ export default function CardContent({ children }: CardContentProps) {
     <p
       className={twMerge(
         classNames.text.color.secondary,
-        "pb-2 pl-2 pr-2 pt-2",
+        "pb-2 pt-2 max-md:pl-2 max-md:pr-2",
       )}
       id={card.descriptionId}
     >
