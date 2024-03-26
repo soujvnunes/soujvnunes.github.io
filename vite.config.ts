@@ -37,6 +37,10 @@ export default defineConfig({
         find: "helpers",
         replacement: "/src/helpers",
       },
+      {
+        find: "providers",
+        replacement: "/src/providers",
+      },
     ],
   },
   build: {
