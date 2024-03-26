@@ -10,7 +10,7 @@ export default function Contributions() {
       <ul
         role="feed"
         aria-busy="false"
-        aria-label={t("contributions_title")}
+        aria-label={t("tabs.contributions")}
         className="space-y-2 lg:space-y-4"
       >
         {projects.map((project) => (
@@ -39,7 +39,8 @@ const projects: ProjectProps[] = [
       href: "https://app.polkamarkets.com/",
     },
     startItem: {
-      className: "bg-gradient-to-br from-blue-500/10 to-blue-500/20",
+      className:
+        "bg-gradient-to-br from-blue-500/10 to-blue-500/20 border-t border-t-blue-500/10",
       icon: "Polkamarkets",
     },
   },
@@ -55,7 +56,8 @@ const projects: ProjectProps[] = [
       },
     ],
     startItem: {
-      className: "bg-gradient-to-br from-sky-500/10 to-sky-500/20",
+      className:
+        "bg-gradient-to-br from-sky-500/10 to-sky-500/20 border-t border-t-sky-500/10",
       icon: "Vitalk",
     },
   },
@@ -71,7 +73,8 @@ const projects: ProjectProps[] = [
       },
     ],
     startItem: {
-      className: "bg-gradient-to-br from-indigo-500/10 to-indigo-500/20",
+      className:
+        "bg-gradient-to-br from-indigo-500/10 to-indigo-500/20 border-t border-t-indigo-500/10",
       icon: "BeproNetwork",
     },
     endItem: {
@@ -97,7 +100,8 @@ const projects: ProjectProps[] = [
       },
     ],
     startItem: {
-      className: "bg-gradient-to-br from-fuchsia-500/10 to-fuchsia-500/20",
+      className:
+        "bg-gradient-to-br from-fuchsia-500/10 to-fuchsia-500/20 border-t border-t-fuchsia-500/10",
       icon: "Ufal",
     },
     endItem: {
