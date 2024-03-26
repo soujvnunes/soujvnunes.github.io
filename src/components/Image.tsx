@@ -1,24 +1,15 @@
-import { useState } from "react";
-
 import { Transition } from "@headlessui/react";
 import { twMerge } from "tailwind-merge";
-import isLoading from "helpers/isLoading";
-
-const imageStates = {
-  loading: "loading",
-  error: "error",
-  success: "success",
-} as const;
+import useImage from "hooks/useImage";
 
 interface ImageProps
   extends Pick<
-    React.ComponentPropsWithRef<"img">,
+    React.ComponentPropsWithoutRef<"img">,
     "src" | "alt" | "className"
   > {
-  size?: "lg";
   radius?: "2xs";
+  size?: "lg";
 }
-type ImageStates = keyof typeof imageStates;
 
 export default function Image({
   alt,
@@ -27,42 +18,26 @@ export default function Image({
   size,
   ...props
 }: ImageProps) {
-  const [state, setState] = useState<ImageStates>(imageStates.loading);
+  const image = useImage();
 
   return (
     <span
       className={twMerge(
-        "relative overflow-hidden",
+        "relative inline-block overflow-hidden",
         size === "lg" && "h-10 w-10 lg:h-16 lg:w-16",
         radius === "2xs" && "rounded-lg",
         className,
       )}
     >
       <img
-        // eslint-disable-next-line react/no-unknown-property
-        fetchPriority="high"
         loading="lazy"
         alt={alt}
         className={twMerge(
-          "block bg-cover bg-no-repeat object-cover transition-opacity",
-          isLoading(state) && "opacity-0",
+          "block bg-cover bg-no-repeat object-cover",
+          image.isLoading ? "opacity-0" : "transition-opacity",
           !!size && "aspect-square",
         )}
-        onLoad={() => {
-          setState(imageStates.success);
-        }}
-        onError={() => {
-          setState(imageStates.error);
-        }}
-        ref={(image: HTMLImageElement | null) => {
-          if (image?.complete) {
-            if (!image.naturalWidth || !image.naturalHeight) {
-              setState(imageStates.error);
-            } else {
-              setState(imageStates.success);
-            }
-          }
-        }}
+        {...image.handlers}
         {...props}
       />
       <Transition
@@ -74,7 +49,7 @@ export default function Image({
         leave="transition-opacity"
         leaveFrom="opacity-100"
         leaveTo="opacity-0"
-        show={isLoading(state)}
+        show={image.isLoading}
       >
         <span className="absolute inset-0 bg-black/10 motion-safe:animate-pulse dark:bg-white/10" />
       </Transition>
