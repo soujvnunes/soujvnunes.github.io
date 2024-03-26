@@ -15,7 +15,7 @@ const className = {
 
 const classNames = {
   container: {
-    root: "mx-auto w-full max-lg:px-4 lg:max-w-5xl",
+    root: "mx-auto w-full px-4 lg:px-8 lg:max-w-5xl",
   },
   button: {
     root: `flex items-center justify-center rounded-lg ${className.text.variant.caption}`,
