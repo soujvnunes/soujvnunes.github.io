@@ -38,6 +38,7 @@ module.exports = {
           "/^consts/",
           "/^config/",
           "/^helpers/",
+          "/^providers/",
           "/^hooks/",
           "/^components/",
           "/^containers/",
