@@ -1,14 +1,17 @@
 import { useCallback, useState } from "react";
 import { twMerge } from "tailwind-merge";
 import classNames from "consts/classNames";
+import isLgScreen from "helpers/isLgScreen";
 
 type HeaderProps = Pick<React.ComponentPropsWithoutRef<"header">, "children">;
 
 export default function Header({ children }: HeaderProps) {
-  const [height, setHeight] = useState(0);
+  const [height, setHeight] = useState(() => (isLgScreen ? 56 : 48));
   const handleHeader = useCallback((node: HTMLElement | null) => {
     if (node !== null) {
-      setHeight(node.getBoundingClientRect().height);
+      setHeight(
+        (prevHeight) => node.getBoundingClientRect().height + prevHeight,
+      );
     }
   }, []);
 
@@ -19,7 +22,7 @@ export default function Header({ children }: HeaderProps) {
     >
       <div
         style={{
-          height: height + 56,
+          height,
         }}
         className={twMerge(
           classNames.surface.primary,
