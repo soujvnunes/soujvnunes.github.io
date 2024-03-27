@@ -1,28 +1,21 @@
-import { useCallback, useState } from "react";
 import { twMerge } from "tailwind-merge";
 import classNames from "consts/classNames";
 import isLgScreen from "helpers/isLgScreen";
+import useBoundingClient from "hooks/useBoundingClientRect";
 
 type HeaderProps = Pick<React.ComponentPropsWithoutRef<"header">, "children">;
 
 export default function Header({ children }: HeaderProps) {
-  const [height, setHeight] = useState(() => (isLgScreen ? 56 : 48));
-  const handleHeader = useCallback((node: HTMLElement | null) => {
-    if (node !== null) {
-      setHeight(
-        (prevHeight) => node.getBoundingClientRect().height + prevHeight,
-      );
-    }
-  }, []);
+  const boundingClient = useBoundingClient();
 
   return (
     <header
-      ref={handleHeader}
+      ref={boundingClient.ref}
       className={twMerge(classNames.container.root, "pb-4 pt-10 text-center")}
     >
       <div
         style={{
-          height,
+          height: boundingClient.rect.height + (isLgScreen ? 56 : 48),
         }}
         className={twMerge(
           classNames.surface.primary,
