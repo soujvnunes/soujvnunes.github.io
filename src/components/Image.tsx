@@ -34,7 +34,7 @@ export default function Image({
         alt={alt}
         className={twMerge(
           "block bg-cover bg-no-repeat object-cover",
-          image.isLoading ? "opacity-0" : "transition-opacity",
+          image.isLoading ? "opacity-0" : "motion-safe:transition-opacity",
           !!size && "aspect-square",
         )}
         {...image.handlers}
@@ -43,10 +43,10 @@ export default function Image({
       <Transition
         as="span"
         aria-hidden
-        enter="transition-opacity"
+        enter="motion-safe:transition-opacity"
         enterFrom="opacity-0"
         enterTo="opacity-100"
-        leave="transition-opacity"
+        leave="motion-safe:transition-opacity"
         leaveFrom="opacity-100"
         leaveTo="opacity-0"
         show={image.isLoading}
