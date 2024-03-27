@@ -9,6 +9,12 @@ export default {
         sans: ['"sofia-pro"', ...defaultTheme.fontFamily.sans],
         serif: ['"freight-display-pro"', ...defaultTheme.fontFamily.serif],
       },
+      colors: {
+        amber: {
+          50: "#FFFBF4",
+          950: "#1F1402",
+        },
+      },
     },
   },
   plugins: [require("@headlessui/tailwindcss")],
