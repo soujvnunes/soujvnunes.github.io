@@ -25,10 +25,10 @@ const classNames = {
     },
     variant: {
       toned:
-        "text-black/80 dark:text-white bg-black/10 dark:bg-white/10 hover:bg-black/20 dark:hover:bg-white/20 transition-colors",
-      text: "text-black/80 dark:text-white hover:bg-black/10 dark:hover:bg-white/10 transition-colors",
+        "text-black/80 dark:text-white bg-black/10 dark:bg-white/10 hover:bg-black/20 dark:hover:bg-white/20 motion-safe:transition-colors",
+      text: "text-black/80 dark:text-white hover:bg-black/10 dark:hover:bg-white/10 motion-safe:transition-colors",
       outline:
-        "border border-black/20 text-black/80 transition-colors hover:border-black/40 hover:bg-black/10 dark:border-white/20 dark:text-white dark:hover:border-white/40 dark:hover:bg-white/10",
+        "border border-black/20 text-black/80 motion-safe:transition-colors hover:border-black/40 hover:bg-black/10 dark:border-white/20 dark:text-white dark:hover:border-white/40 dark:hover:bg-white/10",
     },
   },
   text: className.text,
