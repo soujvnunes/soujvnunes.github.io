@@ -13,7 +13,7 @@ export default function HeaderIntro() {
         <strong
           className={twMerge(
             classNames.text.color.secondary,
-            "rounded-full border-b border-b-amber-700/10 bg-gradient-to-tl from-amber-500/20 py-5 pl-14 pr-8 dark:border-b-0 dark:border-t dark:border-t-amber-500/10",
+            "rounded-full bg-gradient-to-tl from-amber-500/10 to-indigo-500/20 py-5 pl-14 pr-8 dark:border-b-0 dark:border-t dark:border-t-amber-500/10 dark:to-transparent",
           )}
         >
           {t("intro_caption_title")}{" "}
