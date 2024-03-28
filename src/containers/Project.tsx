@@ -35,16 +35,16 @@ export default function Project({
 
   return (
     <CardProvider>
-      <CardRoot className="border-b border-b-amber-700/10 bg-gradient-to-tl from-stone-800/40 backdrop-blur-2xl dark:border-b-0 dark:border-t dark:border-t-stone-500/10 dark:bg-stone-800/20">
+      <CardRoot className="bg-white shadow-lg shadow-amber-800/5 dark:border-t dark:border-t-amber-500/10 dark:bg-amber-900/20 dark:bg-gradient-to-tl dark:from-amber-900/80 dark:shadow-none dark:backdrop-blur-2xl">
         <div
           className={twMerge(
-            "flex max-w-full grow-0 basis-full rounded-lg px-6 pt-10 md:max-w-[41.666667%] md:basis-5/12",
+            "flex max-w-full grow-0 basis-full overflow-hidden rounded-lg px-6 pt-10 md:basis-5/12",
             startItem.className,
           )}
         >
           <Image className="h-48 rounded-t-[4px]" src={`/projects/${id}.jpg`} />
         </div>
-        <div className="flex max-w-full basis-full flex-col md:max-w-[58.333333%] md:basis-7/12">
+        <div className="flex max-w-full basis-full flex-col md:basis-7/12">
           <CardHeader
             subhead={t(`contributions_projects.${id}.company`)}
             startItem={
