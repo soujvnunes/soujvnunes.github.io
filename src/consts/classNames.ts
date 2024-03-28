@@ -24,11 +24,9 @@ const classNames = {
       md: "h-10 min-w-10 pl-2 pr-2",
     },
     variant: {
-      toned:
-        "text-black/80 dark:text-white bg-black/10 dark:bg-white/10 hover:bg-black/20 dark:hover:bg-white/20 motion-safe:transition-colors",
-      text: "text-black/80 dark:text-white hover:bg-black/10 dark:hover:bg-white/10 motion-safe:transition-colors",
+      text: "text-amber-600 dark:text-amber-400 hover:bg-amber-500/10 motion-safe:transition-colors",
       outline:
-        "border border-black/20 text-black/80 motion-safe:transition-colors hover:border-black/40 hover:bg-black/10 dark:border-white/20 dark:text-white dark:hover:border-white/40 dark:hover:bg-white/10",
+        "border border-amber-500/40 text-amber-600 motion-safe:transition-colors hover:border-amber-500/60 hover:bg-amber-500/10 dark:text-amber-400",
     },
   },
   text: className.text,
