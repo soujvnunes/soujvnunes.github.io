@@ -40,7 +40,7 @@ const projects: ProjectProps[] = [
     },
     startItem: {
       className:
-        "bg-gradient-to-br from-blue-500/10 to-blue-500/20 border-t border-t-blue-500/10",
+        "bg-gradient-to-br from-blue-500/10 to-blue-500/20 border-blue-500/10 border-b dark:border-b-0 dark:border-t",
       icon: "Polkamarkets",
     },
   },
@@ -57,7 +57,7 @@ const projects: ProjectProps[] = [
     ],
     startItem: {
       className:
-        "bg-gradient-to-br from-sky-500/10 to-sky-500/20 border-t border-t-sky-500/10",
+        "bg-gradient-to-br from-sky-500/10 to-sky-500/20 border-sky-500/10 border-b dark:border-b-0 dark:border-t",
       icon: "Vitalk",
     },
   },
@@ -74,7 +74,7 @@ const projects: ProjectProps[] = [
     ],
     startItem: {
       className:
-        "bg-gradient-to-br from-indigo-500/10 to-indigo-500/20 border-t border-t-indigo-500/10",
+        "bg-gradient-to-br from-indigo-500/10 to-indigo-500/20 border-indigo-500/10 border-b dark:border-b-0 dark:border-t",
       icon: "BeproNetwork",
     },
     endItem: {
@@ -101,7 +101,7 @@ const projects: ProjectProps[] = [
     ],
     startItem: {
       className:
-        "bg-gradient-to-br from-fuchsia-500/10 to-fuchsia-500/20 border-t border-t-fuchsia-500/10",
+        "bg-gradient-to-br from-fuchsia-500/10 to-fuchsia-500/20 border-fuchsia-500/10 border-b dark:border-b-0 dark:border-t",
       icon: "Ufal",
     },
     endItem: {
