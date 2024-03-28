@@ -10,6 +10,10 @@ type HeaderMemojiProps = Pick<
 
 export default function HeaderIntroMemoji({ className }: HeaderMemojiProps) {
   const [isPlaying, setPlaying] = useState(false);
+  const [canPlay, setCanPlay] = useState(false);
+  const handleCanPlay = useCallback(() => {
+    setCanPlay(true);
+  }, []);
   const handlePlaying = useCallback(() => {
     setPlaying(true);
   }, []);
@@ -42,13 +46,16 @@ export default function HeaderIntroMemoji({ className }: HeaderMemojiProps) {
         preload="none"
         crossOrigin="anonymous"
         src={memojiUrl}
-        onPlaying={handlePlaying}
         onEnded={handleEnded}
+        onPlaying={handlePlaying}
+        onCanPlayThrough={handleCanPlay}
         className={twMerge("h-full scale-150", !isPlaying && "opacity-0")}
       >
         <HeaderIntroMemojiFallback />
       </video>
-      {!isPlaying && <HeaderIntroMemojiFallback className="animate-pulse" />}
+      {!isPlaying && (
+        <HeaderIntroMemojiFallback className={canPlay ? "" : "animate-pulse"} />
+      )}
     </span>
   );
 }
