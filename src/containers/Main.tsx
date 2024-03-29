@@ -1,6 +1,7 @@
 import classNames from "consts/classNames";
+import { PickFrom } from "types/PickFrom";
 
-type MainProps = Pick<React.ComponentPropsWithoutRef<"main">, "children">;
+type MainProps = PickFrom<"main", "children">;
 
 export default function Main(props: MainProps) {
   return <main className={classNames.container.root} {...props} />;
