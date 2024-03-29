@@ -15,5 +15,9 @@ const url = new URL(document.location.href);
 const searchParam = "tab" as const;
 const group = {
   contributions: "contributions",
-  about: "about",
+  /**
+   * TODO: implement on 2.1
+   *
+   * about: "about",
+   */
 } as const;
