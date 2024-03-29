@@ -18,7 +18,11 @@ export default function App() {
       </Header>
       <Main>
         <Contributions />
-        <Tab.Panel>About</Tab.Panel>
+        {/**
+         * TODO: implement on 2.1
+         *
+         * <About />
+         */}
       </Main>
       <Footer />
     </Tab.Group>
