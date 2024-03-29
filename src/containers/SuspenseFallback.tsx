@@ -9,7 +9,7 @@ export default function SuspenseFallback() {
           <SoujvnunesLogos className="m-auto animate-pulse text-2xl" />
         </h1>
         <p className="mb-4">victor nunes - design engineer</p>
-        <Socials />
+        <Socials inline />
       </span>
     </div>
   );
