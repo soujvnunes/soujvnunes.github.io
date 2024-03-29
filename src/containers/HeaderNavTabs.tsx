@@ -20,6 +20,8 @@ export default function HeaderNavTabs() {
             classNames.text.color.secondary,
             classNames.text.variant.title,
             "inline-flex ui-selected:text-black/80 ui-selected:dark:text-white",
+            // TODO: remove on 2.1
+            "pointer-events-none",
           )}
         >
           {t(`tabs.${_tab}`)}
