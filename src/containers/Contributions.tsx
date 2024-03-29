@@ -1,12 +1,11 @@
 import { useTranslation } from "react-i18next";
-import { Tab } from "@headlessui/react";
 import Project, { type ProjectProps } from "./Project";
 
 export default function Contributions() {
   const [t] = useTranslation();
 
   return (
-    <Tab.Panel>
+    <section>
       <ul
         role="feed"
         aria-busy="false"
@@ -19,7 +18,7 @@ export default function Contributions() {
           </li>
         ))}
       </ul>
-    </Tab.Panel>
+    </section>
   );
 }
 
