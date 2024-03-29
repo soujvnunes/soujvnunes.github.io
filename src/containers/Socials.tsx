@@ -14,9 +14,9 @@ export default function Socials({ className, inline }: SocialsProps) {
   return (
     <ul
       className={twMerge(
-        inline
-          ? "space-x-2"
-          : "inline-grid grid-cols-[104px_104px] grid-rows-[104px_104px] gap-2",
+        inline && "space-x-2",
+        !inline &&
+          "inline-grid grid-cols-[104px_104px] grid-rows-[104px_104px] gap-2",
         className,
       )}
     >
@@ -30,34 +30,34 @@ export default function Socials({ className, inline }: SocialsProps) {
 
         return (
           <li
+            key={name}
             className={twMerge(
               inline && "inline-block",
               isBehance && "text-right",
               isGitHub && "text-left",
               isLinkedIn && "flex items-end text-left",
             )}
-            key={name}
           >
             <Button
               as="a"
               variant="text"
               target="_blank"
               rel="noreferrer"
+              href={href}
+              title={title}
               className={twMerge(
                 "plausible-event-name=Visited+socials",
                 !inline && "inline-flex bg-gradient-to-tl",
                 isLinkedIn &&
-                  "h-10 w-10 from-[#0A66C2]/20 to-[#0A66C2]/10 text-[#0A66C2] dark:text-[#3782CD]",
+                  "from-linkedin-500/20 to-linkedin-500/10 text-linkedin-500 dark:text-linkedin-400 h-10 w-10",
                 isGitHub &&
-                  "h-16 w-16 from-[#333333]/20 to-[#333333]/10 text-[#333333] dark:from-white/10 dark:to-white/5 dark:text-white",
+                  "h-16 w-16 from-neutral-700/20 to-neutral-700/10 text-neutral-700 dark:from-white/10 dark:to-white/5 dark:text-white",
                 !inline &&
                   name === "Medium" &&
-                  "h-[104px] w-[104px] from-[#aaaaaa]/20 to-[#aaaaaa]/10 text-black/80 dark:from-gray-50/10 dark:to-gray-100/5 dark:text-gray-200",
+                  "h-[104px] w-[104px] from-neutral-400/20 to-neutral-400/10 text-black/80 dark:from-gray-50/10 dark:to-gray-100/5 dark:text-gray-200",
                 isBehance &&
-                  "h-[88px] w-[88px] from-[#0057FF]/20 to-[#0057FF]/10 text-[#0057FF] dark:text-[#2E76FF]",
+                  "from-behance-500/20 to-behance-500/10 text-behance-500 dark:text-behance-400 h-[88px] w-[88px]",
               )}
-              href={href}
-              title={title}
             >
               <Icon name={name} title={title} />
             </Button>
