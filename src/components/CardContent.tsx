@@ -1,8 +1,9 @@
 import { twMerge } from "tailwind-merge";
 import classNames from "consts/classNames";
 import useCard from "hooks/useCard";
+import { PickFrom } from "types/PickFrom";
 
-type CardContentProps = Pick<React.ComponentPropsWithoutRef<"p">, "children">;
+type CardContentProps = PickFrom<"p", "children">;
 
 export default function CardContent({ children }: CardContentProps) {
   const card = useCard();
