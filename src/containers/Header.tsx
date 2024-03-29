@@ -2,8 +2,9 @@ import { twMerge } from "tailwind-merge";
 import classNames from "consts/classNames";
 import isLgScreen from "helpers/isLgScreen";
 import useBoundingClient from "hooks/useBoundingClientRect";
+import { PickFrom } from "types/PickFrom";
 
-type HeaderProps = Pick<React.ComponentPropsWithoutRef<"header">, "children">;
+type HeaderProps = PickFrom<"header", "children">;
 
 export default function Header({ children }: HeaderProps) {
   const boundingClient = useBoundingClient();
