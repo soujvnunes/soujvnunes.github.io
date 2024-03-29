@@ -42,6 +42,7 @@ module.exports = {
           "/^hooks/",
           "/^components/",
           "/^containers/",
+          "/^types/",
           ["parent", "sibling", "index"],
         ],
         alphabetize: {
