@@ -2,9 +2,9 @@ import { useTranslation } from "react-i18next";
 import { twMerge } from "tailwind-merge";
 import Button from "components/Button";
 import Icon from "components/Icon";
+import { PickFrom } from "types/PickFrom";
 
-interface SocialsProps
-  extends Pick<React.ComponentPropsWithoutRef<"ul">, "className"> {
+interface SocialsProps extends PickFrom<"ul", "className"> {
   inline?: boolean;
 }
 
