@@ -1,35 +1,38 @@
-const text = {
-  color: {
-    secondary: "text-black/60 dark:text-white/60",
-  },
-  variant: {
-    headline: "text-balance text-5xl font-bold",
-    title: "text-2xl font-bold",
-    caption: "text-xs uppercase font-bold tracking-wide",
+const className = {
+  text: {
+    color: {
+      primary: "text-black/80 dark:text-white",
+      secondary: "text-black/60 dark:text-white/60",
+    },
+    variant: {
+      headline:
+        "text-balance text-[2.5rem]/[2.5rem] font-bold lg:text-[4rem]/[4rem]",
+      title: "lg:text-2xl",
+      caption: "text-xs uppercase font-bold tracking-wide",
+    },
   },
 };
 
 const classNames = {
   container: {
-    root: "pl-4 pr-4 lg:pl-8 lg:pr-8",
+    root: "mx-auto w-full px-4 lg:px-8 lg:max-w-5xl",
   },
   button: {
-    root: `flex items-center justify-center rounded-lg ${text.variant.caption}`,
+    root: `flex items-center justify-center rounded-lg ${className.text.variant.caption}`,
     size: {
       sm: "h-8 min-w-8 pl-1 pr-1",
       md: "h-10 min-w-10 pl-2 pr-2",
     },
     variant: {
-      toned:
-        "text-black/80 dark:text-white bg-black/10 dark:bg-white/10 hover:bg-black/20 dark:hover:bg-white/20 transition-colors",
-      text: "text-black/80 dark:text-white hover:bg-black/10 dark:hover:bg-white/10 transition-colors",
+      text: "text-amber-600 dark:text-amber-400 hover:bg-amber-500/10 motion-safe:transition-colors",
       outline:
-        "border border-black/20 text-black/80 transition-colors hover:border-black/40 hover:bg-black/10 dark:border-white/20 dark:text-white dark:hover:border-white/40 dark:hover:bg-white/10",
+        "border border-amber-500/40 text-amber-600 motion-safe:transition-colors hover:border-amber-500/60 hover:bg-amber-500/10 dark:text-amber-400",
     },
   },
-  text,
+  text: className.text,
   surface: {
     primary: "bg-white dark:bg-stone-800",
+    secondary: "bg-gray-100 dark:bg-stone-900",
   },
   grid: {
     root: "flex flex-wrap",

@@ -1,9 +1,9 @@
 import { twMerge } from "tailwind-merge";
 import classNames from "consts/classNames";
 import useCard from "hooks/useCard";
+import { PickFrom } from "types/PickFrom";
 
-interface CardProps
-  extends Pick<React.ComponentPropsWithoutRef<"h3">, "children"> {
+interface CardProps extends PickFrom<"h3", "children"> {
   startItem?: React.ReactNode;
   endItem?: React.ReactNode;
   subhead?: string;

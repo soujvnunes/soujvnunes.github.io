@@ -1,17 +1,26 @@
 import Contributions from "containers/Contributions";
 import Footer from "containers/Footer";
 import Header from "containers/Header";
-import Intro from "containers/Intro";
+import HeaderIntro from "containers/HeaderIntro";
+import HeaderNav from "containers/HeaderNav";
+import Main from "containers/Main";
 
 export default function App() {
   return (
     <>
-      <Header />
-      <main className="flex grow flex-col">
-        <Intro />
+      <Header>
+        <HeaderIntro />
+        <HeaderNav />
+      </Header>
+      <Main>
         <Contributions />
-        <Footer />
-      </main>
+        {/**
+         * TODO: implement on 2.1
+         *
+         * <About />
+         */}
+      </Main>
+      <Footer />
     </>
   );
 }

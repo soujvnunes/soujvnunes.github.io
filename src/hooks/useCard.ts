@@ -1,9 +1,5 @@
-import { createContext, useContext } from "react";
-
-export const CardContext = createContext({
-  labelId: "",
-  descriptionId: "",
-});
+import { useContext } from "react";
+import { CardContext } from "providers/CardProvider";
 
 export default function useCard() {
   return useContext(CardContext);

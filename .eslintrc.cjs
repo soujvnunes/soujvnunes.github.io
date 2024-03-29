@@ -17,6 +17,18 @@ module.exports = {
   parser: "@typescript-eslint/parser",
   plugins: ["react-refresh", "eslint-plugin-import-helpers"],
   rules: {
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        args: "all",
+        argsIgnorePattern: "^_",
+        caughtErrors: "all",
+        caughtErrorsIgnorePattern: "^_",
+        destructuredArrayIgnorePattern: "^_",
+        varsIgnorePattern: "^_",
+        ignoreRestSiblings: true,
+      },
+    ],
     "import-helpers/order-imports": [
       "warn",
       {
@@ -26,9 +38,11 @@ module.exports = {
           "/^consts/",
           "/^config/",
           "/^helpers/",
+          "/^providers/",
           "/^hooks/",
           "/^components/",
           "/^containers/",
+          "/^types/",
           ["parent", "sibling", "index"],
         ],
         alphabetize: {

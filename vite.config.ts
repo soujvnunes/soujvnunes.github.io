@@ -3,6 +3,21 @@ import { defineConfig } from "vite";
 import svgr from "vite-plugin-svgr";
 import webfontDownload from "vite-plugin-webfont-dl";
 
+const aliases = [
+  "consts",
+  "config",
+  "components",
+  "containers",
+  "hooks",
+  "helpers",
+  "providers",
+  "types",
+] as const;
+
+type Alias = {
+  [k in (typeof aliases)[number]]: `/src/${k}`;
+};
+
 // https://vitejs.dev/config/
 export default defineConfig({
   base: "/",
@@ -12,32 +27,10 @@ export default defineConfig({
     svgr(),
   ],
   resolve: {
-    alias: [
-      {
-        find: "consts",
-        replacement: "/src/consts",
-      },
-      {
-        find: "config",
-        replacement: "/src/config",
-      },
-      {
-        find: "components",
-        replacement: "/src/components",
-      },
-      {
-        find: "containers",
-        replacement: "/src/containers",
-      },
-      {
-        find: "hooks",
-        replacement: "/src/hooks",
-      },
-      {
-        find: "helpers",
-        replacement: "/src/helpers",
-      },
-    ],
+    alias: aliases.reduce(
+      (acc, cur) => ({ ...acc, [cur]: `/src/${cur}` }),
+      {} as Alias,
+    ),
   },
   build: {
     target: "esnext",

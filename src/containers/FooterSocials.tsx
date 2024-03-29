@@ -1,49 +1,26 @@
-import { useTranslation } from "react-i18next";
-import Button from "components/Button";
-import Icon from "components/Icon";
-
-const socials = [
-  {
-    href: "https://medium.com/@soujvnunes",
-    name: "Medium",
-  },
-  {
-    href: "https://github.com/soujvnunes",
-    name: "GitHub",
-  },
-  {
-    href: "https://www.linkedin.com/in/soujvnunes/",
-    name: "LinkedIn",
-  },
-
-  {
-    href: "https://www.behance.net/soujvnunes",
-    name: "Behance",
-  },
-] as const;
+import { twMerge } from "tailwind-merge";
+import classNames from "consts/classNames";
+import Socials from "./Socials";
 
 export default function FooterSocials() {
-  const [t] = useTranslation();
-
-  return socials.map(({ name, href }) => {
-    const title = t("socials_label", {
-      name,
-    });
-
-    return (
-      <li className="inline-block" key={name}>
-        <Button
-          as="a"
-          variant="text"
-          target="_blank"
-          rel="noreferrer"
-          className="plausible-event-name=Visited+socials"
-          title={title}
-          href={href}
+  return (
+    <div className="mb-6 mt-10 max-md:space-y-4 md:flex md:flex-row-reverse md:items-center md:justify-center">
+      <div className="md:basis-4/12 md:text-left lg:basis-3/12">
+        <p
+          className={twMerge(
+            classNames.text.variant.caption,
+            "text-amber-600 md:pl-1 dark:text-amber-400",
+          )}
         >
-          <Icon name={name} title={title} />
-        </Button>
-      </li>
-    );
-  });
+          Connect
+        </p>
+        <h2 className="text-2xl font-bold md:pb-6 md:text-[2.75rem]/[2.75rem]">
+          Let&apos;s keep people together!
+        </h2>
+      </div>
+      <div className="md:basis-4/12 md:text-right lg:basis-3/12">
+        <Socials />
+      </div>
+    </div>
+  );
 }

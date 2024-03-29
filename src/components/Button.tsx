@@ -51,7 +51,7 @@ type ButtonProps<C extends React.ElementType = DefaultElement> =
       /** @default md */
       size?: "sm" | "md";
       /** @default outline */
-      variant?: "text" | "outline" | "toned";
+      variant?: "text" | "outline";
     }
   >;
 
