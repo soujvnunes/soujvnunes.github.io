@@ -8,7 +8,7 @@ export default function FooterSocials() {
 
   return (
     <div className="mb-6 mt-10 max-md:space-y-4 md:flex md:flex-row-reverse md:items-center md:justify-center">
-      <div className="md:basis-4/12 md:text-left lg:basis-3/12">
+      <div className="basis-4/12 md:text-left">
         <p
           className={twMerge(
             classNames.text.variant.caption,
@@ -21,7 +21,7 @@ export default function FooterSocials() {
           {t("footer_socials_title")}
         </h2>
       </div>
-      <div className="md:basis-4/12 md:text-right lg:basis-3/12">
+      <div className="basis-4/12 md:text-right">
         <Socials />
       </div>
     </div>
