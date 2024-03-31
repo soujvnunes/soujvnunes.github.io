@@ -2,11 +2,11 @@
   "homepage": "https://soujvnunes.github.io",
   "name": "soujvnunes.github.io",
   "private": true,
-  "version": "1.0.0",
+  "version": "2.0.3",
   "type": "module",
   "scripts": {
     "dev": "vite --host",
-    "build": "tsc && vite build",
+    "build": "tsc && vite build --base=./",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "test": "vitest"

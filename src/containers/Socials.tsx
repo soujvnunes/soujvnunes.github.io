@@ -45,21 +45,22 @@ export default function Socials({ className, inline }: SocialsProps) {
               rel="noreferrer"
               href={href}
               title={title}
+              aria-label={title}
               className={twMerge(
                 "plausible-event-name=Visited+socials",
                 !inline && "inline-flex bg-gradient-to-tl",
                 isLinkedIn &&
-                  "from-linkedin-500/20 to-linkedin-500/10 text-linkedin-500 dark:text-linkedin-400 h-10 w-10",
+                  "h-10 w-10 from-linkedin-500/20 to-linkedin-500/10 text-linkedin-500 dark:text-linkedin-400",
                 isGitHub &&
                   "h-16 w-16 from-neutral-700/20 to-neutral-700/10 text-neutral-700 dark:from-white/10 dark:to-white/5 dark:text-white",
                 !inline &&
                   name === "Medium" &&
                   "h-[104px] w-[104px] from-neutral-400/20 to-neutral-400/10 text-black/80 dark:from-gray-50/10 dark:to-gray-100/5 dark:text-gray-200",
                 isBehance &&
-                  "from-behance-500/20 to-behance-500/10 text-behance-500 dark:text-behance-400 h-[88px] w-[88px]",
+                  "h-[88px] w-[88px] from-behance-500/20 to-behance-500/10 text-behance-500 dark:text-behance-400",
               )}
             >
-              <Icon name={name} title={title} />
+              <Icon name={name} />
             </Button>
           </li>
         );
