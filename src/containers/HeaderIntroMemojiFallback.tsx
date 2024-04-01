@@ -4,13 +4,11 @@ import HeaderIntroMemojiFallbackSvg from "./HeaderIntroMemojiFallback.svg?react"
 
 type HeaderIntroMemojiFallbackProps = PickFrom<"svg", "className">;
 
-export default function HeaderIntroMemojiFallback(
-  { className }: HeaderIntroMemojiFallbackProps,
-  ref: React.ForwardedRef<SVGSVGElement>,
-) {
+export default function HeaderIntroMemojiFallback({
+  className,
+}: HeaderIntroMemojiFallbackProps) {
   return (
     <HeaderIntroMemojiFallbackSvg
-      ref={ref}
       className={twMerge("absolute w-48", className)}
     />
   );
