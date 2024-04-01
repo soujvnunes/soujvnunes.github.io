@@ -42,7 +42,7 @@ export default function Project({
             startItem.className,
           )}
         >
-          <Image className="h-48 rounded-t-[4px]" src={`/projects/${id}.jpg`} />
+          <Image className="h-40 rounded-t-[4px]" src={`/projects/${id}.jpg`} />
         </div>
         <div className="flex max-w-full basis-full flex-col md:basis-7/12">
           <CardHeader
