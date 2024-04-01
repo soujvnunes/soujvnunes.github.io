@@ -1,47 +1,29 @@
 import { Transition } from "@headlessui/react";
 import { twMerge } from "tailwind-merge";
 import useImage from "hooks/useImage";
+import { PickFrom } from "types/PickFrom";
 
-interface ImageProps
-  extends Pick<
-    React.ComponentPropsWithoutRef<"img">,
-    "src" | "alt" | "className"
-  > {
-  radius?: "2xs";
-  size?: "lg";
-}
+type ImageProps = PickFrom<"img", "src" | "alt" | "className">;
 
-export default function Image({
-  alt,
-  className,
-  radius,
-  size,
-  ...props
-}: ImageProps) {
+export default function Image({ className, ...props }: ImageProps) {
   const image = useImage();
 
   return (
     <span
-      className={twMerge(
-        "relative inline-block overflow-hidden",
-        size === "lg" && "h-10 w-10 lg:h-16 lg:w-16",
-        radius === "2xs" && "rounded-lg",
-        className,
-      )}
+      className={twMerge("relative inline-block overflow-hidden", className)}
     >
       <img
+        alt=""
         loading="lazy"
-        alt={alt}
+        decoding="async"
         className={twMerge(
-          "block bg-cover bg-no-repeat object-cover",
-          image.isLoading ? "opacity-0" : "motion-safe:transition-opacity",
-          !!size && "aspect-square",
+          "bg-cover bg-no-repeat object-cover motion-safe:transition-opacity",
+          image.isLoading && "opacity-0",
         )}
         {...image.handlers}
         {...props}
       />
       <Transition
-        as="span"
         aria-hidden
         enter="motion-safe:transition-opacity"
         enterFrom="opacity-0"
