@@ -1,7 +1,6 @@
-type SoujvnunesSymbolProps = Pick<
-  React.ComponentPropsWithoutRef<"strong">,
-  "className"
->;
+import { PickFrom } from "types/PickFrom";
+
+type SoujvnunesSymbolProps = PickFrom<"strong", "className">;
 
 export default function SoujvnunesSymbol(props: SoujvnunesSymbolProps) {
   return (
