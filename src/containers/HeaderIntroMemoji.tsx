@@ -1,12 +1,10 @@
 import { useCallback, useState } from "react";
 import { twMerge } from "tailwind-merge";
+import { PickFrom } from "types/PickFrom";
 import HeaderIntroMemojiFallback from "./HeaderIntroMemojiFallback";
 import memojiUrl from "/memoji.mov";
 
-type HeaderMemojiProps = Pick<
-  React.ComponentPropsWithoutRef<"span">,
-  "className"
->;
+type HeaderMemojiProps = PickFrom<"span", "className">;
 
 export default function HeaderIntroMemoji({ className }: HeaderMemojiProps) {
   const [isPlaying, setPlaying] = useState(false);
