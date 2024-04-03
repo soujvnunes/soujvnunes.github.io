@@ -12,6 +12,7 @@ const aliases = [
   "helpers",
   "providers",
   "types",
+  "stores",
 ] as const;
 
 type Alias = {
