@@ -19,7 +19,7 @@ export default function Header({ children }: HeaderProps) {
           height: boundingClient.rect.height + (isLgScreen ? 56 : 48),
         }}
         className={twMerge(
-          classNames.surface.primary,
+          classNames.surface.secondary,
           "absolute inset-x-0 top-0 -z-10",
         )}
       >
