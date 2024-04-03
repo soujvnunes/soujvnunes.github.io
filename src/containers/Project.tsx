@@ -35,7 +35,7 @@ export default function Project({
 
   return (
     <CardProvider>
-      <CardRoot className="bg-white shadow-lg shadow-amber-800/5 dark:border-t dark:border-t-amber-500/10 dark:bg-amber-900/20 dark:bg-gradient-to-tl dark:from-amber-900/80 dark:shadow-none dark:backdrop-blur-2xl">
+      <CardRoot className="flex gap-4 max-md:flex-wrap">
         <div
           className={twMerge(
             "flex max-w-full grow-0 basis-full overflow-hidden rounded-lg px-6 pt-10 md:basis-5/12",
