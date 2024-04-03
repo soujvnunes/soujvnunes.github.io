@@ -37,6 +37,7 @@ module.exports = {
           "module",
           "/^consts/",
           "/^config/",
+          "/^stores/",
           "/^helpers/",
           "/^providers/",
           "/^hooks/",
