@@ -7,7 +7,6 @@ export default {
     extend: {
       fontFamily: {
         sans: ['"sofia-pro"', ...defaultTheme.fontFamily.sans],
-        serif: ['"freight-display-pro"', ...defaultTheme.fontFamily.serif],
       },
       colors: {
         amber: {
@@ -26,5 +25,4 @@ export default {
       },
     },
   },
-  plugins: [require("@headlessui/tailwindcss")],
 } satisfies Config;
