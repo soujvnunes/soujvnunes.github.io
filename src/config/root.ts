@@ -1,5 +1,6 @@
 import { createRoot } from "react-dom/client";
 
-export const container = document.getElementById("root");
+// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+export const container = document.getElementById("root")!;
 
-export default container ? createRoot(container) : null;
+export default createRoot(container);
