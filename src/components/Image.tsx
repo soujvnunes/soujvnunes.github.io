@@ -1,4 +1,4 @@
-import { Transition } from "@headlessui/react";
+import { motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
 import useImage from "hooks/useImage";
 import { PickFrom } from "types/PickFrom";
@@ -23,18 +23,14 @@ export default function Image({ className, ...props }: ImageProps) {
         {...image.handlers}
         {...props}
       />
-      <Transition
+      <motion.div
         aria-hidden
-        enter="motion-safe:transition-opacity"
-        enterFrom="opacity-0"
-        enterTo="opacity-100"
-        leave="motion-safe:transition-opacity"
-        leaveFrom="opacity-100"
-        leaveTo="opacity-0"
-        show={image.isLoading}
+        className="w-full"
+        animate={image.isLoading ? "show" : "hidden"}
+        variants={{ show: { opacity: 1 }, hidden: { opacity: 0 } }}
       >
         <span className="absolute inset-0 bg-black/10 motion-safe:animate-pulse dark:bg-white/10" />
-      </Transition>
+      </motion.div>
     </span>
   );
 }
