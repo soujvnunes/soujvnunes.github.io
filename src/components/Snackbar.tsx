@@ -1,16 +1,28 @@
+import { forwardRef } from "react";
 import { twMerge } from "tailwind-merge";
 import classNames from "consts/classNames";
-import { type Snackbar } from "stores/snackbars";
+import { type PickFrom } from "types/PickFrom";
 
-interface SnackbarProps extends Snackbar {
+export interface SnackbarProps
+  extends PickFrom<"div", "className" | "children" | "style"> {
+  title: string;
   endItem?: React.ReactNode;
 }
 
-export default function Snackbar({ title, children, endItem }: SnackbarProps) {
+const Snackbar = forwardRef<HTMLDivElement, SnackbarProps>(function Snackbar(
+  { title, children, endItem, className, ...props },
+  ref,
+) {
   return (
     <div
       role="alert"
-      className={twMerge(classNames.surface.primary, "flex p-2 md:max-w-96")}
+      ref={ref}
+      className={twMerge(
+        classNames.surface.primary,
+        "inline-flex p-2",
+        className,
+      )}
+      {...props}
     >
       <p className="px-2 pb-2 leading-[1]">
         <strong className="my-2 block">{title}</strong>
@@ -26,4 +38,6 @@ export default function Snackbar({ title, children, endItem }: SnackbarProps) {
       {endItem}
     </div>
   );
-}
+});
+
+export default Snackbar;
