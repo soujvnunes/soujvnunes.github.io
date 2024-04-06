@@ -1,25 +1,21 @@
-import { useCallback, useState } from "react";
+import { useCallback, useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { twMerge } from "tailwind-merge";
-import useSnackbar from "hooks/useSnackbar";
 import { PickFrom } from "types/PickFrom";
 import HeaderIntroMemojiFallback from "./HeaderIntroMemojiFallback";
+import Snackbars from "./Snackbars";
 import memojiUrl from "/memoji.mov";
 
 type HeaderMemojiProps = PickFrom<"span", "className">;
 
 export default function HeaderIntroMemoji({ className }: HeaderMemojiProps) {
-  const snackbar = useSnackbar();
+  const [t] = useTranslation();
   const [isPlaying, setPlaying] = useState(false);
   const [canPlay, setCanPlay] = useState(false);
+  const [isPaused, setPaused] = useState(false);
   const handlePause = useCallback(() => {
-    if (isPlaying || canPlay) return;
-
-    snackbar.show({
-      title: "🔋 Reduced Resources",
-      children:
-        "Your device is probably with battery saving on. Would you like to disable it and reload the page for a better web experience?",
-    });
-  }, [canPlay, isPlaying, snackbar]);
+    setPaused(true);
+  }, []);
   const handleCanPlay = useCallback(() => {
     setCanPlay(true);
   }, []);
@@ -40,30 +36,40 @@ export default function HeaderIntroMemoji({ className }: HeaderMemojiProps) {
   );
 
   return (
-    <span
-      className={twMerge(
-        "inline-flex h-32 w-32 items-center justify-center overflow-hidden",
-        className,
-      )}
-    >
-      <video
-        muted
-        autoPlay
-        playsInline
-        preload="none"
-        crossOrigin="anonymous"
-        src={memojiUrl}
-        onPause={handlePause}
-        onEnded={handleEnded}
-        onPlaying={handlePlaying}
-        onCanPlayThrough={handleCanPlay}
-        className={twMerge("h-full scale-150", !isPlaying && "opacity-0")}
+    <>
+      <Snackbars
+        show={isPaused && !(isPlaying || canPlay)}
+        title={t("reduced_resources.title")}
       >
-        <HeaderIntroMemojiFallback />
-      </video>
-      {!isPlaying && (
-        <HeaderIntroMemojiFallback className={canPlay ? "" : "animate-pulse"} />
-      )}
-    </span>
+        {t("reduced_resources.description")}
+      </Snackbars>
+      <span
+        className={twMerge(
+          "inline-flex h-32 w-32 items-center justify-center overflow-hidden",
+          className,
+        )}
+      >
+        <video
+          muted
+          autoPlay
+          playsInline
+          preload="none"
+          crossOrigin="anonymous"
+          src={memojiUrl}
+          onPause={handlePause}
+          onEnded={handleEnded}
+          onPlaying={handlePlaying}
+          onCanPlayThrough={handleCanPlay}
+          className={twMerge("h-full scale-150", !isPlaying && "opacity-0")}
+        >
+          <HeaderIntroMemojiFallback />
+        </video>
+        {!isPlaying && (
+          <HeaderIntroMemojiFallback
+            className={canPlay ? "" : "animate-pulse"}
+          />
+        )}
+      </span>
+    </>
   );
 }
