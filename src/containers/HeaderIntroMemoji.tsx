@@ -12,10 +12,6 @@ export default function HeaderIntroMemoji({ className }: HeaderMemojiProps) {
   const [t] = useTranslation();
   const [isPlaying, setPlaying] = useState(false);
   const [canPlay, setCanPlay] = useState(false);
-  const [isPaused, setPaused] = useState(false);
-  const handlePause = useCallback(() => {
-    setPaused(true);
-  }, []);
   const handleCanPlay = useCallback(() => {
     setCanPlay(true);
   }, []);
@@ -38,7 +34,7 @@ export default function HeaderIntroMemoji({ className }: HeaderMemojiProps) {
   return (
     <>
       <Snackbars
-        show={isPaused && !(isPlaying || canPlay)}
+        show={canPlay && !isPlaying}
         title={t("reduced_resources.title")}
       >
         {t("reduced_resources.description")}
@@ -56,7 +52,6 @@ export default function HeaderIntroMemoji({ className }: HeaderMemojiProps) {
           preload="none"
           crossOrigin="anonymous"
           src={memojiUrl}
-          onPause={handlePause}
           onEnded={handleEnded}
           onPlaying={handlePlaying}
           onCanPlayThrough={handleCanPlay}
