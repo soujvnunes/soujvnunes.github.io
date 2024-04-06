@@ -28,11 +28,12 @@ export default function Snackbars({ show, ...props }: SnackbarsProps) {
       const mutationObserver = new MutationObserver(() => {
         void (async function handleShow() {
           const { actions } = (await import("stores/snackbars")).default;
+          const boundingClientRect = ref?.getBoundingClientRect();
 
           dispatch(
             actions.add({
               id,
-              height: ref?.getBoundingClientRect().height ?? 0,
+              height: boundingClientRect?.height ?? 0,
             }),
           );
         })();
@@ -70,8 +71,6 @@ export default function Snackbars({ show, ...props }: SnackbarsProps) {
     if (show) void handleShow();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [show]);
-
-  if (!container) return;
 
   return createPortal(
     <AnimatePresence>
