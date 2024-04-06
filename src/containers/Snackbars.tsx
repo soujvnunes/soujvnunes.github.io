@@ -2,6 +2,7 @@ import { useCallback, useEffect, useId } from "react";
 import { createPortal } from "react-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import { container } from "config/root";
+import isLgScreen from "helpers/isLgScreen";
 import useAppDispatch from "hooks/useAppDispatch";
 import { useAppSelector } from "hooks/useAppSelector";
 import Button from "components/Button";
@@ -59,7 +60,7 @@ export default function Snackbars({ show, ...props }: SnackbarsProps) {
     (acc, { height }, index) => (index < currentIndex ? height + acc : acc),
     0,
   );
-  const bottom = fullHeight + (32 + currentIndex * 16);
+  const bottom = fullHeight + (margin + currentIndex * padding);
 
   useEffect(() => {
     async function handleShow() {
@@ -110,3 +111,6 @@ export default function Snackbars({ show, ...props }: SnackbarsProps) {
     container,
   );
 }
+
+const margin = isLgScreen ? 32 : 16;
+const padding = isLgScreen ? 16 : 8;
