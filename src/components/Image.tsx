@@ -10,7 +10,10 @@ export default function Image({ className, ...props }: ImageProps) {
 
   return (
     <span
-      className={twMerge("relative inline-block overflow-hidden", className)}
+      className={twMerge(
+        "relative inline-block w-full overflow-hidden",
+        className,
+      )}
     >
       <img
         alt=""
@@ -23,14 +26,11 @@ export default function Image({ className, ...props }: ImageProps) {
         {...image.handlers}
         {...props}
       />
-      <motion.div
-        aria-hidden
-        className="w-full"
+      <motion.span
+        className="absolute inset-0 bg-black/10 motion-safe:animate-pulse dark:bg-white/10"
         animate={image.isLoading ? "show" : "hidden"}
         variants={{ show: { opacity: 1 }, hidden: { opacity: 0 } }}
-      >
-        <span className="absolute inset-0 bg-black/10 motion-safe:animate-pulse dark:bg-white/10" />
-      </motion.div>
+      />
     </span>
   );
 }
