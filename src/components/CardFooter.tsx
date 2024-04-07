@@ -1,9 +1,7 @@
 import { twMerge } from "tailwind-merge";
+import { PickFrom } from "types/PickFrom";
 
-type CardFooterProps = Pick<
-  React.ComponentPropsWithoutRef<"footer">,
-  "children" | "className"
->;
+type CardFooterProps = PickFrom<"footer", "children" | "className">;
 
 export default function CardFooter({ className, ...props }: CardFooterProps) {
   return (

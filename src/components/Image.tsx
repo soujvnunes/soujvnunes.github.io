@@ -1,58 +1,36 @@
-import { Transition } from "@headlessui/react";
+import { AnimatePresence, motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
 import useImage from "hooks/useImage";
+import { PickFrom } from "types/PickFrom";
 
-interface ImageProps
-  extends Pick<
-    React.ComponentPropsWithoutRef<"img">,
-    "src" | "alt" | "className"
-  > {
-  radius?: "2xs";
-  size?: "lg";
-}
+type ImageProps = PickFrom<"img", "src" | "alt" | "className">;
 
-export default function Image({
-  alt,
-  className,
-  radius,
-  size,
-  ...props
-}: ImageProps) {
+export default function Image({ className, ...props }: ImageProps) {
   const image = useImage();
 
   return (
-    <span
-      className={twMerge(
-        "relative inline-block overflow-hidden",
-        size === "lg" && "h-10 w-10 lg:h-16 lg:w-16",
-        radius === "2xs" && "rounded-lg",
-        className,
-      )}
-    >
+    <div className={twMerge("relative w-full overflow-hidden", className)}>
       <img
+        alt=""
         loading="lazy"
-        alt={alt}
+        decoding="async"
         className={twMerge(
-          "block bg-cover bg-no-repeat object-cover",
-          image.isLoading ? "opacity-0" : "motion-safe:transition-opacity",
-          !!size && "aspect-square",
+          "bg-cover bg-no-repeat object-cover motion-safe:transition-opacity",
+          image.isLoading && "opacity-0",
         )}
         {...image.handlers}
         {...props}
       />
-      <Transition
-        as="span"
-        aria-hidden
-        enter="motion-safe:transition-opacity"
-        enterFrom="opacity-0"
-        enterTo="opacity-100"
-        leave="motion-safe:transition-opacity"
-        leaveFrom="opacity-100"
-        leaveTo="opacity-0"
-        show={image.isLoading}
-      >
-        <span className="absolute inset-0 bg-black/10 motion-safe:animate-pulse dark:bg-white/10" />
-      </Transition>
-    </span>
+      <AnimatePresence>
+        {image.isLoading && (
+          <motion.span
+            className="absolute inset-0 bg-black/10 motion-safe:animate-pulse dark:bg-white/10"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          />
+        )}
+      </AnimatePresence>
+    </div>
   );
 }

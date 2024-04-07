@@ -1,22 +1,15 @@
-import { forwardRef } from "react";
 import { twMerge } from "tailwind-merge";
+import { PickFrom } from "types/PickFrom";
 import HeaderIntroMemojiFallbackSvg from "./HeaderIntroMemojiFallback.svg?react";
 
-type HeaderIntroMemojiFallbackProps = Pick<
-  React.ComponentPropsWithoutRef<"svg">,
-  "className"
->;
+type HeaderIntroMemojiFallbackProps = PickFrom<"svg", "className">;
 
-const HeaderIntroMemojiFallback = forwardRef(function HeaderIntroMemojiFallback(
-  { className }: HeaderIntroMemojiFallbackProps,
-  ref: React.ForwardedRef<SVGSVGElement>,
-) {
+export default function HeaderIntroMemojiFallback({
+  className,
+}: HeaderIntroMemojiFallbackProps) {
   return (
     <HeaderIntroMemojiFallbackSvg
-      ref={ref}
       className={twMerge("absolute w-48", className)}
     />
   );
-});
-
-export default HeaderIntroMemojiFallback;
+}

@@ -45,5 +45,13 @@
   },
   "socials_label": "Visite meu perfil do {{name}}",
   "footer_socials_caption": "Conecte-se",
-  "footer_socials_title": "Vamos manter as pessoas juntas!"
+  "footer_socials_title": "Vamos manter as pessoas juntas!",
+  "reduced_resources": {
+    "title": "🔋 Recursos reduzidos",
+    "description": "Seu dispositivo provavelmente está no modo de economia de energia. Gostaria de desativá-lo e recarregar a página para uma melhor experiência na web?"
+  },
+  "web_analytics": {
+    "title": "📊 Análise Web",
+    "description": "Este site usa serviços de análise da web de terceiros que respeitam a privacidade para rastrear visitantes por país, dispositivo e navegador; para que possa ser aprimorado com o passar do tempo."
+  }
 }

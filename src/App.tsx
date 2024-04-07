@@ -1,3 +1,5 @@
+import { Provider } from "react-redux";
+import store from "config/store";
 import Contributions from "containers/Contributions";
 import Footer from "containers/Footer";
 import Header from "containers/Header";
@@ -7,7 +9,7 @@ import Main from "containers/Main";
 
 export default function App() {
   return (
-    <>
+    <Provider store={store}>
       <Header>
         <HeaderIntro />
         <HeaderNav />
@@ -21,6 +23,6 @@ export default function App() {
          */}
       </Main>
       <Footer />
-    </>
+    </Provider>
   );
 }

@@ -45,5 +45,13 @@
   },
   "socials_label": "Visit my profile on {{name}}",
   "footer_socials_caption": "Connect",
-  "footer_socials_title": "Let's keep people together!"
+  "footer_socials_title": "Let's keep people together!",
+  "reduced_resources": {
+    "title": "🔋 Reduced Resources",
+    "description": "Your device is probably on power saving mode. Would you like to disable it and reload the page for a better web experience?"
+  },
+  "web_analytics": {
+    "title": "📊 Web Analytics",
+    "description": "This website uses a privacy-friendly third-party web analytics services to track visitors by country, device and browser; so it can be enhanced overtime."
+  }
 }

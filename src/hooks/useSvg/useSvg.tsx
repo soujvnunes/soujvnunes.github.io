@@ -36,6 +36,7 @@ const svgs = {
   ArrowOutward: () => import("./__svgs__/ArrowOutward.svg?react"),
   Behance: () => import("./__svgs__/Behance.svg?react"),
   BeproNetwork: () => import("./__svgs__/BeproNetwork.svg?react"),
+  Cross: () => import("./__svgs__/Cross.svg?react"),
   GitHub: () => import("./__svgs__/GitHub.svg?react"),
   Language: () => import("./__svgs__/Language.svg?react"),
   LinkedIn: () => import("./__svgs__/LinkedIn.svg?react"),

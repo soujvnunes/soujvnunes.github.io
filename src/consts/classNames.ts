@@ -18,12 +18,13 @@ const classNames = {
     root: "mx-auto w-full px-4 lg:px-8 lg:max-w-5xl",
   },
   button: {
-    root: `flex items-center justify-center rounded-lg ${className.text.variant.caption}`,
+    root: `inline-flex align-middle items-center justify-center rounded-lg ${className.text.variant.caption}`,
     size: {
-      sm: "h-8 min-w-8 pl-1 pr-1",
+      sm: "h-8 min-w-8 pl-2 pr-2",
       md: "h-10 min-w-10 pl-2 pr-2",
     },
     variant: {
+      tone: "bg-amber-500/10 text-amber-600 hover:bg-amber-500/20 motion-safe:transition-colors dark:text-amber-400",
       text: "text-amber-600 dark:text-amber-400 hover:bg-amber-500/10 motion-safe:transition-colors",
       outline:
         "border border-amber-500/40 text-amber-600 motion-safe:transition-colors hover:border-amber-500/60 hover:bg-amber-500/10 dark:text-amber-400",
@@ -31,8 +32,9 @@ const classNames = {
   },
   text: className.text,
   surface: {
-    primary: "bg-white dark:bg-stone-800",
-    secondary: "bg-gray-100 dark:bg-stone-900",
+    primary:
+      "rounded-2xl bg-white p-2 shadow-lg shadow-amber-800/5 dark:border-t dark:border-t-amber-500/10 dark:bg-amber-900/20 dark:bg-gradient-to-tl dark:from-amber-900/80 dark:shadow-none dark:backdrop-blur-2xl",
+    secondary: "bg-amber-50 dark:bg-amber-950",
   },
   grid: {
     root: "flex flex-wrap",
