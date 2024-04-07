@@ -1,16 +1,13 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { twMerge } from "tailwind-merge";
 import isAppleWidget from "helpers/isAppleWidget";
 import HeaderIntroMemojiFallback from "./HeaderIntroMemojiFallback";
+import Snackbars from "./Snackbars";
 import memojiUrl from "/memoji.mov";
 
-interface HeaderIntroMemojiMovProps {
-  onPlaying(params: boolean): void;
-}
-
-export default function HeaderIntroMemojiMov({
-  onPlaying,
-}: HeaderIntroMemojiMovProps) {
+export default function HeaderIntroMemojiMov() {
+  const [t] = useTranslation();
   const [isPlaying, setPlaying] = useState(false);
   const [canPlay, setCanPlay] = useState(false);
   const [isPaused, setPaused] = useState(false);
@@ -31,22 +28,23 @@ export default function HeaderIntroMemojiMov({
         video.currentTime = 0;
 
         setPlaying(false);
-        onPlaying(false);
       });
     },
-    [onPlaying],
+    [],
   );
-
-  useEffect(() => {
-    onPlaying(
-      isAppleWidget
-        ? !isPlaying && canPlay
-        : isPaused && !(isPlaying || canPlay),
-    );
-  }, [canPlay, isPaused, isPlaying, onPlaying]);
 
   return (
     <>
+      <Snackbars
+        show={
+          isAppleWidget
+            ? !isPlaying && canPlay
+            : isPaused && !(isPlaying || canPlay)
+        }
+        title={t("reduced_resources.title")}
+      >
+        {t("reduced_resources.description")}
+      </Snackbars>
       <video
         muted
         autoPlay
