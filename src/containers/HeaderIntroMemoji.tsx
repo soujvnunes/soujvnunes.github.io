@@ -37,6 +37,7 @@ export default function HeaderIntroMemoji({
     },
     [],
   );
+  const isDefinitelyPaused = (!isAppleWidget && isPaused) || !isPlaying;
 
   return (
     <span
@@ -46,12 +47,12 @@ export default function HeaderIntroMemoji({
       )}
     >
       <Snackbars
+        title={t("reduced_resources.title")}
         show={
           isAppleWidget
             ? !isPlaying && canPlay
             : isPaused && !(isPlaying || canPlay)
         }
-        title={t("reduced_resources.title")}
       >
         {t("reduced_resources.description")}
       </Snackbars>
@@ -66,11 +67,14 @@ export default function HeaderIntroMemoji({
         onEnded={handleEnded}
         onPlaying={handlePlaying}
         onCanPlayThrough={handleCanPlay}
-        className={twMerge("h-full scale-150", !isPlaying && "opacity-0")}
+        className={twMerge(
+          "h-full scale-150",
+          isDefinitelyPaused && "pointer-events-none opacity-0",
+        )}
       >
         <HeaderIntroMemojiFallback />
       </video>
-      {!isPlaying && (
+      {isDefinitelyPaused && (
         <HeaderIntroMemojiFallback className={canPlay ? "" : "animate-pulse"} />
       )}
     </span>
