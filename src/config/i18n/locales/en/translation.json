@@ -41,6 +41,11 @@
       "title": "Bepro App",
       "description": "User interface implementation of task-based crypto marketplace, integrating it with digital wallets services, such as MetaMask.",
       "company": "Bepro Network"
+    },
+    "prontuarios": {
+      "title": "Medical Record",
+      "description": "I led UI/UX design, gathering requirements based on methodologies, such as Visual Identity System and Design System, to its front-end development.",
+      "company": "Federal University of Alagoas"
     }
   },
   "socials_label": "Visit my profile on {{name}}",

@@ -41,6 +41,11 @@
       "title": "App Bepro",
       "description": "Implementação da interface de usuário para gerenciamento de tarefas baseadas no mercado de criptomoedas, integrada com serviços de carteira digital, como MetaMask.",
       "company": "Bepro Network"
+    },
+    "prontuarios": {
+      "title": "Prontuário Eletrônico",
+      "description": "Liderei o design UI/UX, reunindo requisitos baseados em metodologias, como Visual Identity System e Design System, para seu desenvolvimento front-end.",
+      "company": "Universidade Federal de Alagoas"
     }
   },
   "socials_label": "Visite meu perfil do {{name}}",
