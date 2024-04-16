@@ -92,7 +92,7 @@ const projects: ProjectProps[] = [
       },
       {
         id: "project",
-        href: "https://www.behance.net/gallery/116828869/UFAL-60-Anos",
+        href: "https://www.behance.net/gallery/140840807/WIP-UFAL-60-Anos-%28Redesign%29",
         startItem: {
           icon: "Behance",
         },
