@@ -107,4 +107,21 @@ const projects: ProjectProps[] = [
       href: "https://sites.ufal.br/ufal-60-anos/",
     },
   },
+  {
+    id: "prontuarios",
+    actions: [
+      {
+        id: "project",
+        href: "https://www.behance.net/gallery/185346057/WIP-Prontuario-Eletronico",
+        startItem: {
+          icon: "Behance",
+        },
+      },
+    ],
+    startItem: {
+      className:
+        "bg-gradient-to-br from-orange-500/10 to-orange-500/20 border-orange-500/10 border-b dark:border-b-0 dark:border-t",
+      icon: "Prontuarios",
+    },
+  },
 ];
