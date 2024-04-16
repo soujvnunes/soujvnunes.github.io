@@ -43,6 +43,7 @@ const svgs = {
   Medium: () => import("./__svgs__/Medium.svg?react"),
   Pen: () => import("./__svgs__/Pen.svg?react"),
   Polkamarkets: () => import("./__svgs__/Polkamarkets.svg?react"),
+  Prontuarios: () => import("./__svgs__/Prontuarios.svg?react"),
   Ufal: () => import("./__svgs__/Ufal.svg?react"),
   Vitalk: () => import("./__svgs__/Vitalk.svg?react"),
 };
