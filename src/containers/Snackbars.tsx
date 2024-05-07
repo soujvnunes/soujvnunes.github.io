@@ -73,6 +73,8 @@ export default function Snackbars({ show, ...props }: SnackbarsProps) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [show]);
 
+  if (!container) return;
+
   return createPortal(
     <AnimatePresence>
       {currentIndex >= 0 && (
