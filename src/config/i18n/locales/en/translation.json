@@ -24,28 +24,23 @@
   "contributions_projects": {
     "polkamarkets": {
       "title": "Polkamarkets App",
-      "description": "Design review and implementation of user interface to be integrated with MetaMask interface or other digital wallets services.",
+      "description": "Updated the Polkamarkets App to version 2 presenting a splash screen and social login flow in a brand new homepage and market page by an optimized team development experience after implementing Jest Testing Framework and CSS Modules.",
       "company": "Polkamarkets Labs"
     },
     "ufal": {
       "title": "U.F.A.L. 60 Years",
-      "description": "Design and implementation of a virtual exhibition that shows the evolution of the Federal University of Alagoas.",
+      "description": "Led the Virtual Exhibition UI/UX design and frontend development with React and Material UI that shows the University evolution throughout its 60 years of history.",
       "company": "Federal University of Alagoas"
     },
     "vitalk": {
       "title": "Ways to create Design Tokens",
-      "description": "Right before Gympass US, LLC acquire Vitalk, becoming Wellz, I've written a step-by-step to extract design tokens from a live web service without documentation.",
+      "description": "Analyzed the Vitalk Portal and simulated a website refresh by mapping its design tokens in Figma to improve its components accessibility between device mode, later writing a Medium article about how important a Design System is to a product.",
       "company": "Vitalk"
     },
     "bepro": {
       "title": "Bepro App",
-      "description": "User interface implementation of task-based crypto marketplace, integrating it with digital wallets services, such as MetaMask.",
+      "description": "Contributed for the brand new Bepro App frontend maintaining the design systems and flows with read-only Figma components and design tokens using Bootstrap framework built with React.",
       "company": "Bepro Network"
-    },
-    "prontuarios": {
-      "title": "Medical Record",
-      "description": "I led UI/UX design, gathering requirements based on methodologies, such as Visual Identity System and Design System, to its front-end development.",
-      "company": "Federal University of Alagoas"
     }
   },
   "socials_label": "Visit my profile on {{name}}",
