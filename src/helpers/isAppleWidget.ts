@@ -1,5 +1,3 @@
-const isAppleWidget =
-  !!window.navigator.userAgent.match(/iPad/i) ||
-  !!window.navigator.userAgent.match(/iPhone/i);
+const isAppleWidget = !!window.navigator.userAgent.match(/iPad|iPhone/i);
 
 export default isAppleWidget;

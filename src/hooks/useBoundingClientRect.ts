@@ -3,13 +3,12 @@ import { useCallback, useState } from "react";
 export default function useBoundingClient() {
   const [rect, setRect] = useState(defaultRect);
   const ref = useCallback((node: HTMLElement | null) => {
-    if (node != null) setRect(node.getBoundingClientRect());
+    const boundingClientRect = node?.getBoundingClientRect();
+
+    setRect(boundingClientRect ?? defaultRect);
   }, []);
 
-  return {
-    rect,
-    ref,
-  };
+  return { rect, ref };
 }
 
 const defaultRect = {
