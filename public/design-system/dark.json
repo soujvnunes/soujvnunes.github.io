@@ -1,0 +1,282 @@
+{
+  "colors": {
+    "main": {
+      "0": {
+        "value": "rgba( {colors.amber.400} , {opacities.0})",
+        "type": "color"
+      },
+      "10": {
+        "value": "rgba( {colors.amber.400} , {opacities.10})",
+        "type": "color"
+      },
+      "20": {
+        "value": "rgba( {colors.amber.400} , {opacities.20})",
+        "type": "color"
+      },
+      "40": {
+        "value": "rgba( {colors.amber.400} , {opacities.40})",
+        "type": "color"
+      },
+      "60": {
+        "value": "rgba( {colors.amber.400} , {opacities.60})",
+        "type": "color"
+      },
+      "100": {
+        "value": "{colors.amber.400}",
+        "type": "color"
+      }
+    },
+    "accent": {
+      "0": {
+        "value": "rgba( {colors.indigo.500} , {opacities.0})",
+        "type": "color"
+      },
+      "10": {
+        "value": "rgba( {colors.indigo.500} , {opacities.10})",
+        "type": "color"
+      },
+      "20": {
+        "value": "rgba( {colors.indigo.500} , {opacities.20})",
+        "type": "color"
+      },
+      "40": {
+        "value": "rgba( {colors.indigo.500} , {opacities.40})",
+        "type": "color"
+      },
+      "60": {
+        "value": "rgba( {colors.indigo.500} , {opacities.60})",
+        "type": "color"
+      },
+      "100": {
+        "value": "{colors.indigo.500}",
+        "type": "color"
+      }
+    },
+    "background": {
+      "100": {
+        "value": "{colors.amber.900}",
+        "type": "color"
+      }
+    },
+    "foreground": {
+      "20": {
+        "value": "rgba( {colors.amber.100} , {opacities.20})",
+        "type": "color"
+      },
+      "40": {
+        "value": "rgba( {colors.amber.100} , {opacities.40})",
+        "type": "color"
+      },
+      "60": {
+        "value": "rgba( {colors.amber.100} , {opacities.60})",
+        "type": "color"
+      },
+      "100": {
+        "value": "{colors.amber.100}",
+        "type": "color"
+      }
+    },
+    "surface": {
+      "0": {
+        "value": "rgba( {colors.amber.800} , {opacities.0})",
+        "type": "color"
+      },
+      "60": {
+        "value": "rgba( {colors.amber.800} , {opacities.60})",
+        "type": "color"
+      },
+      "100": {
+        "value": "{colors.amber.800}",
+        "type": "color"
+      }
+    },
+    "brand": {
+      "bepro": {
+        "10": {
+          "value": "rgba( {colors.blue.800} , {opacities.10})",
+          "type": "color"
+        },
+        "20": {
+          "value": "rgba( {colors.blue.800} , {opacities.20})",
+          "type": "color"
+        },
+        "100": {
+          "value": "{colors.blue.800}",
+          "type": "color"
+        }
+      },
+      "vitalk": {
+        "10": {
+          "value": "rgba( {colors.sky.400} , {opacities.10})",
+          "type": "color"
+        },
+        "20": {
+          "value": "rgba( {colors.sky.400} , {opacities.20})",
+          "type": "color"
+        },
+        "100": {
+          "value": "{colors.sky.400}",
+          "type": "color"
+        }
+      },
+      "polkamarkets": {
+        "10": {
+          "value": "rgba( {colors.indigo.700} , {opacities.10})",
+          "type": "color"
+        },
+        "20": {
+          "value": "rgba( {colors.indigo.700} , {opacities.20})",
+          "type": "color"
+        },
+        "100": {
+          "value": "{colors.indigo.700}",
+          "type": "color"
+        }
+      },
+      "ufal": {
+        "10": {
+          "value": "rgba( {colors.fuchsia.400} , {opacities.10})",
+          "type": "color"
+        },
+        "20": {
+          "value": "rgba( {colors.fuchsia.400} , {opacities.20})",
+          "type": "color"
+        },
+        "100": {
+          "value": "{colors.fuchsia.400}",
+          "type": "color"
+        }
+      },
+      "wellhub": {
+        "10": {
+          "value": "rgba( {colors.rose.500} , {opacities.10})",
+          "type": "color"
+        },
+        "20": {
+          "value": "rgba( {colors.rose.500} , {opacities.20})",
+          "type": "color"
+        },
+        "100": {
+          "value": "{colors.rose.500}",
+          "type": "color"
+        }
+      }
+    },
+    "social": {
+      "medium": {
+        "10": {
+          "value": "rgba( {colors.zinc.200} , {opacities.10})",
+          "type": "color"
+        },
+        "20": {
+          "value": "rgba( {colors.zinc.200} , {opacities.20})",
+          "type": "color"
+        },
+        "100": {
+          "value": "{colors.zinc.200}",
+          "type": "color"
+        }
+      },
+      "github": {
+        "10": {
+          "value": "rgba( {colors.slate.50} , {opacities.10})",
+          "type": "color"
+        },
+        "20": {
+          "value": "rgba( {colors.slate.50} , {opacities.20})",
+          "type": "color"
+        },
+        "100": {
+          "value": "{colors.slate.50}",
+          "type": "color"
+        }
+      },
+      "behance": {
+        "10": {
+          "value": "rgba( {colors.blue.600} , {opacities.10})",
+          "type": "color"
+        },
+        "20": {
+          "value": "rgba( {colors.blue.600} , {opacities.20})",
+          "type": "color"
+        },
+        "100": {
+          "value": "{colors.blue.600}",
+          "type": "color"
+        }
+      },
+      "linkedin": {
+        "10": {
+          "value": "rgba( {colors.sky.600} , {opacities.10})",
+          "type": "color"
+        },
+        "20": {
+          "value": "rgba( {colors.sky.600} , {opacities.20})",
+          "type": "color"
+        },
+        "100": {
+          "value": "{colors.sky.600}",
+          "type": "color"
+        }
+      }
+    },
+    "tool": {
+      "react": {
+        "10": {
+          "value": "rgba( {colors.cyan.300} , {opacities.10})",
+          "type": "color"
+        },
+        "20": {
+          "value": "rgba( {colors.cyan.300} , {opacities.20})",
+          "type": "color"
+        },
+        "100": {
+          "value": "{colors.cyan.300}",
+          "type": "color"
+        }
+      },
+      "typescript": {
+        "10": {
+          "value": "rgba( {colors.sky.700} , {opacities.10})",
+          "type": "color"
+        },
+        "20": {
+          "value": "rgba( {colors.sky.700} , {opacities.20})",
+          "type": "color"
+        },
+        "100": {
+          "value": "{colors.sky.700}",
+          "type": "color"
+        }
+      },
+      "figma": {
+        "10": {
+          "value": "rgba( {colors.violet.600} , {opacities.10})",
+          "type": "color"
+        },
+        "20": {
+          "value": "rgba( {colors.violet.600} , {opacities.20})",
+          "type": "color"
+        },
+        "100": {
+          "value": "{colors.violet.600}",
+          "type": "color"
+        }
+      },
+      "storybook": {
+        "10": {
+          "value": "rgba( {colors.pink.500} , {opacities.10})",
+          "type": "color"
+        },
+        "20": {
+          "value": "rgba( {colors.pink.500} , {opacities.20})",
+          "type": "color"
+        },
+        "100": {
+          "value": "{colors.pink.500}",
+          "type": "color"
+        }
+      }
+    }
+  }
+}
