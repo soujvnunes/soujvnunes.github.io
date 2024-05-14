@@ -88,6 +88,10 @@
       "100": {
         "value": "{colors.amber.800}",
         "type": "color"
+      },
+      "gradient": {
+        "value": "linear-gradient(90deg, {colors.surface.0} 0%, {colors.surface.60} 100%)",
+        "type": "color"
       }
     },
     "brand": {
@@ -103,6 +107,10 @@
         "100": {
           "value": "{colors.blue.800}",
           "type": "color"
+        },
+        "gradient": {
+          "value": "linear-gradient(90deg, {colors.brand.bepro.20} 0%, {colors.brand.bepro.10} 100%)",
+          "type": "color"
         }
       },
       "vitalk": {
@@ -116,6 +124,10 @@
         },
         "100": {
           "value": "{colors.sky.400}",
+          "type": "color"
+        },
+        "gradient": {
+          "value": "linear-gradient(90deg, {colors.brand.vitalk.20} 0%, {colors.brand.vitalk.10} 100%)",
           "type": "color"
         }
       },
@@ -131,6 +143,10 @@
         "100": {
           "value": "{colors.indigo.700}",
           "type": "color"
+        },
+        "gradient": {
+          "value": "linear-gradient(90deg, {colors.brand.polkamarkets.20} 0%, {colors.brand.polkamarkets.10} 100%)",
+          "type": "color"
         }
       },
       "ufal": {
@@ -145,6 +161,10 @@
         "100": {
           "value": "{colors.fuchsia.400}",
           "type": "color"
+        },
+        "gradient": {
+          "value": "linear-gradient(90deg, {colors.brand.ufal.20} 0%, {colors.brand.ufal.10} 100%)",
+          "type": "color"
         }
       },
       "wellhub": {
@@ -158,6 +178,10 @@
         },
         "100": {
           "value": "{colors.rose.500}",
+          "type": "color"
+        },
+        "gradient": {
+          "value": "linear-gradient(90deg, {colors.brand.wellhub.20} 0%, {colors.brand.wellhub.10} 100%)",
           "type": "color"
         }
       }
@@ -175,6 +199,10 @@
         "100": {
           "value": "{colors.zinc.200}",
           "type": "color"
+        },
+        "gradient": {
+          "value": "linear-gradient(90deg, {colors.social.medium.20} 0%, {colors.social.medium.10} 100%)",
+          "type": "color"
         }
       },
       "github": {
@@ -188,6 +216,10 @@
         },
         "100": {
           "value": "{colors.slate.50}",
+          "type": "color"
+        },
+        "gradient": {
+          "value": "linear-gradient(90deg, {colors.social.github.20} 0%, {colors.social.github.10} 100%)",
           "type": "color"
         }
       },
@@ -203,6 +235,10 @@
         "100": {
           "value": "{colors.blue.600}",
           "type": "color"
+        },
+        "gradient": {
+          "value": "linear-gradient(90deg, {colors.social.behance.20} 0%, {colors.social.behance.10} 100%)",
+          "type": "color"
         }
       },
       "linkedin": {
@@ -216,6 +252,10 @@
         },
         "100": {
           "value": "{colors.sky.600}",
+          "type": "color"
+        },
+        "gradient": {
+          "value": "linear-gradient(90deg, {colors.social.linkedin.20} 0%, {colors.social.linkedin.10} 100%)",
           "type": "color"
         }
       }
@@ -233,6 +273,10 @@
         "100": {
           "value": "{colors.cyan.300}",
           "type": "color"
+        },
+        "gradient": {
+          "value": "linear-gradient(90deg, {colors.tool.react.20} 0%, {colors.tool.react.10} 100%)",
+          "type": "color"
         }
       },
       "typescript": {
@@ -246,6 +290,10 @@
         },
         "100": {
           "value": "{colors.sky.700}",
+          "type": "color"
+        },
+        "gradient": {
+          "value": "linear-gradient(90deg, {colors.tool.typescript.20} 0%, {colors.tool.typescript.10} 100%)",
           "type": "color"
         }
       },
@@ -261,6 +309,10 @@
         "100": {
           "value": "{colors.violet.600}",
           "type": "color"
+        },
+        "gradient": {
+          "value": "linear-gradient(90deg, {colors.tool.figma.20} 0%, {colors.tool.figma.10} 100%)",
+          "type": "color"
         }
       },
       "storybook": {
@@ -274,6 +326,28 @@
         },
         "100": {
           "value": "{colors.pink.500}",
+          "type": "color"
+        },
+        "gradient": {
+          "value": "linear-gradient(90deg, {colors.tool.storybook.20} 0%, {colors.tool.storybook.10} 100%)",
+          "type": "color"
+        }
+      },
+      "tailwindcss": {
+        "10": {
+          "value": "rgba( {colors.cyan.500} , {opacities.10})",
+          "type": "color"
+        },
+        "20": {
+          "value": "rgba( {colors.cyan.500} , {opacities.20})",
+          "type": "color"
+        },
+        "100": {
+          "value": "{colors.cyan.500}",
+          "type": "color"
+        },
+        "gradient": {
+          "value": "linear-gradient(90deg, {colors.tool.tailwindcss.20} 0%, {colors.tool.tailwindcss.10} 100%)",
           "type": "color"
         }
       }
