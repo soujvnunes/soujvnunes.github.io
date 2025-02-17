@@ -23,6 +23,11 @@
     "design system": "design system"
   },
   "contributions_projects": {
+    "ainotator": {
+      "title": "AINotator Web",
+      "description": "Implemented the Fabric.js library's brush and polygon drawing tools to semantically annotate segmentation data in images interactively, featuring a responsive design and exportation the results in COCO format.",
+      "company": "Overview AI–Next-Gen AI Industrial Vision Systems"
+    },
     "mentalyc": {
       "title": "Mentalyc App",
       "description": "Implemented a demo for the Clients page and its Design System in Storybook using the provided Figma prototype, where I provided suggestions to make the UI more user-friendly and compliant with accessibility standards.",

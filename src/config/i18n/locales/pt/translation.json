@@ -23,6 +23,11 @@
     "design system": "sistema de design"
   },
   "contributions_projects": {
+    "ainotator": {
+      "title": "AINotator Web",
+      "description": "Implementei as ferramentas polígono e pincél de desenho usando a biblioteca Fabric.js para anotação interativa e semãntica de dados em images, apresentando um design responsivo e exportando os resultados no formato COCO.",
+      "company": "Overview AI–Next-Gen AI Industrial Vision Systems"
+    },
     "mentalyc": {
       "title": "Mentalyc App",
       "description": "Implementei uma demonstração para a página Clientes junto com seu Sitema de Design usando um protótipo do Figma disponibilizado, onde provi sugestões para tornar a interface de usuário amigável e correspondente a fundamentos de acessibilidade.",
