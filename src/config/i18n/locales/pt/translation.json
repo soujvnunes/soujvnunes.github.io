@@ -31,22 +31,22 @@
     "polkamarkets": {
       "title": "App Polkamarkets",
       "description": "Atualizei o aplicativo web Polkamarkets para a versão 2, apresentando uma tela inicial e fluxo de login social em uma nova página inicial e página de mercado por meio de uma experiência de desenvolvimento de equipe otimizada após a implementação do Jest Testing Framework e dos módulos CSS.",
-      "company": "Polkamarkets Labs"
+      "company": "Polkamarkets Labs–Mercados de previsão Web3 para todos"
     },
     "ufal": {
-      "title": "UFAL 60 Anos",
+      "title": "Ufal 60 Anos",
       "description": "Liderei o design UI/UX e desenvolvimento frontend da Exposição Virtual com React e Material UI que mostra a evolução da Universidade ao longo de seus 60 anos de história.",
-      "company": "Universidade Federal de Alagoas"
+      "company": "UFAL–Instituição de ensino superior alagoano"
     },
     "vitalk": {
       "title": "Maneiras de Criar tokens de Design",
       "description": "Analisei o Portal Vitalk e simulei uma atualização do site mapeando seus tokens de design no Figma para melhorar a acessibilidade de seus componentes entre os modos de dispositivo, posteriormente escrevendo um artigo no Medium sobre a importância de um Design System para um produto.",
-      "company": "Vitalk"
+      "company": "Vitalk–Soluções para problemas de saúde emocional online"
     },
     "bepro": {
       "title": "App Bepro",
       "description": "Contribui para o novo aplicativo web da Bepro, realizando manutenção dos sistemas de design e fluxos com componentes e tokens de design pelo Figma somente-leitura. usando a estrutura Bootstrap construída com React.",
-      "company": "Bepro Network"
+      "company": "Bepro Network–Uma plataforma de mercado de tarefas"
     }
   },
   "socials_label": "Visite meu perfil do {{name}}",
