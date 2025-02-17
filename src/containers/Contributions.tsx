@@ -24,6 +24,60 @@ export default function Contributions() {
 
 const projects: ProjectProps[] = [
   {
+    id: "ainotator",
+    actions: [
+      {
+        id: "contribution",
+        href: "https://github.com/soujvnunes/ainotator-web/commits/main/?author=soujvnunes",
+        startItem: {
+          icon: "GitHub",
+        },
+      },
+      {
+        id: "design system",
+        href: "https://679428627f3ef9bc2d0ef88b-cwihzkqdjf.chromatic.com",
+        startItem: {
+          icon: "Storybook",
+        },
+      },
+    ],
+    endItem: {
+      href: "https://ainotator-web.vercel.app/",
+    },
+    startItem: {
+      className:
+        "bg-gradient-to-br from-neutral-500/10 to-neutral-500/20 border-neutral-500/10 border-b dark:border-b-0 dark:border-t",
+      icon: "AINotator",
+    },
+  },
+  {
+    id: "mentalyc",
+    actions: [
+      {
+        id: "contribution",
+        href: "https://github.com/soujvnunes/mentalyc-app/commits/main?author=soujvnunes/",
+        startItem: {
+          icon: "GitHub",
+        },
+      },
+      {
+        id: "design system",
+        href: "https://6777e1e865133e08a2c2f3a4-afmgojqwxj.chromatic.com",
+        startItem: {
+          icon: "Storybook",
+        },
+      },
+    ],
+    endItem: {
+      href: "https://mentalyc-app.vercel.app/",
+    },
+    startItem: {
+      className:
+        "bg-gradient-to-br from-fuchsia-800/10 to-fuchsia-800/20 border-fuchsia-800/10 border-b dark:border-b-0 dark:border-t",
+      icon: "Mentalyc",
+    },
+  },
+  {
     id: "polkamarkets",
     actions: [
       {
