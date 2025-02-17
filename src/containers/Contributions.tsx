@@ -24,6 +24,33 @@ export default function Contributions() {
 
 const projects: ProjectProps[] = [
   {
+    id: "mentalyc",
+    actions: [
+      {
+        id: "contribution",
+        href: "https://github.com/soujvnunes/mentalyc-app/commits/main?author=soujvnunes/",
+        startItem: {
+          icon: "GitHub",
+        },
+      },
+      {
+        id: "design system",
+        href: "https://6777e1e865133e08a2c2f3a4-afmgojqwxj.chromatic.com",
+        startItem: {
+          icon: "Storybook",
+        },
+      },
+    ],
+    endItem: {
+      href: "https://mentalyc-app.vercel.app/",
+    },
+    startItem: {
+      className:
+        "bg-gradient-to-br from-fuchsia-800/10 to-fuchsia-800/20 border-fuchsia-800/10 border-b dark:border-b-0 dark:border-t",
+      icon: "Mentalyc",
+    },
+  },
+  {
     id: "polkamarkets",
     actions: [
       {
