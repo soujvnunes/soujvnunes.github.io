@@ -26,7 +26,7 @@ export default function CardHeader({
           className={twMerge(
             classNames.text.color.secondary,
             classNames.text.variant.caption,
-            "block",
+            "block truncate",
           )}
         >
           {subhead}
