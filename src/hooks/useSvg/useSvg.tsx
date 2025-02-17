@@ -33,6 +33,7 @@ export default function useSvg(svg: Svgs) {
 
 // Pairing each callable splitted SVG with its key to turn the usage predictable
 const svgs = {
+  AINotator: () => import("./__svgs__/AINotator.svg?react"),
   ArrowOutward: () => import("./__svgs__/ArrowOutward.svg?react"),
   Behance: () => import("./__svgs__/Behance.svg?react"),
   BeproNetwork: () => import("./__svgs__/BeproNetwork.svg?react"),
