@@ -19,9 +19,15 @@
   "contributions_projects_actions": {
     "contribution": "contribution",
     "project": "project",
-    "article": "article"
+    "article": "article",
+    "design system": "design system"
   },
   "contributions_projects": {
+    "mentalyc": {
+      "title": "Mentalyc App",
+      "description": "Implemented a demo for the Clients page and its Design System in Storybook using the provided Figma prototype, where I provided suggestions to make the UI more user-friendly and compliant with accessibility standards.",
+      "company": "Mentalyc–AI Psychotherapy Progress Notes"
+    },
     "polkamarkets": {
       "title": "Polkamarkets App",
       "description": "Updated the Polkamarkets App to version 2 presenting a splash screen and social login flow in a brand new homepage and market page by an optimized team development experience after implementing Jest Testing Framework and CSS Modules.",

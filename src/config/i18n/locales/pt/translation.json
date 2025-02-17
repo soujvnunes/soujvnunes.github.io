@@ -19,9 +19,15 @@
   "contributions_projects_actions": {
     "contribution": "contribuição",
     "project": "projeto",
-    "article": "artigo"
+    "article": "artigo",
+    "design system": "sistema de design"
   },
   "contributions_projects": {
+    "mentalyc": {
+      "title": "Mentalyc App",
+      "description": "Implementei uma demonstração para a página Clientes junto com seu Sitema de Design usando um protótipo do Figma disponibilizado, onde provi sugestões para tornar a interface de usuário amigável e correspondente a fundamentos de acessibilidade.",
+      "company": "Mentalyc–Notas de progresso da psicoterapia com IA"
+    },
     "polkamarkets": {
       "title": "App Polkamarkets",
       "description": "Atualizei o aplicativo web Polkamarkets para a versão 2, apresentando uma tela inicial e fluxo de login social em uma nova página inicial e página de mercado por meio de uma experiência de desenvolvimento de equipe otimizada após a implementação do Jest Testing Framework e dos módulos CSS.",
