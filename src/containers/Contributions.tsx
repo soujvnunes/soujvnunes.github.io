@@ -33,13 +33,6 @@ const projects: ProjectProps[] = [
           icon: "GitHub",
         },
       },
-      {
-        id: "design system",
-        href: "https://679428627f3ef9bc2d0ef88b-cwihzkqdjf.chromatic.com",
-        startItem: {
-          icon: "Storybook",
-        },
-      },
     ],
     endItem: {
       href: "https://ainotator-web.vercel.app/",
@@ -49,6 +42,15 @@ const projects: ProjectProps[] = [
         "bg-gradient-to-br from-neutral-500/10 to-neutral-500/20 border-neutral-500/10 border-b dark:border-b-0 dark:border-t",
       icon: "AINotator",
     },
+    technologies: [
+      "typescript",
+      "figma",
+      "react",
+      "redux",
+      "rest api",
+      "tailwind css",
+      "fabric.js",
+    ],
   },
   {
     id: "mentalyc",
@@ -61,7 +63,7 @@ const projects: ProjectProps[] = [
         },
       },
       {
-        id: "design system",
+        id: "stories",
         href: "https://6777e1e865133e08a2c2f3a4-afmgojqwxj.chromatic.com",
         startItem: {
           icon: "Storybook",
@@ -76,6 +78,7 @@ const projects: ProjectProps[] = [
         "bg-gradient-to-br from-fuchsia-800/10 to-fuchsia-800/20 border-fuchsia-800/10 border-b dark:border-b-0 dark:border-t",
       icon: "Mentalyc",
     },
+    technologies: ["typescript", "figma", "react", "storybook", "tailwind css"],
   },
   {
     id: "polkamarkets",
@@ -96,6 +99,7 @@ const projects: ProjectProps[] = [
         "bg-gradient-to-br from-blue-500/10 to-blue-500/20 border-blue-500/10 border-b dark:border-b-0 dark:border-t",
       icon: "Polkamarkets",
     },
+    technologies: ["typescript", "figma", "react", "next.js", "scss"],
   },
   {
     id: "vitalk",
@@ -113,6 +117,13 @@ const projects: ProjectProps[] = [
         "bg-gradient-to-br from-sky-500/10 to-sky-500/20 border-sky-500/10 border-b dark:border-b-0 dark:border-t",
       icon: "Vitalk",
     },
+    technologies: [
+      "figma",
+      "react",
+      "ruby on rails",
+      "bootstrap",
+      "react native",
+    ],
   },
   {
     id: "bepro",
@@ -133,6 +144,7 @@ const projects: ProjectProps[] = [
     endItem: {
       href: "https://app.bepro.network",
     },
+    technologies: ["typescript", "figma", "web3", "rest api", "scss"],
   },
   {
     id: "ufal",
@@ -160,5 +172,6 @@ const projects: ProjectProps[] = [
     endItem: {
       href: "https://sites.ufal.br/ufal-60-anos/",
     },
+    technologies: ["mui", "adobe xd", "adobe illustrator", "react"],
   },
 ];
