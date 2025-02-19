@@ -14,11 +14,12 @@ export interface ProjectProps {
   id: string;
   startItem: { icon: IconName; className: string };
   endItem?: { href: string };
+  technologies?: string[];
   actions: ((
     | { startItem: { icon: IconName<"GitHub"> }; id: "contribution" }
     | { startItem: { icon: IconName<"Behance"> }; id: "project" }
     | { startItem: { icon: IconName<"Medium"> }; id: "article" }
-    | { startItem: { icon: IconName<"Storybook"> }; id: "design system" }
+    | { startItem: { icon: IconName<"Storybook"> }; id: "stories" }
   ) & {
     href: string;
   })[];
@@ -29,6 +30,7 @@ export default function Project({
   actions,
   startItem,
   endItem,
+  technologies,
 }: ProjectProps) {
   const [t] = useTranslation();
   const endItemLabel = t("contributions_title_visit_label");
@@ -82,6 +84,25 @@ export default function Project({
         </CardHeader>
         <CardContent>
           {t(`contributions_projects.${id}.description`)}
+          {!!technologies?.length && (
+            <ul
+              aria-label="technologies"
+              className="wrap mt-2 flex flex-wrap gap-2"
+            >
+              {technologies.map((technology) => (
+                <li
+                  key={technology}
+                  className={twMerge(
+                    classNames.button.root,
+                    classNames.button.size.xs,
+                    classNames.button.variant.tone,
+                  )}
+                >
+                  {technology}
+                </li>
+              ))}
+            </ul>
+          )}
         </CardContent>
         <CardFooter>
           {actions.map((action) => {
