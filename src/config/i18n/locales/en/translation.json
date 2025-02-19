@@ -20,7 +20,7 @@
     "contribution": "contribution",
     "project": "project",
     "article": "article",
-    "design system": "design system"
+    "stories": "stories"
   },
   "contributions_projects": {
     "ainotator": {

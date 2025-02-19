@@ -18,10 +18,11 @@ const classNames = {
     root: "mx-auto w-full px-4 lg:px-8 lg:max-w-5xl",
   },
   button: {
-    root: `inline-flex align-middle items-center justify-center rounded-lg ${className.text.variant.caption}`,
+    root: `inline-flex align-middle items-center justify-center pl-2 pr-2 rounded-lg ${className.text.variant.caption}`,
     size: {
-      sm: "h-8 min-w-8 pl-2 pr-2",
-      md: "h-10 min-w-10 pl-2 pr-2",
+      xs: "h-6 min-w-6 rounded-md",
+      sm: "h-8 min-w-8",
+      md: "h-10 min-w-10",
     },
     variant: {
       tone: "bg-amber-500/10 text-amber-600 hover:bg-amber-500/20 motion-safe:transition-colors dark:text-amber-400",
