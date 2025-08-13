@@ -43,6 +43,7 @@ const svgs = {
   LinkedIn: () => import("./__svgs__/LinkedIn.svg?react"),
   Medium: () => import("./__svgs__/Medium.svg?react"),
   Mentalyc: () => import("./__svgs__/Mentalyc.svg?react"),
+  Palpitada: () => import("./__svgs__/Palpitada.svg?react"),
   Pen: () => import("./__svgs__/Pen.svg?react"),
   Polkamarkets: () => import("./__svgs__/Polkamarkets.svg?react"),
   Storybook: () => import("./__svgs__/Storybook.svg?react"),
