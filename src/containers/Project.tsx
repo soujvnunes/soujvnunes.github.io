@@ -36,10 +36,10 @@ export default function Project({
   const endItemLabel = t("contributions_title_visit_label");
 
   return (
-    <Card className="flex gap-4 max-md:flex-wrap">
+    <Card className="grid grid-cols-1 gap-4 sm:grid-cols-12">
       <div
         className={twMerge(
-          "flex max-w-full grow-0 basis-full overflow-hidden rounded-lg px-6 pt-10 md:basis-5/12",
+          "flex overflow-hidden rounded-lg px-6 pt-10 sm:col-span-5",
           startItem.className,
         )}
       >
@@ -48,7 +48,7 @@ export default function Project({
           src={`/projects/${id}.jpg`}
         />
       </div>
-      <div className="flex max-w-full basis-full flex-col md:basis-7/12">
+      <div className="flex flex-col sm:col-span-7">
         <CardHeader
           subhead={t(`contributions_projects.${id}.company`)}
           startItem={
@@ -69,7 +69,7 @@ export default function Project({
                 target="_blank"
                 rel="noreferrer"
                 variant="text"
-                className="plausible-event-name=Visited+project"
+                className="plausible-event-name=Visited+project shrink-0"
                 aria-label={endItemLabel}
                 title={endItemLabel}
                 href={endItem.href}
@@ -96,6 +96,7 @@ export default function Project({
                     classNames.button.root,
                     classNames.button.size.xs,
                     classNames.button.variant.tone,
+                    "pointer-events-none cursor-default",
                   )}
                 >
                   {technology}
