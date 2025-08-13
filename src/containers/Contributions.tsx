@@ -24,6 +24,32 @@ export default function Contributions() {
 
 const projects: ProjectProps[] = [
   {
+    id: "palpitada",
+    actions: [],
+    endItem: {
+      href: "https://palpitada.com.br/",
+    },
+    startItem: {
+      className:
+        "bg-gradient-to-br from-emerald-500/10 to-emerald-900/20 border-emerald-500/10 border-b dark:border-b-0 dark:border-t",
+      icon: "Palpitada",
+    },
+    technologies: [
+      "typescript",
+      "next.js",
+      "tailwind css",
+      "figma",
+      "react",
+      "redux toolkit",
+      "rtk query",
+      "rest api",
+      "graphql",
+      "smart contracts",
+      "ethers.js",
+      "scrum",
+    ],
+  },
+  {
     id: "ainotator",
     actions: [
       {
