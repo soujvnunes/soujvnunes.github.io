@@ -23,35 +23,40 @@
     "stories": "stories"
   },
   "contributions_projects": {
+    "palpitada": {
+      "title": "Palpitada",
+      "description": "I lead the development of the Web3 Palpitada platform in Next.js with TypeScript, using Tailwind CSS and Figma for prototyping. I mentor engineering and design teams to align UX and define API standards, integrating REST/GraphQL and interacting with smart contracts via RTK Query and Redux Toolkit, with a focus on performance optimization, architecture, and accessibility.",
+      "company": "MetaMatch-People's interaction with the power of decentralization"
+    },
     "ainotator": {
       "title": "AINotator Web",
       "description": "Implemented the Fabric.js library's brush and polygon drawing tools to semantically annotate segmentation data in images interactively, featuring a responsive design and exportation the results in COCO format.",
-      "company": "Overview AI–Next-Gen AI Industrial Vision Systems"
+      "company": "Overview AI-Next-Gen AI Industrial Vision Systems"
     },
     "mentalyc": {
       "title": "Mentalyc App",
       "description": "Implemented a demo for the Clients page and its Design System in Storybook using the provided Figma prototype, where I provided suggestions to make the UI more user-friendly and compliant with accessibility standards.",
-      "company": "Mentalyc–AI Psychotherapy Progress Notes"
+      "company": "Mentalyc-AI Psychotherapy Progress Notes"
     },
     "polkamarkets": {
       "title": "Polkamarkets App",
       "description": "Updated the Polkamarkets App to version 2 presenting a splash screen and social login flow in a brand new homepage and market page by an optimized team development experience after implementing Jest Testing Framework and CSS Modules.",
-      "company": "Polkamarkets Labs–Web3 Prediction Markets for everyone"
+      "company": "Polkamarkets Labs-Web3 Prediction Markets for everyone"
     },
     "ufal": {
       "title": "Ufal 60 Years",
       "description": "Led the Virtual Exhibition UI/UX design and frontend development with React and Material UI that shows the University evolution throughout its 60 years of history.",
-      "company": "UFAL–Higher education institution in Alagoas, Brazil"
+      "company": "UFAL-Higher education institution in Alagoas, Brazil"
     },
     "vitalk": {
       "title": "Ways to create Design Tokens",
       "description": "Analyzed the Vitalk Portal and simulated a website refresh by mapping its design tokens in Figma to improve its components accessibility between device mode, later writing a Medium article about how important a Design System is to a product.",
-      "company": "Vitalk–Online solutions for emotional health problems provider"
+      "company": "Vitalk-Online solutions for emotional health problems provider"
     },
     "bepro": {
       "title": "Bepro App",
       "description": "Contributed for the brand new Bepro App frontend maintaining the design systems and flows with read-only Figma components and design tokens using Bootstrap framework built with React.",
-      "company": "Bepro Network–A task marketplace platform"
+      "company": "Bepro Network-A task marketplace platform"
     }
   },
   "socials_label": "Visit my profile on {{name}}",
