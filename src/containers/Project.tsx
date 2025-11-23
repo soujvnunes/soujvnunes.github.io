@@ -20,6 +20,7 @@ export interface ProjectProps {
     | { startItem: { icon: IconName<"Behance"> }; id: "project" }
     | { startItem: { icon: IconName<"Medium"> }; id: "article" }
     | { startItem: { icon: IconName<"Storybook"> }; id: "stories" }
+    | { startItem: { icon: IconName<"NPM"> }; id: "package" }
   ) & {
     href: string;
   })[];
