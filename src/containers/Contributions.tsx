@@ -24,6 +24,41 @@ export default function Contributions() {
 
 const projects: ProjectProps[] = [
   {
+    id: "themizer",
+    actions: [
+      {
+        id: "contribution",
+        href: "https://github.com/soujvnunes/themizer",
+        startItem: {
+          icon: "GitHub",
+        },
+      },
+      {
+        id: "package",
+        href: "https://www.npmjs.com/package/themizer",
+        startItem: {
+          icon: "NPM",
+        },
+      },
+    ],
+    startItem: {
+      className:
+        "bg-gradient-to-br from-amber-500/10 to-amber-500/20 border-amber-500/10 border-b dark:border-b-0 dark:border-t",
+      icon: "Themizer",
+    },
+    technologies: [
+      "typescript",
+      "node.js",
+      "commander.js",
+      "design tokens",
+      "css custom properties",
+      "oklch color space",
+      "jest",
+      "tsup",
+      "pnpm",
+    ],
+  },
+  {
     id: "palpitada",
     actions: [],
     endItem: {

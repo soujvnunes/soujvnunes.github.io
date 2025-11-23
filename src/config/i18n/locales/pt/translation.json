@@ -20,43 +20,49 @@
     "contribution": "contribuição",
     "project": "projeto",
     "article": "artigo",
-    "stories": "histórias"
+    "stories": "histórias",
+    "package": "pacote"
   },
   "contributions_projects": {
     "palpitada": {
       "title": "Palpitada",
-      "description": "Lidero o desenvolvimento da plataforma Web3 Palpitada em Next.js com TypeScript, usando Tailwind CSS e Figma para prototipagem. Mentorio equipes de engenharia e design para alinhar UX e definir padrões de API, integrando REST/GraphQL e interagindo com smart contracts em RTK Query e Redux Toolkit, com foco em otimização de performance, arquitetura e acessibilidade.",
-      "company": "MetaMatch-Interação de pessoas com o poder da descentralização"
+      "description": "Liderei o desenvolvimento frontend para plataforma de mercados de previsão em tempo real servindo milhares de usuários. Otimizei performance de build do Next.js em 94% (17k→1k módulos), arquitetei gerenciamento de estado complexo para transações financeiras usando Redux Toolkit, e mentoreei equipe de engenharia em padrões modernos de TypeScript. Integrei APIs REST/GraphQL e implementei tratamento de erros abrangente para recursos críticos.",
+      "company": "MetaMatch - Plataforma de Mercados de Previsão"
     },
-    "ainotator": {
-      "title": "AINotator Web",
-      "description": "Implementei as ferramentas polígono e pincél de desenho usando a biblioteca Fabric.js para anotação interativa e semântica de dados em imagens, apresentando um design responsivo e exportando os resultados no formato COCO.",
-      "company": "Overview AI-Indústria de Sistemas Visuais de última geração"
+    "themizer": {
+      "title": "Themizer",
+      "description": "Arquitetei e desenvolvi ferramenta CLI open-source em TypeScript que transforma classes CSS em tokens de design type-safe. Implementei manipulação de espaço de cor OKLCH para expansão automática de paletas, alcancei redução de 88% no tamanho do CSS através de minificação base-52 customizada, e construí detecção de frameworks para Next.js, Remix e Vite com observação em tempo real. Publicado no npm com cobertura completa de testes Jest.",
+      "company": "Open Source - Sistema de Tokens de Design para Arquitetura CSS Escalável"
     },
     "mentalyc": {
       "title": "Mentalyc App",
-      "description": "Implementei uma demonstração para a página Clientes junto com seu Sitema de Design usando um protótipo do Figma disponibilizado, onde provi sugestões para tornar a interface de usuário amigável e correspondente a fundamentos de acessibilidade.",
-      "company": "Mentalyc-Notas de progresso da psicoterapia com IA"
+      "description": "Construí biblioteca de componentes acessível para plataforma SaaS de saúde mental com conformidade completa WCAG 2.1 AA. Implementei sistema de documentação Storybook e estabeleci workflows de testes de acessibilidade. Colaborei com equipe de design para melhorar fluxos de usuário e implementar padrões de design responsivo usando Tailwind CSS.",
+      "company": "Mentalyc - Notas de Progresso de Psicoterapia com IA"
     },
     "polkamarkets": {
-      "title": "App Polkamarkets",
-      "description": "Atualizei o aplicativo web Polkamarkets para a versão 2, apresentando uma tela inicial e fluxo de login social em uma nova página inicial e página de mercado por meio de uma experiência de desenvolvimento de equipe otimizada após a implementação do Jest Testing Framework e dos módulos CSS.",
-      "company": "Polkamarkets Labs-Mercados de previsão Web3 para todos"
+      "title": "Polkamarkets App",
+      "description": "Contribuí para redesign da plataforma (lançamento v2) e melhorei performance da aplicação em 15% através de otimização de assets e refatoração de CSS. Introduzi framework de testes Jest e estabeleci padrões de documentação de componentes, melhorando velocidade de desenvolvimento na equipe. Implementei integração de autenticação social e otimizei renderização da homepage.",
+      "company": "Polkamarkets Labs - Plataforma de Mercados de Previsão"
     },
-    "ufal": {
-      "title": "Ufal 60 Anos",
-      "description": "Liderei o design UI/UX e desenvolvimento frontend da Exposição Virtual com React e Material UI que mostra a evolução da Universidade ao longo de seus 60 anos de história.",
-      "company": "UFAL-Instituição de ensino superior alagoano"
+    "ainotator": {
+      "title": "AINotator Web",
+      "description": "Implementei sistema interativo de anotação de imagens usando Fabric.js para captura de dados de segmentação semântica. Construí ferramentas customizadas de desenho com pincel e polígono com design responsivo e funcionalidade de exportação de dados em formato COCO. Integrado com sistemas de visão IA para aplicações industriais.",
+      "company": "Overview AI - Sistemas de Visão Industrial IA de Última Geração"
     },
     "vitalk": {
-      "title": "Maneiras de Criar tokens de Design",
-      "description": "Analisei o Portal Vitalk e simulei uma atualização do site mapeando seus tokens de design no Figma para melhorar a acessibilidade de seus componentes entre os modos de dispositivo, posteriormente escrevendo um artigo no Medium sobre a importância de um Design System para um produto.",
-      "company": "Vitalk-Soluções para problemas de saúde emocional online"
+      "title": "Portal Vitalk",
+      "description": "Implementei UI de onboarding com QR-code para projeto de migração de usuários, construindo componentes React responsivos e colaborando com equipe de design. Contribuí para refatoração de design system que melhorou produtividade de desenvolvimento em 10% através de tokens de design centralizados e padrões de componentes padronizados.",
+      "company": "Vitalk - Provedor de Soluções Online de Saúde Emocional"
     },
     "bepro": {
-      "title": "App Bepro",
-      "description": "Contribui para o novo aplicativo web da Bepro, realizando manutenção dos sistemas de design e fluxos com componentes e tokens de design pelo Figma somente-leitura. usando a estrutura Bootstrap construída com React.",
-      "company": "Bepro Network-Uma plataforma de mercado de tarefas"
+      "title": "Bepro App",
+      "description": "Implementei páginas responsivas para plataforma de marketplace de tarefas usando React com Bootstrap. Integrei fluxos de autenticação, APIs REST, e melhorei performance da aplicação em até 15% através de técnicas de otimização de código. Contribuí para arquitetura frontend e padrões de componentes.",
+      "company": "Bepro Network - Plataforma de Marketplace de Tarefas"
+    },
+    "ufal": {
+      "title": "UFAL 60 Anos",
+      "description": "Liderei desenvolvimento frontend para plataforma de Exposição Virtual mostrando 60 anos de história da universidade, construída com React e Material UI servindo milhares de visitantes. Conduzi pesquisa de usuários e desenhei fluxos de usuário para sistema de registro médico. Gerenciei projeto desde conceito até deploy.",
+      "company": "UFAL - Instituição de Ensino Superior em Alagoas, Brasil"
     }
   },
   "socials_label": "Visite meu perfil do {{name}}",

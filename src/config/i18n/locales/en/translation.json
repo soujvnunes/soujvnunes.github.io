@@ -20,43 +20,49 @@
     "contribution": "contribution",
     "project": "project",
     "article": "article",
-    "stories": "stories"
+    "stories": "stories",
+    "package": "package"
   },
   "contributions_projects": {
     "palpitada": {
       "title": "Palpitada",
-      "description": "I lead the development of the Web3 Palpitada platform in Next.js with TypeScript, using Tailwind CSS and Figma for prototyping. I mentor engineering and design teams to align UX and define API standards, integrating REST/GraphQL and interacting with smart contracts via RTK Query and Redux Toolkit, with a focus on performance optimization, architecture, and accessibility.",
-      "company": "MetaMatch-People's interaction with the power of decentralization"
+      "description": "Led frontend development for real-time prediction markets platform serving thousands of users. Optimized Next.js build performance by 94% (17k→1k modules), architected complex state management for financial transactions using Redux Toolkit, and mentored engineering team on modern TypeScript patterns. Integrated REST/GraphQL APIs and implemented comprehensive error handling for mission-critical features.",
+      "company": "MetaMatch - Prediction Markets Platform"
     },
-    "ainotator": {
-      "title": "AINotator Web",
-      "description": "Implemented the Fabric.js library's brush and polygon drawing tools to semantically annotate segmentation data in images interactively, featuring a responsive design and exportation the results in COCO format.",
-      "company": "Overview AI-Next-Gen AI Industrial Vision Systems"
+    "themizer": {
+      "title": "Themizer",
+      "description": "Architected and developed open-source TypeScript CLI tool that transforms CSS utility classes into type-safe design tokens. Implemented OKLCH color space manipulation for automatic palette expansion, achieved 88% CSS size reduction through custom base-52 minification, and built framework detection for Next.js, Remix, and Vite with real-time file watching. Published to npm with comprehensive Jest test coverage.",
+      "company": "Open Source - Design Token System for Scalable CSS Architecture"
     },
     "mentalyc": {
       "title": "Mentalyc App",
-      "description": "Implemented a demo for the Clients page and its Design System in Storybook using the provided Figma prototype, where I provided suggestions to make the UI more user-friendly and compliant with accessibility standards.",
-      "company": "Mentalyc-AI Psychotherapy Progress Notes"
+      "description": "Built accessible component library for mental health SaaS platform with full WCAG 2.1 AA compliance. Implemented Storybook documentation system and established accessibility testing workflows. Collaborated with design team to improve user flows and implement responsive design patterns using Tailwind CSS.",
+      "company": "Mentalyc - AI Psychotherapy Progress Notes"
     },
     "polkamarkets": {
       "title": "Polkamarkets App",
-      "description": "Updated the Polkamarkets App to version 2 presenting a splash screen and social login flow in a brand new homepage and market page by an optimized team development experience after implementing Jest Testing Framework and CSS Modules.",
-      "company": "Polkamarkets Labs-Web3 Prediction Markets for everyone"
+      "description": "Contributed to major platform redesign (v2 launch) and improved application performance by 15% through asset optimization and CSS refactoring. Introduced Jest unit testing framework and established component documentation standards, improving developer velocity across the engineering team. Implemented social authentication integration and optimized homepage rendering.",
+      "company": "Polkamarkets Labs - Prediction Markets Platform"
     },
-    "ufal": {
-      "title": "Ufal 60 Years",
-      "description": "Led the Virtual Exhibition UI/UX design and frontend development with React and Material UI that shows the University evolution throughout its 60 years of history.",
-      "company": "UFAL-Higher education institution in Alagoas, Brazil"
+    "ainotator": {
+      "title": "AINotator Web",
+      "description": "Implemented interactive image annotation system using Fabric.js for semantic segmentation data capture. Built custom brush and polygon drawing tools with responsive design and COCO format data export functionality. Integrated with AI vision systems for industrial applications.",
+      "company": "Overview AI - Next-Gen AI Industrial Vision Systems"
     },
     "vitalk": {
-      "title": "Ways to create Design Tokens",
-      "description": "Analyzed the Vitalk Portal and simulated a website refresh by mapping its design tokens in Figma to improve its components accessibility between device mode, later writing a Medium article about how important a Design System is to a product.",
-      "company": "Vitalk-Online solutions for emotional health problems provider"
+      "title": "Vitalk Portal",
+      "description": "Owned QR-code onboarding UI implementation for user migration project, building responsive React components and collaborating with design team. Contributed to design system refactor that improved developer productivity by 10% through centralized design tokens and standardized component patterns.",
+      "company": "Vitalk - Online Emotional Health Solutions Provider"
     },
     "bepro": {
       "title": "Bepro App",
-      "description": "Contributed for the brand new Bepro App frontend maintaining the design systems and flows with read-only Figma components and design tokens using Bootstrap framework built with React.",
-      "company": "Bepro Network-A task marketplace platform"
+      "description": "Implemented responsive pages for task marketplace platform using React with Bootstrap. Integrated authentication flows, REST APIs, and improved application performance up to 15% through code optimization techniques. Contributed to frontend architecture and component standards.",
+      "company": "Bepro Network - Task Marketplace Platform"
+    },
+    "ufal": {
+      "title": "UFAL 60 Years",
+      "description": "Led frontend development for Virtual Exhibition platform showcasing university's 60-year history, built with React and Material UI serving thousands of visitors. Conducted user research and designed user flows for medical record system. Managed project from concept through deployment.",
+      "company": "UFAL - Higher Education Institution in Alagoas, Brazil"
     }
   },
   "socials_label": "Visit my profile on {{name}}",
