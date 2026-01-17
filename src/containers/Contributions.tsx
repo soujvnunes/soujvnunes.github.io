@@ -24,11 +24,46 @@ export default function Contributions() {
 
 const projects: ProjectProps[] = [
   {
+    id: "tailwind_expand",
+    actions: [
+      {
+        id: "contribution",
+        href: "https://github.com/soujvnunes/tailwind-expand/commits/main/?author=soujvnunes",
+        startItem: {
+          icon: "GitHub",
+        },
+      },
+      {
+        id: "package",
+        href: "https://www.npmjs.com/org/tailwind-expand",
+        startItem: {
+          icon: "NPM",
+        },
+      },
+    ],
+    startItem: {
+      className:
+        "bg-gradient-to-br from-blue-600/10 to-blue-600/20 border-blue-600/10 border-b dark:border-b-0 dark:border-t",
+      icon: "TailwindExpand",
+    },
+    technologies: [
+      "typescript",
+      "node.js",
+      "tailwind css",
+      "vite",
+      "postcss",
+      "babel",
+      "swc",
+      "jest",
+      "tsup",
+    ],
+  },
+  {
     id: "themizer",
     actions: [
       {
         id: "contribution",
-        href: "https://github.com/soujvnunes/themizer",
+        href: "https://github.com/soujvnunes/themizer/commits/main/?author=soujvnunes",
         startItem: {
           icon: "GitHub",
         },
@@ -83,63 +118,6 @@ const projects: ProjectProps[] = [
       "ethers.js",
       "scrum",
     ],
-  },
-  {
-    id: "ainotator",
-    actions: [
-      {
-        id: "contribution",
-        href: "https://github.com/soujvnunes/ainotator-web/commits/main/?author=soujvnunes",
-        startItem: {
-          icon: "GitHub",
-        },
-      },
-    ],
-    endItem: {
-      href: "https://ainotator-web.vercel.app/",
-    },
-    startItem: {
-      className:
-        "bg-gradient-to-br from-neutral-500/10 to-neutral-500/20 border-neutral-500/10 border-b dark:border-b-0 dark:border-t",
-      icon: "AINotator",
-    },
-    technologies: [
-      "typescript",
-      "figma",
-      "react",
-      "redux",
-      "rest api",
-      "tailwind css",
-      "fabric.js",
-    ],
-  },
-  {
-    id: "mentalyc",
-    actions: [
-      {
-        id: "contribution",
-        href: "https://github.com/soujvnunes/mentalyc-app/commits/main?author=soujvnunes/",
-        startItem: {
-          icon: "GitHub",
-        },
-      },
-      {
-        id: "stories",
-        href: "https://6777e1e865133e08a2c2f3a4-afmgojqwxj.chromatic.com",
-        startItem: {
-          icon: "Storybook",
-        },
-      },
-    ],
-    endItem: {
-      href: "https://mentalyc-app.vercel.app/",
-    },
-    startItem: {
-      className:
-        "bg-gradient-to-br from-fuchsia-800/10 to-fuchsia-800/20 border-fuchsia-800/10 border-b dark:border-b-0 dark:border-t",
-      icon: "Mentalyc",
-    },
-    technologies: ["typescript", "figma", "react", "storybook", "tailwind css"],
   },
   {
     id: "polkamarkets",
