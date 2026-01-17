@@ -34,20 +34,15 @@
       "description": "Arquitetei e desenvolvi ferramenta CLI open-source em TypeScript que transforma classes CSS em tokens de design type-safe. Implementei manipulação de espaço de cor OKLCH para expansão automática de paletas, alcancei redução de 88% no tamanho do CSS através de minificação base-52 customizada, e construí detecção de frameworks para Next.js, Remix e Vite com observação em tempo real. Publicado no npm com cobertura completa de testes Jest.",
       "company": "Open Source - Sistema de Tokens de Design para Arquitetura CSS Escalável"
     },
-    "mentalyc": {
-      "title": "Mentalyc App",
-      "description": "Construí biblioteca de componentes acessível para plataforma SaaS de saúde mental com conformidade completa WCAG 2.1 AA. Implementei sistema de documentação Storybook e estabeleci workflows de testes de acessibilidade. Colaborei com equipe de design para melhorar fluxos de usuário e implementar padrões de design responsivo usando Tailwind CSS.",
-      "company": "Mentalyc - Notas de Progresso de Psicoterapia com IA"
+    "tailwind_expand": {
+      "title": "tailwind-expand",
+      "description": "Arquitetei e desenvolvi uma ferramenta de build de alta performance que expande aliases de componentes CSS em classes utilitárias do Tailwind. Construí um ecossistema modular incluindo plugins para Vite, PostCSS, Babel e SWC, permitindo integração fluida em toolchains modernos de frontend. Focado em experiência do desenvolvedor e zero overhead em runtime para sistemas de design escaláveis.",
+      "company": "Open Source - Utilitário de Build para o Ecossistema Tailwind CSS"
     },
     "polkamarkets": {
       "title": "Polkamarkets App",
       "description": "Contribuí para redesign da plataforma (lançamento v2) e melhorei performance da aplicação em 15% através de otimização de assets e refatoração de CSS. Introduzi framework de testes Jest e estabeleci padrões de documentação de componentes, melhorando velocidade de desenvolvimento na equipe. Implementei integração de autenticação social e otimizei renderização da homepage.",
       "company": "Polkamarkets Labs - Plataforma de Mercados de Previsão"
-    },
-    "ainotator": {
-      "title": "AINotator Web",
-      "description": "Implementei sistema interativo de anotação de imagens usando Fabric.js para captura de dados de segmentação semântica. Construí ferramentas customizadas de desenho com pincel e polígono com design responsivo e funcionalidade de exportação de dados em formato COCO. Integrado com sistemas de visão IA para aplicações industriais.",
-      "company": "Overview AI - Sistemas de Visão Industrial IA de Última Geração"
     },
     "vitalk": {
       "title": "Portal Vitalk",

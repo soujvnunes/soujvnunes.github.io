@@ -33,7 +33,7 @@ export default function useSvg(svg: Svgs) {
 
 // Pairing each callable splitted SVG with its key to turn the usage predictable
 const svgs = {
-  AINotator: () => import("./__svgs__/AINotator.svg?react"),
+  TailwindExpand: () => import("./__svgs__/TailwindExpand.svg?react"),
   ArrowOutward: () => import("./__svgs__/ArrowOutward.svg?react"),
   Behance: () => import("./__svgs__/Behance.svg?react"),
   BeproNetwork: () => import("./__svgs__/BeproNetwork.svg?react"),
@@ -42,7 +42,6 @@ const svgs = {
   Language: () => import("./__svgs__/Language.svg?react"),
   LinkedIn: () => import("./__svgs__/LinkedIn.svg?react"),
   Medium: () => import("./__svgs__/Medium.svg?react"),
-  Mentalyc: () => import("./__svgs__/Mentalyc.svg?react"),
   NPM: () => import("./__svgs__/NPM.svg?react"),
   Palpitada: () => import("./__svgs__/Palpitada.svg?react"),
   Pen: () => import("./__svgs__/Pen.svg?react"),

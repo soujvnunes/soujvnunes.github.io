@@ -34,20 +34,15 @@
       "description": "Architected and developed open-source TypeScript CLI tool that transforms CSS utility classes into type-safe design tokens. Implemented OKLCH color space manipulation for automatic palette expansion, achieved 88% CSS size reduction through custom base-52 minification, and built framework detection for Next.js, Remix, and Vite with real-time file watching. Published to npm with comprehensive Jest test coverage.",
       "company": "Open Source - Design Token System for Scalable CSS Architecture"
     },
-    "mentalyc": {
-      "title": "Mentalyc App",
-      "description": "Built accessible component library for mental health SaaS platform with full WCAG 2.1 AA compliance. Implemented Storybook documentation system and established accessibility testing workflows. Collaborated with design team to improve user flows and implement responsive design patterns using Tailwind CSS.",
-      "company": "Mentalyc - AI Psychotherapy Progress Notes"
+    "tailwind_expand": {
+      "title": "tailwind-expand",
+      "description": "Architected and developed a high-performance build-time utility that expands CSS component aliases into Tailwind utility classes. Built a modular ecosystem including Vite, PostCSS, Babel, and SWC plugins, enabling seamless integration across modern frontend toolchains. Focused on developer experience and zero-runtime overhead for scalable design systems.",
+      "company": "Open Source - Build-time Utility for Tailwind CSS Ecosystem"
     },
     "polkamarkets": {
       "title": "Polkamarkets App",
       "description": "Contributed to major platform redesign (v2 launch) and improved application performance by 15% through asset optimization and CSS refactoring. Introduced Jest unit testing framework and established component documentation standards, improving developer velocity across the engineering team. Implemented social authentication integration and optimized homepage rendering.",
       "company": "Polkamarkets Labs - Prediction Markets Platform"
-    },
-    "ainotator": {
-      "title": "AINotator Web",
-      "description": "Implemented interactive image annotation system using Fabric.js for semantic segmentation data capture. Built custom brush and polygon drawing tools with responsive design and COCO format data export functionality. Integrated with AI vision systems for industrial applications.",
-      "company": "Overview AI - Next-Gen AI Industrial Vision Systems"
     },
     "vitalk": {
       "title": "Vitalk Portal",
