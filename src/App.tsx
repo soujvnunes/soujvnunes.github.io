@@ -1,5 +1,8 @@
+import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import { Provider } from "react-redux";
 import { MotionConfig } from "framer-motion";
+
 import store from "config/store";
 import Contributions from "containers/Contributions";
 import Footer from "containers/Footer";
@@ -9,6 +12,12 @@ import HeaderNav from "containers/HeaderNav";
 import Main from "containers/Main";
 
 export default function App() {
+  const { i18n } = useTranslation();
+
+  useEffect(() => {
+    document.documentElement.lang = i18n.language;
+  }, [i18n.language]);
+
   return (
     <Provider store={store}>
       <MotionConfig reducedMotion="user" transition={{ ease: "easeOut" }}>
@@ -18,11 +27,6 @@ export default function App() {
         </Header>
         <Main>
           <Contributions />
-          {/**
-           * TODO: implement on 2.1
-           *
-           * <About />
-           */}
         </Main>
         <Footer />
       </MotionConfig>
