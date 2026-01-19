@@ -47,7 +47,6 @@ export default function Socials({ className, inline }: SocialsProps) {
               title={title}
               aria-label={title}
               className={twMerge(
-                "plausible-event-name=Visited+socials",
                 !inline && "inline-flex bg-gradient-to-tl",
                 isLinkedIn &&
                   "h-10 w-10 from-linkedin-500/20 to-linkedin-500/10 text-linkedin-500 dark:text-linkedin-400",
