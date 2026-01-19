@@ -9,15 +9,20 @@ export default function HeaderNavLanguage() {
 
   return (
     <Button
-      className="plausible-event-name=Toggled+language min-w-32"
+      className="min-w-32"
       aria-label={title}
       title={title}
       endItem={<Icon name="Language" />}
       value={i18n.language === "en" ? "pt" : "en"}
       size={isLgScreen ? "md" : "sm"}
-      onClick={(event: React.MouseEvent<HTMLButtonElement>) =>
-        void i18n.changeLanguage(event.currentTarget.value)
-      }
+      onClick={(event: React.MouseEvent<HTMLButtonElement>) => {
+        const nextLang = event.currentTarget.value;
+        const url = new URL(window.location.href);
+        url.searchParams.set("hl", nextLang);
+        url.searchParams.delete("lng");
+        window.history.pushState({}, "", url);
+        void i18n.changeLanguage(nextLang);
+      }}
     >
       {t("lang")}
     </Button>
